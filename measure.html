@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Measure</title></head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const img = new Image();
+img.onload = () => {
+  const c = document.getElementById('c');
+  c.width = img.width;
+  c.height = img.height;
+  const ctx = c.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  const data = ctx.getImageData(0, 0, c.width, c.height).data;
+
+  // Grid bounds
+  // x0 = 19, yBase = 494, uX = 119.25, uY = 119.25
+  const x0 = 19, yBase = 494, u = 119.25;
+
+  // Skeleton / centerline of red:
+  // Let's create a 2D boolean grid for red pixels
+  const isRed = new Uint8Array(c.width * c.height);
+  for (let y = 0; y < c.height; y++) {
+    for (let x = 0; x < c.width; x++) {
+      const idx = (y * c.width + x) * 4;
+      const r = data[idx], g = data[idx+1], b = data[idx+2];
+      if (r > 160 && g < 70 && b < 70) {
+        isRed[y * c.width + x] = 1;
+      }
+    }
+  }
+
+  // Also include the start dot (19, 372) and end dot (317, 377)
+  // Let's find the centerline by slicing along the path.
+  // The path has 3 distinct phases:
+  // Phase 1: Going UP from x=19, y=372 to the peak near y=256 (height 2 ô ly). Here x goes from 19 to ~130.
+  // Phase 2: Going DOWN from peak to bottom near y=494 (height 0 ô ly). Here y goes from ~256 to ~494, x is around 130-190.
+  // Phase 3: Hooking UP from bottom trough to end dot (317, 377). Here x goes from ~190 to 317, y goes from ~494 to 377.
+
+  // Let's extract:
+  // Phase 1: For each X from 19 to 135, find average Y of red pixels with Y < 390
+  const phase1 = [];
+  for (let x = 19; x <= 135; x++) {
+    const ys = [];
+    for (let y = 240; y <= 400; y++) {
+      if (isRed[y * c.width + x]) ys.push(y);
+    }
+    if (ys.length > 0) {
+      const avgY = ys.reduce((a,b)=>a+b, 0) / ys.length;
+      phase1.push({
+        x_px: x,
+        y_px: avgY,
+        u_x: +((x - x0) / u).toFixed(3),
+        u_y: +((yBase - avgY) / u).toFixed(3)
+      });
+    }
+  }
+
+  // Peak region: around x = 120 to 160
+  // Phase 2 (Stem going down): For each Y from 270 to 480, find average X of red pixels
+  const phase2 = [];
+  for (let y = 265; y <= 485; y += 5) {
+    const xs = [];
+    for (let x = 110; x <= 220; x++) {
+      if (isRed[y * c.width + x]) xs.push(x);
+    }
+    if (xs.length > 0) {
+      const avgX = xs.reduce((a,b)=>a+b, 0) / xs.length;
+      phase2.push({
+        x_px: avgX,
+        y_px: y,
+        u_x: +((avgX - x0) / u).toFixed(3),
+        u_y: +((yBase - y) / u).toFixed(3)
+      });
+    }
+  }
+
+  // Phase 3 (Hook up to end dot): For each X from 180 to 317, find average Y
+  const phase3 = [];
+  for (let x = 180; x <= 317; x += 2) {
+    const ys = [];
+    for (let y = 360; y <= 500; y++) {
+      if (isRed[y * c.width + x]) ys.push(y);
+    }
+    if (ys.length > 0) {
+      const avgY = ys.reduce((a,b)=>a+b, 0) / ys.length;
+      phase3.push({
+        x_px: x,
+        y_px: avgY,
+        u_x: +((x - x0) / u).toFixed(3),
+        u_y: +((yBase - avgY) / u).toFixed(3)
+      });
+    }
+  }
+
+  const result = {
+    startDot: { x: 19, y: 372, u_x: 0, u_y: +((yBase - 372)/u).toFixed(3) },
+    endDot: { x: 317, y: 377, u_x: +((317 - x0)/u).toFixed(3), u_y: +((yBase - 377)/u).toFixed(3) },
+    phase1_samples: phase1.filter((_, i) => i % 10 === 0),
+    phase2_stem: phase2,
+    phase3_samples: phase3.filter((_, i) => i % 5 === 0)
+  };
+
+  fetch('/save', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(result)
+  });
+};
+img.src = 'net_7_chuan.jpg';
+</script>
+</body>
+</html>

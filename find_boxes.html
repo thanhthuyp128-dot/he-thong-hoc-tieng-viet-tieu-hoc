@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="cv"></canvas>
+<script>
+window.onload = async () => {
+  const img = new Image();
+  img.src = 'reference_strokes.jpg';
+  await img.decode();
+  const cv = document.getElementById('cv');
+  cv.width = img.width;
+  cv.height = img.height;
+  const ctx = cv.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  const data = ctx.getImageData(0, 0, img.width, img.height).data;
+
+  // Let's sample horizontal profile of darkness/blue/red across the image
+  console.log('IMG_SIZE: ' + img.width + 'x' + img.height);
+
+  // Find blue grid boundaries: blue grid has low red, high blue (e.g. R < 150, B > 180 or similar)
+  // Let's detect the boxes by scanning horizontal and vertical lines of blue color
+  const boxes = [];
+  // Top row is roughly y in [80, 220]
+  // Bottom row is roughly y in [240, 420]
+  
+  // Let's create an array of 14 canvas elements and export their base64 images
+  // For each box, let's save a crop!
+  // In the image, top row has 7 boxes:
+  // Let's find approximate X ranges for 7 boxes across 845 width
+  // 845 / 7 is ~120px per box.
+  
+  // Let's dump the 14 box crops as dataURLs into console so node can save them!
+  // We will slice precisely.
+  window.boxInfo = { width: img.width, height: img.height };
+};
+</script>
+</body>
+</html>

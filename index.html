@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiếng Việt Lớp 1 | Kết Nối Tri Thức Với Cuộc Sống</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen text-slate-800 pb-12">
+
+  <!-- TOP HEADER -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b-4 border-amber-300 shadow-sm py-3 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="showHomeView()">
+        <div class="w-12 h-12 bg-gradient-to-tr from-amber-400 to-rose-400 rounded-2xl flex items-center justify-center text-2xl text-white shadow-md animate-float">
+          📖
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-rose-500 tracking-tight flex items-center gap-1.5">
+            Tiếng Việt 1 <span class="text-xs bg-emerald-500 text-white px-2 py-0.5 rounded-full font-bold">Kết Nối Tri Thức</span>
+          </h1>
+          <p class="text-[11px] text-amber-600 font-bold hidden sm:block">Chương trình SGK Lớp 1 Chuẩn • Dễ Hiểu & Vui Nhộn ✨</p>
+        </div>
+      </div>
+
+      <!-- Chọn Khối Lớp -->
+      <div class="hidden sm:flex items-center gap-1.5 bg-amber-100 p-1.5 rounded-2xl border-2 border-amber-300">
+        <button class="px-3.5 py-1.5 bg-rose-500 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-xs">
+          🌟 Lớp 1
+        </button>
+        <button onclick="showGradeNotice(2)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 font-bold text-xs sm:text-sm rounded-xl hover:bg-white/60 transition">
+          Lớp 2
+        </button>
+        <button onclick="showGradeNotice(3)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 font-bold text-xs sm:text-sm rounded-xl hover:bg-white/60 transition">
+          Lớp 3
+        </button>
+        <button onclick="showGradeNotice(4)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 font-bold text-xs sm:text-sm rounded-xl hover:bg-white/60 transition">
+          Lớp 4
+        </button>
+        <button onclick="showGradeNotice(5)" class="px-3 py-1.5 text-slate-600 hover:text-slate-900 font-bold text-xs sm:text-sm rounded-xl hover:bg-white/60 transition">
+          Lớp 5
+        </button>
+      </div>
+
+      <!-- Huy hiệu Sao & Nút Loa -->
+      <div class="flex items-center gap-2.5">
+        <div class="flex items-center gap-1.5 bg-amber-300 border-2 border-amber-400 text-amber-950 px-3 py-1.5 rounded-2xl font-black text-sm shadow-xs">
+          <span class="star-anim text-lg">⭐</span>
+          <span id="headerStars">0</span>
+        </div>
+        <button id="soundBtn" onclick="toggleAudio()" class="w-11 h-11 bg-white hover:bg-amber-50 text-slate-700 rounded-2xl border-2 border-amber-200 flex items-center justify-center text-lg transition shadow-xs" title="Bật/Tắt tiếng">
+          <i class="fa-solid fa-volume-high text-emerald-500" id="soundIcon"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-6">
+
+    <!-- VIEW 1: TRANG CHỦ & CHỌN TUẦN -->
+    <div id="homeView" class="space-y-6">
+
+      <!-- Banner Vui Nhộn Nhẹ Nhàng -->
+      <div class="bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400 rounded-3xl p-6 sm:p-8 text-white shadow-lg relative overflow-hidden">
+        <div class="relative z-10 max-w-xl">
+          <div class="inline-block bg-white/30 backdrop-blur-xs px-3 py-1 rounded-full text-xs font-black mb-2">
+            🌱 BỘ SÁCH KẾT NỐI TRI THỨC VỚI CUỘC SỐNG
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black leading-snug mb-2">
+            Bé Khám Phá Chữ & Số Thật Vui! 🚀
+          </h2>
+          <p class="text-rose-100 text-xs sm:text-sm font-semibold">
+            Tuần 1 làm quen nét và chữ cái • Tuần 2 bước vào âm A, B, C, E, Ê và dấu thanh!
+          </p>
+        </div>
+        <div class="absolute right-3 -bottom-4 text-7xl sm:text-8xl opacity-80 select-none animate-float">
+          🎒
+        </div>
+      </div>
+
+      <!-- THANH CHỌN 5 TUẦN HỌC -->
+      <div>
+        <div class="text-sm font-black text-slate-700 mb-3 flex items-center justify-between">
+          <span>📅 Chọn Tuần Học:</span>
+          <span class="text-xs text-amber-700 font-bold">Tuần 1 (2 bài) • Tuần 2 (5 bài)</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3" id="weekBarContainer">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- DANH SÁCH BÀI TRONG TUẦN ĐÃ CHỌN -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg sm:text-xl font-black text-slate-800 flex items-center gap-2" id="weekHeaderTitle">
+            ✏️ Tuần 1: Làm quen
+          </h3>
+          <span class="text-xs bg-amber-200 text-amber-900 px-3 py-1 rounded-full font-extrabold" id="weekProgressTag">
+            0 bài xong
+          </span>
+        </div>
+
+        <!-- Thẻ Bài Học To, Rực Rỡ -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="lessonCardsContainer">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VIEW 2: MÀN HÌNH BÀI HỌC -->
+    <div id="lessonView" class="hidden space-y-6">
+
+      <!-- Thanh Điều Hướng Bài Học -->
+      <div class="bg-white rounded-3xl p-4 border-2 border-amber-200 shadow-sm flex flex-wrap items-center justify-between gap-3">
+        <button onclick="showHomeView()" class="px-4 py-2.5 bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-2xl font-black text-xs sm:text-sm transition flex items-center gap-2 btn-toy">
+          <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </button>
+
+        <!-- Nút Chuyển 2 Chế Độ -->
+        <div class="flex items-center bg-slate-100 p-1.5 rounded-2xl border border-slate-200 gap-1">
+          <button id="btnTabTheory" onclick="switchTab('theory')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-black bg-rose-500 text-white shadow-xs transition flex items-center gap-1.5">
+            📖 Kiến Thức Mới
+          </button>
+          <button id="btnTabPractice" onclick="switchTab('practice')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-black text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+            🎮 Bài Tập Thực Hành ⭐
+          </button>
+        </div>
+
+        <button onclick="window.print()" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-2xl text-xs font-bold transition">
+          🖨️ In bài
+        </button>
+      </div>
+
+      <!-- PHẦN 1: KIẾN THỨC MỚI -->
+      <div id="theoryPanel" class="space-y-6">
+
+        <!-- THẺ HERO BANNER -->
+        <div class="bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 border-4 border-amber-300 rounded-3xl p-6 sm:p-8 text-center shadow-md relative overflow-hidden">
+          <div class="inline-block bg-white text-rose-500 font-black text-xs sm:text-sm px-3.5 py-1 rounded-full shadow-xs mb-3" id="heroBadge">
+            BÀI HỌC HÔM NAY
+          </div>
+
+          <!-- Chữ / Nét cực to -->
+          <div class="text-6xl sm:text-8xl font-black text-rose-600 my-2 tracking-wide drop-shadow-xs cursor-pointer hover:scale-105 transition" onclick="speakCurrentLetter()" id="heroBigLetter">
+            — | / \
+          </div>
+
+          <p class="text-base sm:text-lg font-black text-slate-800 mb-4" id="heroLetterName">
+            Tên bài học
+          </p>
+
+          <button onclick="speakCurrentLetter()" class="px-6 py-3.5 bg-rose-500 hover:bg-rose-600 text-white rounded-2xl font-black text-sm sm:text-base shadow-lg shadow-rose-200 transition inline-flex items-center gap-2 btn-toy">
+            <span class="text-xl">🔊</span> Bé bấm để nghe cô đọc mẫu
+          </button>
+        </div>
+
+        <!-- KHU VỰC ĐẶC BIỆT 1: BỘ SƯU TẬP NÉT CƠ BẢN (CHO BÀI 1) -->
+        <div id="strokesSection" class="hidden bg-white rounded-3xl p-6 border-4 border-pink-300 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-black text-rose-600 flex items-center gap-2">
+              ✏️ Bảng Các Nét Cơ Bản Của Bé
+            </h4>
+            <span class="text-xs text-slate-400 font-bold">Chạm vào từng nét để xem và nghe 🔊</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5" id="strokesGrid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- KHU VỰC ĐẶC BIỆT 2: BẢNG CHỮ CÁI, SỐ & DẤU THANH (CHO BÀI 2) -->
+        <div id="alphabetSpecialSection" class="hidden space-y-6">
+          
+          <!-- Bảng 29 Chữ Cái -->
+          <div class="bg-white rounded-3xl p-6 border-4 border-amber-300 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-lg font-black text-amber-700 flex items-center gap-2">
+                🔤 29 Chữ Cái Tiếng Việt
+              </h4>
+              <span class="text-xs text-slate-400 font-bold">Chạm vào chữ để nghe đọc 🔊</span>
+            </div>
+            <div class="flex flex-wrap gap-2.5 justify-center" id="alphabetListGrid">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+          <!-- Chữ Số 0 - 9 & Dấu Thanh -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Chữ số -->
+            <div class="bg-sky-50 rounded-3xl p-6 border-4 border-sky-300 shadow-sm">
+              <h4 class="text-base sm:text-lg font-black text-sky-800 mb-3 flex items-center gap-2">
+                🔢 Các Chữ Số (0 - 9)
+              </h4>
+              <div class="flex flex-wrap gap-2 justify-center" id="numbersListGrid">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <!-- Dấu thanh -->
+            <div class="bg-purple-50 rounded-3xl p-6 border-4 border-purple-300 shadow-sm">
+              <h4 class="text-base sm:text-lg font-black text-purple-800 mb-3 flex items-center gap-2">
+                🏷️ 5 Dấu Thanh Tiếng Việt
+              </h4>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="tonesListGrid">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TẬP ĐÁNH VẦN THƯỜNG (CHO CÁC BÀI TỪ TUẦN 2 TRỞ ĐI) -->
+        <div id="regularSpellingSection" class="bg-white rounded-3xl p-6 border-2 border-emerald-200 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="text-base sm:text-lg font-black text-emerald-700 flex items-center gap-2">
+              🎶 Bé Tập Đánh Vần
+            </h4>
+            <span class="text-xs text-slate-400 font-bold">Chạm vào từng từ để nghe đọc 🔊</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5" id="spellingBubblesContainer">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- TỪ VỰNG HÌNH ẢNH -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="text-base sm:text-lg font-black text-amber-700 flex items-center gap-2">
+              🖼️ Tranh Đẹp & Từ Hay
+            </h4>
+            <span class="text-xs text-slate-400 font-bold">Chạm vào tranh để nghe 🔊</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="vocabGridContainer">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- TẬP ĐỌC CÂU DỄ NHỚ -->
+        <div class="bg-emerald-50 rounded-3xl p-6 border-2 border-emerald-300 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-base sm:text-lg font-black text-emerald-800 flex items-center gap-2">
+              📖 Bé Tập Đọc Câu
+            </h4>
+            <button onclick="readAllSentences()" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition flex items-center gap-1.5 shadow-xs">
+              <span>🔊</span> Đọc hết
+            </button>
+          </div>
+
+          <div class="space-y-2.5" id="sentencesListContainer">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- MẸO NHỚ VẦN THƠ -->
+        <div class="bg-yellow-50 border-2 border-yellow-300 rounded-3xl p-5 text-center">
+          <span class="text-2xl mb-1 inline-block">💡</span>
+          <div class="text-xs font-black text-amber-800 uppercase mb-1">Mẹo Nhớ Của Bé:</div>
+          <p class="text-sm sm:text-base font-black text-amber-950 italic" id="mnemonicText">
+            Nội dung mẹo nhớ
+          </p>
+        </div>
+
+        <!-- Nút Chuyển Sang Bài Tập -->
+        <div class="text-center pt-2">
+          <button onclick="switchTab('practice')" class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-base sm:text-lg rounded-3xl shadow-lg shadow-emerald-200 transition inline-flex items-center gap-3 btn-toy">
+            <span>Bé Đã Hiểu Bài Rồi, Làm Bài Tập Nào! 🎮</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PHẦN 2: BÀI TẬP THỰC HÀNH -->
+      <div id="practicePanel" class="hidden space-y-6">
+
+        <!-- GAME ĐẶC BIỆT: THÁM TỬ TÌM CHỮ (CHO BÀI 2) -->
+        <div id="detectiveGameSection" class="hidden bg-gradient-to-b from-amber-50 to-orange-50 rounded-3xl border-4 border-amber-400 p-6 shadow-md space-y-5">
+          <!-- Game Header -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b-2 border-amber-200 pb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-14 bg-amber-400 rounded-2xl flex items-center justify-center text-3xl shadow-sm animate-float">
+                🕵️‍♂️
+              </div>
+              <div>
+                <span class="bg-amber-200 text-amber-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
+                  Mini Game Độc Quyền
+                </span>
+                <h4 class="text-xl font-black text-slate-800">Thám Tử Tìm Chữ! 🔍</h4>
+                <p class="text-xs text-slate-600 font-bold">Tìm đúng chữ cái được yêu cầu trong bảng lộn xộn nhé!</p>
+              </div>
+            </div>
+
+            <!-- Mission Target Box -->
+            <div class="bg-white border-3 border-amber-400 rounded-2xl px-5 py-2.5 text-center shadow-xs">
+              <div class="text-[11px] font-bold text-slate-400 uppercase">Nhiệm vụ tìm chữ:</div>
+              <div class="text-3xl font-black text-rose-600 flex items-center justify-center gap-2">
+                <span id="detectiveTargetLetter">B</span>
+                <button onclick="speakDetectiveTarget()" class="text-sm text-slate-400 hover:text-rose-500">
+                  🔊
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert / Feedback banner inside game -->
+          <div id="detectiveFeedback" class="hidden p-3 rounded-2xl text-center font-black text-sm"></div>
+
+          <!-- Scattered Letters Playground -->
+          <div class="bg-white/80 rounded-3xl border-2 border-dashed border-amber-300 p-6 min-h-[280px] flex flex-wrap gap-3 sm:gap-4 items-center justify-center relative overflow-hidden" id="detectiveBoard">
+            <!-- Letters injected by JS with random rotation and pastel colors -->
+          </div>
+
+          <!-- Score & Next button -->
+          <div class="flex items-center justify-between pt-2">
+            <div class="text-xs font-black text-slate-600">
+              Đã tìm được: <span id="detectiveScore" class="text-emerald-600 text-base font-extrabold">0</span> chữ cái
+            </div>
+            <button onclick="nextDetectiveMission()" class="px-5 py-2.5 bg-amber-400 hover:bg-amber-500 text-amber-950 font-black text-xs sm:text-sm rounded-2xl btn-toy shadow-xs">
+              Đổi Chữ Khác 🎲
+            </button>
+          </div>
+        </div>
+
+        <!-- BÀI TẬP TRẮC NGHIỆM TIÊU CHUẨN (CÁC BÀI CÒN LẠI) -->
+        <div class="bg-white rounded-3xl p-5 border-2 border-rose-200 shadow-sm flex items-center justify-between">
+          <div>
+            <h4 class="font-black text-slate-800 text-base sm:text-lg flex items-center gap-2">
+              🎯 Thử Thách Ôn Tập Kiến Thức
+            </h4>
+            <p class="text-xs text-slate-500 font-semibold">Bé bấm chọn vào đáp án đúng nhất nhé!</p>
+          </div>
+          <button onclick="resetCurrentQuiz()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl font-black transition">
+            🔄 Làm lại
+          </button>
+        </div>
+
+        <!-- Danh Sách Các Câu Hỏi -->
+        <div class="space-y-5" id="quizCardsContainer">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Nút Nộp Bài & Nhận Sao -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 text-center shadow-sm">
+          <button onclick="checkQuizResults()" class="px-8 py-4 bg-gradient-to-r from-amber-400 to-rose-500 hover:from-amber-500 hover:to-rose-600 text-white rounded-3xl font-black text-base sm:text-lg shadow-xl shadow-rose-200 transition inline-flex items-center gap-2.5 btn-toy">
+            <span>⭐ Nộp Bài & Nhận Sao Vàng!</span>
+          </button>
+
+          <!-- Hộp Chúc Mừng -->
+          <div id="quizResultBox" class="hidden mt-6 p-6 rounded-3xl border-4 text-center transition"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- POPUP THÔNG BÁO LỚP 2-5 -->
+  <div id="gradeNoticeModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center border-4 border-amber-300 shadow-2xl">
+      <div class="text-5xl mb-3">🎒 ✨</div>
+      <h4 class="text-lg font-black text-slate-800 mb-2" id="modalNoticeTitle">Lớp 2 Đang Chuẩn Bị</h4>
+      <p class="text-xs sm:text-sm text-slate-600 font-semibold mb-5 leading-relaxed" id="modalNoticeDesc">
+        Bé hãy cùng ba mẹ học thật giỏi các bài của Lớp 1 để mở khóa Lớp 2 nhé!
+      </p>
+      <button onclick="closeGradeNotice()" class="w-full py-3 bg-rose-500 hover:bg-rose-600 text-white rounded-2xl font-black text-sm shadow-md transition btn-toy">
+        Em Đã Hiểu Rồi! 👍
+      </button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="data/grade1.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

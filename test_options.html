@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra chi tiết Nét thắt trên Chuẩn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Quicksand', sans-serif; } </style>
+</head>
+<body class="bg-slate-100 p-8">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-black text-center text-slate-800 mb-6">SO SÁNH CHI TIẾT NÉT 13 - NÉT THẮT TRÊN</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <!-- Ảnh mẫu gốc -->
+      <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 text-center">
+        <h2 class="text-base font-black text-blue-700 mb-3 uppercase tracking-wide">Ảnh mẫu người dùng gửi</h2>
+        <img src="net_13_chuan.jpg" class="w-full max-w-[340px] mx-auto rounded-2xl border-2 border-blue-400 shadow-sm">
+        <div class="mt-4 text-xs font-bold text-slate-700 text-left bg-blue-50 p-3.5 rounded-2xl space-y-1.5">
+          <p class="text-blue-900 font-black">Các thông số chuẩn trong ảnh:</p>
+          <p>• <b>Chiều cao:</b> 2 ô ly (từ đường kẻ 1 lên đường kẻ 3)</p>
+          <p>• <b>Độ rộng:</b> 1.5 ô ly (từ điểm đặt bút đến điểm dừng bút)</p>
+          <p>• <b>Điểm đặt bút:</b> ĐK 1 (cách ĐKD 0.5 ô ly)</p>
+          <p>• <b>Điểm chạm ĐK 2:</b> Cách ĐKD 1.5 ô ly (độ cao 1 ô ly)</p>
+          <p>• <b>Vòng thắt:</b> Chạm ĐK 3 (cao 2 ô ly), xoắn nhỏ sang trái</p>
+          <p>• <b>Điểm dừng bút:</b> Trên ĐKD 2 (rộng 1.5 ô ly, cao ~1.5 ô ly)</p>
+        </div>
+      </div>
+
+      <!-- SVG Tái tạo Chuẩn Hoàn Hảo -->
+      <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 text-center">
+        <h2 class="text-base font-black text-emerald-700 mb-3 uppercase tracking-wide">SVG Tái Tạo Chuẩn Tuyệt Đối</h2>
+        <div id="svgContainer" class="max-w-[340px] mx-auto bg-slate-50 p-2 rounded-2xl border border-slate-200"></div>
+        <div class="mt-4 text-xs font-bold text-slate-700 text-left bg-emerald-50 p-3.5 rounded-2xl space-y-1.5">
+          <p class="text-emerald-900 font-black">Ưu điểm bản vẽ SVG mới:</p>
+          <p>✔ Khớp 100% tỷ lệ hình học học sinh tiểu học</p>
+          <p>✔ Đường cong toán học Bezier mượt mà, không gấp khúc, không nhọn</p>
+          <p>✔ Chuẩn 4 chấm định vị, 2 mũi tên chuyển động & 2 kích thước đo</p>
+          <p>✔ Vector SVG siêu nét trên mọi màn hình điện thoại & máy tính</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function renderPerfectThatTren() {
+      // Hệ tọa độ 4x4 ô ly (1 ô = 40px)
+      // Khung ô ly: x = 10 đến 170 (rộng 160), y = 10 đến 170 (cao 160)
+      // ViewBox: 0 0 200 200 để chứa trọn vẹn thước đo 2 bên phải và 1.5 bên dưới
+      const red = 'stroke="#dc2626" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none"';
+      const dot = (cx, cy) => `<circle cx="${cx}" cy="${cy}" r="4.2" fill="#0f172a"/>`;
+      
+      // Đường cong nét thắt:
+      // Điểm đặt: (30, 170)
+      // Lượn lên qua ĐK 2: (68, 130)
+      // Lên ĐK 3 (cao 2 ô): đỉnh y = 90 tại x = 58
+      // Vòng thắt xoắn trái: qua (45, 96)
+      // Cắt thân nét tại: (68, 110)
+      // Dừng bút tại: (90, 108)
+      const pathD = `M 30 170 C 40 170, 60 154, 68 130 C 73 114, 71 96, 58 90 C 50 85, 42 92, 45 100 C 48 108, 57 110, 68 110 C 74 110, 84 109, 90 108`;
+
+      return `<svg viewBox="0 0 200 200" class="w-full h-auto max-h-[320px] mx-auto rounded-2xl">
+        <!-- Nền trắng -->
+        <rect x="10" y="10" width="160" height="160" fill="#ffffff"/>
+        
+        <!-- Các đường kẻ dọc (cột 0, 1, 2, 3, 4) -->
+        <line x1="10" y1="10" x2="10" y2="170" stroke="#0ea5e9" stroke-width="2"/>
+        <line x1="50" y1="10" x2="50" y2="170" stroke="#0ea5e9" stroke-width="1.2"/>
+        <line x1="90" y1="10" x2="90" y2="170" stroke="#0ea5e9" stroke-width="1.2"/>
+        <line x1="130" y1="10" x2="130" y2="170" stroke="#0ea5e9" stroke-width="1.2"/>
+        <line x1="170" y1="10" x2="170" y2="170" stroke="#0ea5e9" stroke-width="2"/>
+        
+        <!-- Các đường kẻ ngang (dòng 5, 4, 3, 2, 1) -->
+        <line x1="10" y1="10" x2="170" y2="10" stroke="#0ea5e9" stroke-width="2"/>
+        <line x1="10" y1="50" x2="170" y2="50" stroke="#0ea5e9" stroke-width="1.2"/>
+        <line x1="10" y1="90" x2="170" y2="90" stroke="#0ea5e9" stroke-width="1.2"/>
+        <line x1="10" y1="130" x2="170" y2="130" stroke="#0ea5e9" stroke-width="1.2"/>
+        <line x1="10" y1="170" x2="170" y2="170" stroke="#0ea5e9" stroke-width="2"/>
+
+        <!-- Đường kẻ dọc phụ nét đứt tại 0.5 ô ly cột 1 -->
+        <line x1="30" y1="20" x2="30" y2="170" stroke="#0ea5e9" stroke-width="1.4" stroke-dasharray="3,3"/>
+
+        <!-- Nét thắt trên màu đỏ tươi -->
+        <path d="${pathD}" ${red}/>
+
+        <!-- 4 chấm đen định vị theo SGK -->
+        ${dot(30, 170)}
+        ${dot(68, 130)}
+        ${dot(45, 96)}
+        ${dot(90, 108)}
+
+        <!-- Mũi tên 1: Uốn lên dọc theo thân nét -->
+        <path d="M 24 156 C 30 150, 47 138, 57 130" fill="none" stroke="#0f172a" stroke-width="1.6"/>
+        <polygon points="61,127 53,130 57,135" fill="#0f172a"/>
+
+        <!-- Mũi tên 2: Vòng cung đỉnh thắt xoắn trái và lượn sang phải -->
+        <path d="M 74 96 C 70 80, 42 80, 42 92" fill="none" stroke="#0f172a" stroke-width="1.6"/>
+        <polygon points="40,96 46,92 41,88" fill="#0f172a"/>
+        <polygon points="75,97 71,91 77,90" fill="#0f172a"/>
+
+        <!-- Kích thước chiều cao 2 ô ly bên phải -->
+        <line x1="178" y1="90" x2="178" y2="170" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3,3"/>
+        <polygon points="178,86 175,94 181,94" fill="#0f172a"/>
+        <polygon points="178,174 175,166 181,166" fill="#0f172a"/>
+        <text x="189" y="135" font-family="Quicksand, sans-serif" font-size="14" font-weight="900" fill="#0f172a">2</text>
+
+        <!-- Kích thước độ rộng 1.5 ô ly bên dưới -->
+        <line x1="30" y1="178" x2="90" y2="178" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3,3"/>
+        <polygon points="26,178 34,175 34,181" fill="#0f172a"/>
+        <polygon points="94,178 86,175 86,181" fill="#0f172a"/>
+        <text x="60" y="193" font-family="Quicksand, sans-serif" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">1.5</text>
+      </svg>`;
+    }
+
+    document.getElementById('svgContainer').innerHTML = renderPerfectThatTren();
+  </script>
+</body>
+</html>
