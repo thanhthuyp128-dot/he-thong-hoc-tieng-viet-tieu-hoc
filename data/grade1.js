@@ -3,7 +3,7 @@
 // Tuần 2: 5 bài (A a, B b dấu huyền, C c dấu sắc, E e Ê ê, Ôn tập)
 // Tuần 3-5: Chuẩn SGK KNTT
 
-window.GRADE_1_DATA = {
+const grade1Data = {
   "grade": 1,
   "gradeName": "Tiếng Việt Lớp 1 - Bộ sách Kết nối tri thức với cuộc sống",
   "description": "Chương trình chuẩn SGK Kết nối tri thức với cuộc sống: Tuần 1 làm quen (2 bài), Tuần 2 âm A B C E Ê (5 bài), Tuần 3-5 âm ghép và dấu thanh.",
@@ -123,9 +123,9 @@ window.GRADE_1_DATA = {
               {
                 "id": "khuyet_tren",
                 "name": "Nét khuyết trên",
-                "heightDesc": "Cao 5 ô ly, rộng 1.5 ô ly",
+                "heightDesc": "Cao 5 ô ly",
                 "widthDesc": "Rộng 1.5 ô ly",
-                "guide": "Đặt bút ở đường kẻ 2, đưa xiên lên qua đường kẻ 3, 4, 5, uốn cong chạm đường kẻ 6 rồi kéo thẳng đứng xuống đường kẻ 1.",
+                "guide": "Đặt bút trên đường kẻ 2 (giữa ô ly, cách thân nét 0.5 ô ly), đưa nét xiên lên cắt đường kẻ 3 tại đường kẻ dọc, lên tiếp đường kẻ 5 rộng 1 ô ly. Uốn cong tròn chạm đỉnh đường kẻ 6 (cao 5 ô ly) rồi kéo thẳng đứng dọc theo đường kẻ dọc xuống đường kẻ 1 (đường kẻ đậm) dừng bút.",
                 "example": "Trong chữ: b, l, h, k",
                 "svgKey": "khuyet_tren"
               },
@@ -150,9 +150,9 @@ window.GRADE_1_DATA = {
               {
                 "id": "that_giua",
                 "name": "Nét thắt giữa (chữ k)",
-                "heightDesc": "Cao 2.5 ô ly",
+                "heightDesc": "Cao 2 ô ly",
                 "widthDesc": "Rộng 2.5 ô ly",
-                "guide": "Uốn lượn xuống tạo một vòng xoắn thắt nhỏ ở giữa tại đường kẻ 2 rồi uốn cong móc ngược lên.",
+                "guide": "Đặt bút trên đường kẻ 2 (tại mép đường kẻ dọc), đưa nét lượn cong sang phải lên đường kẻ 3 (cao 2 ô ly). Từ đỉnh cong kéo xuống đường kẻ 2 tạo vòng xoắn thắt nhỏ ở giữa (thắt từ phải sang trái), tiếp tục lượn xuống đường kẻ 1 rồi móc ngược lên, dừng bút tại đường kẻ 2 (rộng 2.5 ô ly).",
                 "example": "Trong chữ: k",
                 "svgKey": "that_giua"
               }
@@ -356,40 +356,34 @@ window.GRADE_1_DATA = {
             ],
             "tonesList": [
               {
-                "name": "Thanh ngang",
-                "symbol": "không dấu",
-                "icon": "⛵",
-                "sound": "ba, ca"
-              },
-              {
                 "name": "Thanh huyền",
-                "symbol": "\\",
-                "icon": "🌧️",
-                "sound": "bà, cà"
+                "symbol": "Dấu huyền",
+                "sound": "bà, cà",
+                "mnemonic": "Nét xiên vuốt xuôi từ trên xuống phải"
               },
               {
                 "name": "Thanh sắc",
-                "symbol": "/",
-                "icon": "🚩",
-                "sound": "bá, cá"
+                "symbol": "Dấu sắc",
+                "sound": "bá, cá",
+                "mnemonic": "Nét xiên vuốt từ dưới lên phải"
               },
               {
                 "name": "Thanh hỏi",
-                "symbol": "?",
-                "icon": "🪝",
-                "sound": "bả, cả"
+                "symbol": "Dấu hỏi",
+                "sound": "bả, cả",
+                "mnemonic": "Dấu hỏi như cái móc câu xoay ngược"
               },
               {
                 "name": "Thanh ngã",
-                "symbol": "~",
-                "icon": "🌊",
-                "sound": "bã, cã"
+                "symbol": "Dấu ngã",
+                "sound": "bã, cã",
+                "mnemonic": "Dấu ngã như con sóng lượn"
               },
               {
                 "name": "Thanh nặng",
-                "symbol": ".",
-                "icon": "🌱",
-                "sound": "bạ, cạ"
+                "symbol": "Dấu nặng",
+                "sound": "bạ, cạ",
+                "mnemonic": "Dấu nặng như viên bi tròn"
               }
             ],
             "spellingTable": [
@@ -408,42 +402,13 @@ window.GRADE_1_DATA = {
               {
                 "base": "Dấu thanh",
                 "tone": "5 dấu",
-                "result": "\\ / ? ~ .",
+                "result": "Huyền, Sắc, Hỏi, Ngã, Nặng",
                 "example": "Làm giàu tiếng Việt"
               }
             ],
-            "vocabulary": [
-              {
-                "word": "chữ cái",
-                "icon": "🔤",
-                "meaning": "Các ký tự dùng để ghép thành từ",
-                "example": "Bé đọc vang 29 chữ cái."
-              },
-              {
-                "word": "chữ số",
-                "icon": "🔢",
-                "meaning": "Các ký hiệu dùng để đếm số lượng",
-                "example": "Bé đếm từ số 0 đến số 9."
-              },
-              {
-                "word": "dấu huyền",
-                "icon": "📉",
-                "meaning": "Dấu nghiêng từ trái sang phải",
-                "example": "Dấu huyền giọng êm êm."
-              },
-              {
-                "word": "dấu sắc",
-                "icon": "📈",
-                "meaning": "Dấu xiên vút lên cao",
-                "example": "Dấu sắc giọng cao vui tươi."
-              }
-            ],
-            "readingSentences": [
-              "Bé yêu bảng chữ cái tiếng Việt.",
-              "Tiếng Việt có năm dấu thanh xinh xắn.",
-              "Bé đếm một, hai, ba, bốn, năm ngôi sao."
-            ],
-            "mnemonicTip": "29 chữ cái bé yêu, 5 thanh bay bổng, sớm chiều hát ca!"
+            "vocabulary": [],
+            "readingSentences": [],
+            "mnemonicTip": "Móc câu dấu hỏi, sóng lượn dấu ngã, viên bi dấu nặng, huyền xuôi sắc vút - 5 thanh diệu kỳ!"
           },
           "exercises": [
             {
@@ -475,18 +440,70 @@ window.GRADE_1_DATA = {
             {
               "id": "w1_l2_q3",
               "type": "single_choice",
-              "question": "Dấu thanh nào có hình chiếc móc câu?",
+              "question": "Dấu thanh nào có nét xiên xuôi từ trên xuống dưới sang phải (giọng trầm êm: bà, cà)?",
               "options": [
-                "Dấu hỏi (?)",
-                "Dấu huyền (\\)",
-                "Dấu sắc (/)",
-                "Dấu nặng (.)"
+                "Dấu huyền",
+                "Dấu sắc",
+                "Dấu hỏi",
+                "Dấu ngã"
               ],
               "correct": 0,
-              "explanation": "Dấu hỏi uốn lượn như một chiếc móc câu nhỏ xinh."
+              "explanation": "Dấu huyền là nét xiên xuôi từ trên xuống dưới sang phải, tạo giọng trầm êm như bà, cà."
             },
             {
               "id": "w1_l2_q4",
+              "type": "single_choice",
+              "question": "Dấu thanh nào có nét xiên vút từ dưới lên trên sang phải (giọng cao tươi: bé, cá)?",
+              "options": [
+                "Dấu sắc",
+                "Dấu huyền",
+                "Dấu nặng",
+                "Dấu hỏi"
+              ],
+              "correct": 0,
+              "explanation": "Dấu sắc là nét xiên vút từ dưới lên trên sang phải, tạo giọng cao tươi như bé, cá."
+            },
+            {
+              "id": "w1_l2_q5",
+              "type": "single_choice",
+              "question": "Dấu thanh nào có hình dáng giống như **cái móc câu xoay ngược**?",
+              "options": [
+                "Dấu hỏi",
+                "Dấu ngã",
+                "Dấu nặng",
+                "Dấu sắc"
+              ],
+              "correct": 0,
+              "explanation": "Dấu hỏi như cái móc câu xoay ngược (giọng bổng trầm: bả, cả, cỏ)."
+            },
+            {
+              "id": "w1_l2_q6",
+              "type": "single_choice",
+              "question": "Dấu thanh nào có hình dáng uốn lượn như **con sóng**?",
+              "options": [
+                "Dấu ngã",
+                "Dấu hỏi",
+                "Dấu huyền",
+                "Dấu nặng"
+              ],
+              "correct": 0,
+              "explanation": "Dấu ngã như con sóng lượn (giọng lượn sóng ngân nga: bã, cã, vẽ)."
+            },
+            {
+              "id": "w1_l2_q7",
+              "type": "single_choice",
+              "question": "Dấu thanh nào có hình dáng tròn trịa như **viên bi** đặt dưới con chữ?",
+              "options": [
+                "Dấu nặng",
+                "Dấu sắc",
+                "Dấu hỏi",
+                "Dấu huyền"
+              ],
+              "correct": 0,
+              "explanation": "Dấu nặng như viên bi tròn (dấu chấm) đặt dưới con chữ, tạo giọng đè nặng dứt khoát: bạ, cạ, vẹt."
+            },
+            {
+              "id": "w1_l2_q8",
               "type": "single_choice",
               "question": "Đâu là một chữ số trong các ký tự sau?",
               "options": [
@@ -513,12 +530,13 @@ window.GRADE_1_DATA = {
           "week": 2,
           "lessonNumber": 1,
           "title": "Bài 1: A a",
-          "focus": "Âm A, chữ cái A in hoa và a in thường",
+          "focus": "Âm A, chữ cái A in hoa, a in thường và a viết thường",
+          "isLetterALesson": true,
           "theory": {
             "letterIntro": {
               "letter": "A a",
-              "tone": "Nguyên âm A",
-              "description": "Chữ A mở rộng miệng, phát âm to rõ: 'a'. Chữ A in hoa có 2 chân chéo và gạch ngang.",
+              "tone": "Nguyên âm A (Bài học chữ cái đầu tiên)",
+              "description": "Chữ A mở rộng miệng, phát âm to rõ: 'a'. Chữ A gồm 3 kiểu chữ: chữ A in hoa, chữ a in thường và chữ a viết thường (gồm nét cong kín và nét móc ngược).",
               "visualIcon": "🍎"
             },
             "spellingTable": [
@@ -526,107 +544,82 @@ window.GRADE_1_DATA = {
                 "base": "a",
                 "tone": "Đọc to",
                 "result": "a",
-                "example": "tiếng reo vui: a!"
+                "example": "Mở rộng khẩu hình phát âm to rõ: a"
               },
               {
-                "base": "b - a",
-                "tone": "Ghép âm",
-                "result": "ba",
-                "example": "người ba yêu quý"
+                "base": "A!",
+                "tone": "Tiếng reo vui",
+                "result": "A!",
+                "example": "Tiếng reo bất ngờ: A! Mẹ đã về!"
               },
               {
-                "base": "c - a",
-                "tone": "Ghép âm",
-                "result": "ca",
-                "example": "cái ca nước"
+                "base": "a - a - a",
+                "tone": "Ngân vang",
+                "result": "a a a",
+                "example": "Tiếng cười hát rộn rã: a ha ha!"
               }
             ],
             "vocabulary": [
               {
-                "word": "con cá",
-                "icon": "🐟",
-                "meaning": "Cá bơi dưới nước có âm a",
-                "example": "Con cá bơi tung tăng."
+                "word": "A!",
+                "icon": "🎉",
+                "meaning": "Tiếng reo vui mừng khi gặp mẹ hoặc thấy điều kỳ diệu",
+                "example": "A! Mẹ đã về rồi!"
               },
               {
-                "word": "con gà",
-                "icon": "🐔",
-                "meaning": "Gà trống gáy có âm a",
-                "example": "Gà gáy vang báo trời sáng."
+                "word": "A ha!",
+                "icon": "😄",
+                "meaning": "Tiếng cười vui sướng khi khám phá ra điều hay",
+                "example": "A ha! Em biết rồi!"
               },
               {
-                "word": "lá đa",
-                "icon": "🍃",
-                "meaning": "Lá cây xanh mát có âm a",
-                "example": "Lá đa rụng đầu đình."
+                "word": "Chữ A in hoa",
+                "icon": "🅰️",
+                "meaning": "Chữ A in hoa cao lớn, đứng ở đầu câu",
+                "example": "Chữ A in hoa"
               },
               {
-                "word": "quả na",
-                "icon": "🍈",
-                "meaning": "Quả thơm ngọt có âm a",
-                "example": "Bà bóc quả na cho bé."
+                "word": "Chữ a viết thường",
+                "icon": "✍️",
+                "meaning": "Chữ a viết thường gồm nét cong kín và nét móc ngược",
+                "example": "Chữ a viết thường trong vở ô ly"
               }
             ],
             "readingSentences": [
-              "A! Con cá vàng đẹp quá!",
-              "Bé nhìn thấy con gà trống.",
-              "Bà có quả na chín thơm."
+              "A!",
+              "A! A!",
+              "A ha! A ha!"
             ],
-            "mnemonicTip": "Nét cong khép kín xinh xinh, thêm nét móc phải ra hình chữ a!"
+            "mnemonicTip": "Nét cong khép kín bên trái, thêm nét móc sát bên phải là ra chữ a viết thường!"
           },
           "exercises": [
             {
-              "id": "w2_l1_q1",
-              "type": "single_choice",
-              "question": "Chữ cái nào dưới đây là chữ 'a' in thường?",
-              "options": [
-                "a",
-                "o",
-                "c",
-                "e"
-              ],
-              "correct": 0,
-              "explanation": "Chữ 'a' gồm nét cong tròn khép kín và nét móc ngược bên phải."
+              "id": "w2_l1_game1",
+              "type": "game_assemble_a",
+              "title": "Trò 1: Em ghép chữ a",
+              "question": "Kéo thả các nét (nét cong kín và nét móc) để tạo thành chữ a viết thường hoàn chỉnh.",
+              "explanation": "Chữ a viết thường gồm nét cong kín ở bên trái và nét móc ngược ở bên phải."
             },
             {
-              "id": "w2_l1_q2",
-              "type": "single_choice",
-              "question": "Tiếng nào dưới đây có chứa âm 'a'?",
-              "options": [
-                "cá",
-                "bê",
-                "bò",
-                "dê"
-              ],
-              "correct": 0,
-              "explanation": "Tiếng 'cá' có chứa âm a (c - a - sắc - cá)."
+              "id": "w2_l1_game2",
+              "type": "game_catch_animals_a",
+              "title": "Trò 2: Gắp thú chữ a",
+              "question": "Gắp hết những con thú có mang chữ A, a và a viết thường.",
+              "explanation": "Bé gắp đúng các con thú có chữ A in hoa, a in thường và a viết thường."
             },
             {
-              "id": "w2_l1_q3",
-              "type": "fill_blank",
-              "question": "Điền chữ còn thiếu: con g... (🐔)",
-              "options": [
-                "a",
-                "o",
-                "u",
-                "e"
-              ],
-              "correct": 0,
-              "answerWord": "gà",
-              "explanation": "g ghép với a tạo thành tiếng gà."
-            },
-            {
-              "id": "w2_l1_q4",
+              "id": "w2_l1_game3",
               "type": "single_choice",
-              "question": "Trong từ 'quả na', âm nào lặp lại ở cả tiếng na?",
+              "title": "Trò 3: Tìm tiếng chứa a",
+              "question": "Trong 4 tiếng: bè, cô, ăn, lá - tiếng nào có chứa chữ a?",
               "options": [
-                "Âm a",
-                "Âm o",
-                "Âm e",
-                "Âm u"
+                "bè",
+                "cô",
+                "ăn",
+                "lá"
               ],
-              "correct": 0,
-              "explanation": "Tiếng 'na' có âm đầu n và âm chính là a."
+              "correct": 3,
+              "explanation": "Tiếng 'lá' có chứa chữ a (l - a - sắc - lá)."
             }
           ]
         },
@@ -636,11 +629,12 @@ window.GRADE_1_DATA = {
           "lessonNumber": 2,
           "title": "Bài 2: B b, Dấu huyền ( \\ )",
           "focus": "Phụ âm B, b và Thanh huyền ( \\ )",
+          "isLetterBLesson": true,
           "theory": {
             "letterIntro": {
               "letter": "B b &  \\ ",
               "tone": "Thanh huyền",
-              "description": "Chữ B mím môi bật nhẹ: 'bờ'. Dấu huyền là nét xiên từ trái qua phải, giọng trầm ấm: 'bà, cà'.",
+              "description": "Chữ B mím môi bật nhẹ: 'bờ'. Dấu huyền là nét xiên từ trái qua phải, giọng trầm ấm: 'bà, à'.",
               "visualIcon": "👵"
             },
             "spellingTable": [
@@ -648,72 +642,89 @@ window.GRADE_1_DATA = {
                 "base": "b - a",
                 "tone": "Không dấu",
                 "result": "ba",
-                "example": "ba yêu, số ba"
+                "example": "người ba, số ba"
               },
               {
                 "base": "b - a - huyền",
                 "tone": "Thanh huyền ( \\ )",
                 "result": "bà",
-                "example": "bà ngoại, bà nội"
+                "example": "người bà hiền từ"
               },
               {
-                "base": "c - a - huyền",
+                "base": "a - huyền",
                 "tone": "Thanh huyền ( \\ )",
-                "result": "cà",
-                "example": "quả cà bát"
+                "result": "à",
+                "example": "tiếng thưa gửi ngoan ngoãn: dạ... à"
+              },
+              {
+                "base": "ba - ba",
+                "tone": "Từ ghép",
+                "result": "ba ba",
+                "example": "con ba ba"
               }
             ],
             "vocabulary": [
               {
-                "word": "người bà",
+                "word": "ba",
+                "icon": "👨",
+                "meaning": "Người cha thân yêu, hoặc chữ số 3",
+                "example": "Bé yêu thương ba."
+              },
+              {
+                "word": "bà",
                 "icon": "👵",
                 "meaning": "Bà hiền từ yêu thương bé",
-                "example": "Bà kể chuyện cổ tích cho bé nghe."
+                "example": "Bà chăm sóc cho bé."
               },
               {
-                "word": "người ba",
-                "icon": "👨",
-                "meaning": "Người cha thân yêu của bé",
-                "example": "Ba dắt tay bé đến trường."
-              },
-              {
-                "word": "con ba ba",
+                "word": "ba ba",
                 "icon": "🐢",
-                "meaning": "Loài vật mai mềm sống dưới ao hồ",
-                "example": "Bé nhìn thấy con ba ba bơi."
+                "meaning": "Loài vật mai mềm quen thuộc",
+                "example": "Bé ngắm con ba ba bơi."
               },
               {
-                "word": "bàn học",
-                "icon": "🪑",
-                "meaning": "Nơi bé ngồi học bài ngay ngắn",
-                "example": "Bé ngồi học bài chăm chỉ bên bàn."
+                "word": "Chữ b viết thường",
+                "icon": "✍️",
+                "meaning": "Cao 5 ô ly, gồm nét khuyết trên và nét thắt trên nối liền",
+                "example": "Chữ b viết thường trong vở ô ly"
               }
             ],
+            "readingTitle": "Bé đọc tiếng, từ",
             "readingSentences": [
-              "Ba bế bé.",
-              "Bà có ba ba.",
-              "Nhà bà có cây cà tím."
+              "Ba.",
+              "Bà.",
+              "Bà ba.",
+              "Ba ba."
             ],
-            "mnemonicTip": "Nét sổ đứng thẳng hiên ngang, thêm bụng tròn dưới hóa thành chữ b!"
+            "mnemonicTip": "Nét khuyết vươn cao 5 ly thẳng tắp, thêm nét thắt lưng dòng 3 thành chữ b!"
           },
           "exercises": [
             {
-              "id": "w2_l2_q1",
-              "type": "single_choice",
-              "question": "Tiếng 'bà' được ghép bởi âm đầu b, âm chính a và dấu gì?",
-              "options": [
-                "Dấu huyền (\\)",
-                "Dấu sắc (/)",
-                "Dấu hỏi (?)",
-                "Dấu ngã (~)"
-              ],
-              "correct": 0,
-              "explanation": "b - a - huyền tạo thành tiếng 'bà'."
+              "id": "w2_l2_game1",
+              "type": "game_puzzle_b",
+              "title": "Trò 1: Bé ghép chữ b",
+              "question": "Kéo thả các nét (nét khuyết trên và nét thắt trên) để tạo thành chữ b viết thường hoàn chỉnh.",
+              "explanation": "Chữ b viết thường gồm nét khuyết trên (cao 5 ô ly) và nét thắt trên (cao 2 ô ly) nối liền nhau."
             },
             {
-              "id": "w2_l2_q2",
+              "id": "w2_l2_game2",
+              "type": "game_spot_b",
+              "title": "Trò 2: Ai tinh mắt!",
+              "question": "Tìm chữ B (in hoa), b (in thường) và b (viết thường) đang nấp trong bức tranh thiên nhiên.",
+              "explanation": "Bé đã tìm đúng chữ B in hoa trên tán cây, chữ b in thường bên suối và chữ b viết thường cạnh bàn ăn."
+            },
+            {
+              "id": "w2_l2_game3",
+              "type": "game_color_strawberries",
+              "title": "Trò 3: Tô màu quả dâu",
+              "question": "Tìm và tô màu vào các quả dâu chứa tiếng có âm b hoặc dấu huyền (ba, lá, a, à, bò).",
+              "explanation": "Các tiếng chứa âm b hoặc dấu huyền là: ba (có âm b), à (có dấu huyền), bò (có âm b và dấu huyền)."
+            },
+            {
+              "id": "w2_l2_game4",
               "type": "single_choice",
-              "question": "Từ nào dưới đây có chứa chữ 'b'?",
+              "title": "Trò 4: Tìm từ chứa b",
+              "question": "Từ nào dưới đây có chứa chữ b?",
               "options": [
                 "ba ba",
                 "con cá",
@@ -721,12 +732,13 @@ window.GRADE_1_DATA = {
                 "lá đa"
               ],
               "correct": 0,
-              "explanation": "'ba ba' có chứa chữ cái b."
+              "explanation": "Từ 'ba ba' có chứa chữ b (gồm 2 âm b ghép với âm a)."
             },
             {
-              "id": "w2_l2_q3",
+              "id": "w2_l2_game5",
               "type": "fill_blank",
-              "question": "Điền âm còn thiếu: ...à bế bé (👵)",
+              "title": "Trò 5: Điền âm còn thiếu",
+              "question": "Điền chữ còn thiếu để tạo thành tiếng: ...à (người bà hiền từ 👵)",
               "options": [
                 "B",
                 "C",
@@ -734,24 +746,7 @@ window.GRADE_1_DATA = {
                 "G"
               ],
               "correct": 0,
-              "answerWord": "Bà",
-              "explanation": "B ghép với a và thanh huyền thành Bà."
-            },
-            {
-              "id": "w2_l2_q4",
-              "type": "sentence_order",
-              "question": "Sắp xếp từ thành câu đúng:",
-              "scrambled": [
-                "ba ba.",
-                "có",
-                "Bà"
-              ],
-              "correctOrder": [
-                "Bà",
-                "có",
-                "ba ba."
-              ],
-              "explanation": "Câu hoàn chỉnh: 'Bà có ba ba.'"
+              "explanation": "B ghép với a và thanh huyền tạo thành tiếng 'Bà'."
             }
           ]
         },
@@ -765,7 +760,7 @@ window.GRADE_1_DATA = {
             "letterIntro": {
               "letter": "C c &  / ",
               "tone": "Thanh sắc",
-              "description": "Chữ C phát âm là 'cờ'. Dấu sắc là nét xiên từ dưới lên trên, giọng vút cao: 'cá, lá'.",
+              "description": "Chữ C phát âm là 'cờ'. Dấu sắc là nét xiên từ dưới lên trên, giọng vút cao: 'cá, bá'.",
               "visualIcon": "🐟"
             },
             "spellingTable": [
@@ -773,53 +768,55 @@ window.GRADE_1_DATA = {
                 "base": "c - a",
                 "tone": "Không dấu",
                 "result": "ca",
-                "example": "cái ca, ca hát"
+                "example": "cái ca, ca ba"
               },
               {
                 "base": "c - a - sắc",
                 "tone": "Thanh sắc ( / )",
                 "result": "cá",
-                "example": "con cá vàng"
+                "example": "con cá, a! cá"
+              },
+              {
+                "base": "c - a - huyền",
+                "tone": "Thanh huyền ( \\ )",
+                "result": "cà",
+                "example": "quả cà, a! cà"
               },
               {
                 "base": "b - a - sắc",
                 "tone": "Thanh sắc ( / )",
                 "result": "bá",
-                "example": "bác bá"
+                "example": "bà bá, bác bá"
               }
             ],
             "vocabulary": [
               {
+                "word": "cái ca",
+                "icon": "🥤",
+                "meaning": "Chiếc ca dùng để đựng nước uống",
+                "example": "Bé có cái ca."
+              },
+              {
                 "word": "con cá",
                 "icon": "🐟",
                 "meaning": "Loài vật bơi dưới nước có vây",
-                "example": "Con cá bơi lội tung tăng trong bể."
-              },
-              {
-                "word": "cái ca",
-                "icon": "🥤",
-                "meaning": "Chiếc cốc dùng đựng nước uống",
-                "example": "Bé uống nước bằng chiếc ca sạch."
+                "example": "A! Cá."
               },
               {
                 "word": "quả cà",
-                "icon": "🍆",
-                "meaning": "Quả cà tím nấu canh ngon",
-                "example": "Mẹ mua cà về nấu canh."
-              },
-              {
-                "word": "chiếc lá",
-                "icon": "🍃",
-                "meaning": "Lá cây màu xanh đung đưa trong gió",
-                "example": "Chiếc lá rơi trên thảm cỏ."
+                "icon": "🍅",
+                "meaning": "Quả cà chua, quả cà tròn xinh",
+                "example": "A! Cà."
               }
             ],
             "readingSentences": [
-              "Bé có ca.",
-              "Ba có cá to.",
-              "Bà và ba bắt cá."
+              "A! Cá.",
+              "A! Cà.",
+              "Ca ba.",
+              "Bà bá ca.",
+              "Ba, bà, cá, cà."
             ],
-            "mnemonicTip": "Cong hở bên phải xinh ghê, đó là chữ C bé nhớ mang về!"
+            "mnemonicTip": "Nét cong hở phải xinh ghê, cao hai ô ly bé nhớ mang về!"
           },
           "exercises": [
             {
@@ -838,7 +835,7 @@ window.GRADE_1_DATA = {
             {
               "id": "w2_l3_q2",
               "type": "single_choice",
-              "question": "Từ nào dưới đây mang **dấu sắc ( / )**?",
+              "question": "Tiếng nào dưới đây mang **dấu sắc ( / )**?",
               "options": [
                 "cá",
                 "bà",
@@ -846,7 +843,7 @@ window.GRADE_1_DATA = {
                 "cà"
               ],
               "correct": 0,
-              "explanation": "Từ 'cá' có dấu sắc đặt trên đầu chữ a: c - a - sắc - cá."
+              "explanation": "Tiếng 'cá' có dấu sắc đặt trên đầu chữ a: c - a - sắc - cá."
             },
             {
               "id": "w2_l3_q3",
@@ -867,16 +864,16 @@ window.GRADE_1_DATA = {
               "type": "sentence_order",
               "question": "Sắp xếp lại câu đúng:",
               "scrambled": [
-                "cá to.",
-                "có",
-                "Ba"
+                "ca.",
+                "bá",
+                "Bà"
               ],
               "correctOrder": [
-                "Ba",
-                "có",
-                "cá to."
+                "Bà",
+                "bá",
+                "ca."
               ],
-              "explanation": "Câu hoàn chỉnh: 'Ba có cá to.'"
+              "explanation": "Câu hoàn chỉnh: 'Bà bá ca.'"
             }
           ]
         },
@@ -885,78 +882,85 @@ window.GRADE_1_DATA = {
           "week": 2,
           "lessonNumber": 4,
           "title": "Bài 4: E e, Ê ê",
-          "focus": "Nguyên âm E e và Ê ê",
+          "focus": "Nguyên âm E e và Ê ê (cùng âm a, b, c, dấu huyền, dấu sắc)",
           "theory": {
             "letterIntro": {
               "letter": "E e - Ê ê",
               "tone": "Nguyên âm E và Ê",
-              "description": "Chữ e mở vừa miệng phát âm 'e'. Chữ ê hẹp miệng hơn một chút và đội chiếc nón lá xinh xắn: 'ê'.",
+              "description": "Chữ e cấu tạo gồm một nét xiên phải và nét cong hở phải, cao 2 ô ly. Chữ ê cấu tạo gồm thân chữ e và phía trên có một dấu mũ nhỏ hình giống mái nhà, nét ngay ngắn, chỉn chu.",
               "visualIcon": "🐮"
             },
             "spellingTable": [
               {
-                "base": "b - e",
-                "tone": "Không dấu",
-                "result": "be",
-                "example": "tiếng dê kêu be be"
+                "base": "b - e - huyền",
+                "tone": "Thanh huyền ( \\ )",
+                "result": "bè",
+                "example": "bè cá, bè gỗ"
+              },
+              {
+                "base": "b - ê - sắc",
+                "tone": "Thanh sắc ( / )",
+                "result": "bế",
+                "example": "bà bế bé, ba bế bé"
               },
               {
                 "base": "b - e - sắc",
-                "tone": "Thanh sắc",
+                "tone": "Thanh sắc ( / )",
                 "result": "bé",
-                "example": "em bé nhỏ"
+                "example": "em bé, cá bé"
               },
               {
                 "base": "b - ê",
                 "tone": "Không dấu",
                 "result": "bê",
-                "example": "con bê, bế bé"
-              },
-              {
-                "base": "b - ê - sắc",
-                "tone": "Thanh sắc",
-                "result": "bế",
-                "example": "mẹ bế em"
+                "example": "chú bê, con bê"
               }
             ],
             "vocabulary": [
               {
-                "word": "em bé",
-                "icon": "👶",
-                "meaning": "Em nhỏ đáng yêu trong gia đình",
-                "example": "Em bé nở nụ cười rạng rỡ."
+                "word": "e viết thường",
+                "icon": "✍️",
+                "meaning": "Cao 2 ô ly, gồm nét xiên phải và nét cong hở phải",
+                "example": "Chữ e viết thường trong vở ô ly"
               },
               {
-                "word": "con bê",
-                "icon": "🐮",
-                "meaning": "Con của con bò, còn non",
-                "example": "Chú bê con chạy theo mẹ trên bãi cỏ."
+                "word": "ê viết thường",
+                "icon": "✍️",
+                "meaning": "Cao 2 ô ly, thân chữ e và phía trên có dấu mũ mái nhà",
+                "example": "Chữ ê viết thường trong vở ô ly"
               },
               {
-                "word": "bế em",
-                "icon": "🫂",
-                "meaning": "Đỡ và bồng em bé trên tay",
-                "example": "Mẹ bế bé dạo chơi trong vườn."
+                "word": "bề bề",
+                "icon": "🦐",
+                "meaning": "Loài tôm tít biển vỏ cứng thơm ngon",
+                "example": "Bé có bề bề."
               },
               {
-                "word": "quả lê",
-                "icon": "🍐",
-                "meaning": "Quả lê mọng nước ngọt thanh",
-                "example": "Bà gọt quả lê cho bé ăn."
+                "word": "cá bé",
+                "icon": "🐠",
+                "meaning": "Con cá nhỏ xíu bơi lội",
+                "example": "Cá be bé."
+              },
+              {
+                "word": "bè cá",
+                "icon": "🐟",
+                "meaning": "Bè nổi kết bằng gỗ để nuôi cá",
+                "example": "Nhà bà có bè cá."
               }
             ],
+            "readingTitle": "Bé đọc câu",
             "readingSentences": [
               "Ba bế bé.",
-              "Bé có con bê.",
-              "Mẹ bế em bé đi dạo mát."
+              "Cá be bé.",
+              "Bé bề bề."
             ],
-            "mnemonicTip": "Chữ e có nét thắt lưng, thêm chiếc nón nhọn hóa thành chữ ê!"
+            "mnemonicTip": "Chữ e: một nét xiên phải nối liền nét cong hở phải cao 2 ô ly. Đội thêm chiếc mũ mái nhà xinh xắn phía trên là ta được chữ ê!"
           },
           "exercises": [
             {
               "id": "w2_l4_q1",
               "type": "single_choice",
-              "question": "Chữ cái nào có thêm dấu nón (mũ) ở trên đầu?",
+              "question": "Chữ cái nào cấu tạo gồm thân chữ e và dấu mũ hình mái nhà ở trên đầu?",
               "options": [
                 "Chữ ê",
                 "Chữ e",
@@ -964,7 +968,7 @@ window.GRADE_1_DATA = {
                 "Chữ c"
               ],
               "correct": 0,
-              "explanation": "Chữ ê có dấu mũ nhọn ở trên đầu phân biệt với chữ e."
+              "explanation": "Chữ ê có dấu mũ hình mái nhà đặt cân đối ngay ngắn trên đầu chữ e."
             },
             {
               "id": "w2_l4_q2",
@@ -981,35 +985,32 @@ window.GRADE_1_DATA = {
             },
             {
               "id": "w2_l4_q3",
-              "type": "fill_blank",
-              "question": "Điền chữ e hoặc ê: em b... (👶)",
+              "type": "single_choice",
+              "question": "Tiếng nào dưới đây có chứa âm 'e'?",
               "options": [
-                "é",
-                "ê",
-                "a",
-                "o"
+                "bè",
+                "bê",
+                "ba",
+                "ca"
               ],
               "correct": 0,
-              "answerWord": "bé",
-              "explanation": "b + e + sắc = bé (em bé)."
+              "explanation": "Tiếng 'bè' gồm b ghép với e và thanh huyền: b - e - huyền - bè."
             },
             {
               "id": "w2_l4_q4",
               "type": "sentence_order",
-              "question": "Sắp xếp lại câu đúng:",
+              "question": "Sắp xếp lại các từ thành câu đúng:",
               "scrambled": [
-                "bế bé.",
+                "bé.",
                 "Ba",
-                "mẹ",
-                "và"
+                "bế"
               ],
               "correctOrder": [
                 "Ba",
-                "và",
-                "mẹ",
-                "bế bé."
+                "bế",
+                "bé."
               ],
-              "explanation": "Câu hoàn chỉnh: 'Ba và mẹ bế bé.'"
+              "explanation": "Câu hoàn chỉnh: 'Ba bế bé.'"
             }
           ]
         },
@@ -1054,35 +1055,34 @@ window.GRADE_1_DATA = {
             ],
             "vocabulary": [
               {
-                "word": "con ba ba",
-                "icon": "🐢",
-                "meaning": "Loài bò sát mai mềm",
-                "example": "Ba ba bơi lội dưới ao."
+                "word": "ba bà",
+                "icon": "👵",
+                "meaning": "Người bà kính yêu của bé",
+                "example": "Bé rất yêu ba bà."
               },
               {
-                "word": "cá bống",
+                "word": "bè cá",
+                "icon": "⛵",
+                "meaning": "Chiếc bè nuôi cá trên sông",
+                "example": "Bè cá nổi trên sông nước."
+              },
+              {
+                "word": "bế bé",
+                "icon": "🤱",
+                "meaning": "Mẹ âu yếm bế em bé",
+                "example": "Bà âu yếm bế bé."
+              },
+              {
+                "word": "cá bé",
                 "icon": "🐟",
-                "meaning": "Cá nước ngọt nhỏ bé",
-                "example": "Mẹ kho cá thơm ngon."
-              },
-              {
-                "word": "con bê",
-                "icon": "🐮",
-                "meaning": "Bò con xinh xắn",
-                "example": "Bê con đi theo mẹ."
-              },
-              {
-                "word": "em bé",
-                "icon": "👶",
-                "meaning": "Trẻ nhỏ đáng yêu",
-                "example": "Em bé bi bô tập nói."
+                "meaning": "Chú cá nhỏ bơi tung tăng",
+                "example": "Dưới ao có đàn cá bé."
               }
             ],
             "readingSentences": [
+              "Bè be bé.",
               "Bà bế bé.",
-              "Ba có cá to.",
-              "Bé có con bê.",
-              "Cả nhà cùng vui vẻ, yêu thương nhau."
+              "Bé bê ca."
             ],
             "mnemonicTip": "A, B, C với E, Ê - Thêm huyền, thêm sắc, đọc mê say lòng!"
           },
@@ -2992,6 +2992,10 @@ window.GRADE_1_DATA = {
     }
   ]
 };
+
+if (typeof window !== 'undefined') {
+  window.GRADE_1_DATA = grade1Data;
+}
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = grade1Data;

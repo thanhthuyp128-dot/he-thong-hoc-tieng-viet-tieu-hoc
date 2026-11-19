@@ -296,38 +296,66 @@ function getStrokeSVGDefinition(key) {
       </svg>`;
     }
 
-    // 11. Nét khuyết trên: cao đúng 5 ô ly (200px), rộng 1.5 ô ly (60px), thân thẳng đứng
-    // Grid: 3 cols x 6 rows. Baseline at row 5 (y=200).
-    // Dòng 6 (y=0, 5 ô ly trên baseline), Dòng 5 (y=40), Dòng 4 (y=80), Dòng 3 (y=120), Dòng 2 (y=160), Dòng 1 (y=200)
+    // 11. Nét khuyết trên (chuẩn 100% hình mẫu SGK: cao 5 ô ly, rộng 1.5 ô ly, thân thẳng tắp 90 độ, vòm tròn đều)
     case "khuyet_tren": {
-      const { w, h, grid } = makeGrid(3, 6, 5, { subCols: true, subRows: true });
-      const xStart = 40, yStart = 160; // Dòng 2
-      const xStem = 70, yBase = 200;  // Vertical stem on x=70 down to baseline y=200
-      // Slants up-right from (40, 160), crosses vertical stem line x=70 at y=120 (Dòng 3 - 2 ô ly trên baseline!)
-      // Curves around top at y=0, then drops straight vertically down x=70 to y=200!
-      const pathD = `M ${xStart} ${yStart} L 60 40 C 66 12, 54 0, 44 0 C 34 0, 32 16, 32 36 L ${xStem} 0 ? M ${xStart} ${yStart} L 62 44 C 70 20, 58 0, 48 0 C 38 0, 36 16, 44 36 L ${xStem} ${yBase}`;
-      // Clean path:
-      // Slant: (40, 160) -> (60, 60) -> curves over top at (50, 0) -> joins vertical line at x=55
-      const cleanD = `M 40 160 L 62 40 C 68 15, 56 0, 46 0 C 38 0, 35 15, 42 36 L 42 200`;
-      // Let's ensure the vertical line is on a grid line: vertical line at x=50 or x=60
-      // Let's place vertical stem at x=60!
-      // Start at x=30, y=160 (Dòng 2).
-      // Slants up, crosses (60, 120 - Dòng 3) -> exactly at grid intersection!
-      // At top: curves roundly over y=0 with loop at (75, 0), returns to stem x=60.
-      const pathKNTT = `M 30 160 L 60 120 L 78 30 C 84 10, 72 0, 64 0 C 56 0, 54 10, 54 30 L 54 200`;
-      return `<svg viewBox="0 0 ${w} ${h}" class="w-full h-auto max-h-[190px] mx-auto rounded-2xl shadow-sm border border-blue-200">
-        ${grid}
-        <path d="${pathKNTT}" ${red}/>
-        ${dot(30, 160)}
-        ${dot(54, 200)}
-        ${dot(60, 120)}
-        ${dot(69, 5)}
-        <!-- Mũi tên xiên lên rồi thẳng xuống -->
-        <line x1="48" y1="130" x2="56" y2="90" stroke="#334155" stroke-width="1.5"/>
-        <polygon points="58,84 52,90 60,92" fill="#334155"/>
-        ${vDim(w - 14, 0, 200, '5')}
-        ${hDim(h - 14, 30, 80, '1.5')}
+      const pathD = "M 70 170 L 130 50 C 130 24, 122 10, 110 10 C 98 10, 90 24, 90 50 L 90 210";
+      return `<svg viewBox="0 0 220 250" class="w-full h-auto max-h-[190px] mx-auto rounded-2xl shadow-sm border border-blue-200">
+        <!-- Nền trắng -->
+        <rect x="10" y="10" width="160" height="200" fill="#ffffff"/>
+        
+        <!-- Các đường kẻ dọc chính (cột 0, 1, 2, 3, 4 - mỗi ô rộng 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="10" y2="210" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="50" y1="10" x2="50" y2="210" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="90" y1="10" x2="90" y2="210" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="130" y1="10" x2="130" y2="210" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="170" y1="10" x2="170" y2="210" stroke="#00a0e9" stroke-width="2"/>
+        
+        <!-- Các đường kẻ ngang chính (dòng 6, 5, 4, 3, 2, 1 - mỗi ô cao 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="170" y2="10" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="10" y1="50" x2="170" y2="50" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="90" x2="170" y2="90" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="130" x2="170" y2="130" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="170" x2="170" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="210" x2="170" y2="210" stroke="#00a0e9" stroke-width="2"/>
+
+        <!-- Nét khuyết trên màu đỏ tươi rực rỡ chuẩn SGK (thân thẳng đứng tắp 90 độ, vòm tròn đều) -->
+        <path d="${pathD}" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+        <!-- 7 Chấm đen định vị chuẩn SGK -->
+        <circle cx="70" cy="170" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="130" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="90" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="50" r="5" fill="#0f172a"/>
+        <circle cx="130" cy="50" r="5" fill="#0f172a"/>
+        <circle cx="110" cy="10" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="210" r="5" fill="#0f172a"/>
+
+        <!-- Mũi tên 1: Xiên lên hướng từ điểm đặt bút đến giao điểm -->
+        <line x1="62" y1="162" x2="77" y2="136" stroke="#0f172a" stroke-width="1.6"/>
+        <polygon points="80,131 72,137 78,141" fill="#0f172a"/>
+
+        <!-- Mũi tên 2: Vòm cong trên đỉnh uốn xuống thân nét -->
+        <path d="M 122 24 C 122 16, 102 16, 100 36" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+        <polygon points="100,42 96,34 104,34" fill="#0f172a"/>
+
+        <!-- Mũi tên 3: Thẳng đứng hướng xuống dọc theo thân nét -->
+        <line x1="98" y1="150" x2="98" y2="182" stroke="#0f172a" stroke-width="1.6"/>
+        <polygon points="98,188 94,180 102,180" fill="#0f172a"/>
+
+        <!-- Thước đo chiều cao 5 ô ly bên phải -->
+        <line x1="185" y1="10" x2="185" y2="210" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="185,6 182,13 188,13" fill="#0f172a"/>
+        <polygon points="185,214 182,207 188,207" fill="#0f172a"/>
+        <text x="198" y="105" font-family="'Quicksand', sans-serif" font-size="14" font-weight="900" fill="#0f172a">5</text>
+        <text x="198" y="122" font-family="'Quicksand', sans-serif" font-size="12" font-weight="900" fill="#0f172a">ô ly</text>
+
+        <!-- Thước đo độ rộng 1.5 ô ly bên dưới -->
+        <line x1="70" y1="222" x2="130" y2="222" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="66,222 73,219 73,225" fill="#0f172a"/>
+        <polygon points="134,222 127,219 127,225" fill="#0f172a"/>
+        <text x="100" y="238" font-family="'Quicksand', sans-serif" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">1.5 ô ly</text>
       </svg>`;
+    }
     }
 
     // 12. Nét khuyết dưới: cao 5 ô ly (2 ô trên, 3 ô dưới baseline)
@@ -394,23 +422,67 @@ function getStrokeSVGDefinition(key) {
       </svg>`;
     }
 
-    // 14. Nét thắt giữa (chữ k): rộng 2.5 ô ly, cao 2 ô ly
+    // 14. Nét thắt giữa (chữ k - chuẩn 100% hình mẫu SGK: cao 2 ô ly, rộng 2.5 ô ly, thắt tròn ở dòng kẻ 2, không cong méo)
     case "that_giua": {
-      const { w, h, grid } = makeGrid(4, 3, 2, { subCols: true, subRows: true });
-      // Starts at Dòng 2 (y=40), x=15.
-      // Arches up to touch Dòng 3 (y=0) at x=35.
-      // Descends to center x=55, makes a round knot at y=40 (Dòng 2).
-      // Descends from knot to touch baseline y=80 at x=85.
-      // Hooks up to Dòng 2 (y=40) at x=105.
-      const pathD = `M 15 40 C 15 15, 25 0, 38 0 C 50 0, 56 22, 58 36 C 62 42, 66 42, 66 36 C 66 30, 56 28, 54 36 C 52 44, 58 56, 68 68 C 76 78, 84 80, 88 80 C 98 80, 105 65, 105 40`;
-      return `<svg viewBox="0 0 ${w} ${h}" class="w-full h-auto max-h-[170px] mx-auto rounded-2xl shadow-sm border border-blue-200">
-        ${grid}
-        <path d="${pathD}" ${red}/>
-        ${dot(15, 40)}
-        ${dot(105, 40)}
-        ${dot(60, 36)}
-        ${vDim(w - 14, 0, 80, '2')}
-        ${hDim(h - 14, 15, 105, '2.5')}
+      const pathD = "M 10 130 C 18 114, 32 90, 52 90 C 66 90, 72 104, 68 118 C 65 125, 58 135, 48 135 C 39 135, 39 125, 48 125 C 58 125, 65 130, 68 138 C 71 146, 70 156, 74 164 C 77 170, 81 170, 86 170 C 96 170, 106 156, 110 130";
+      return `<svg viewBox="0 0 200 200" class="w-full h-auto max-h-[170px] mx-auto rounded-2xl shadow-sm border border-blue-200">
+        <!-- Nền trắng -->
+        <rect x="10" y="10" width="160" height="160" fill="#ffffff"/>
+        
+        <!-- Các đường kẻ dọc chính (cột 0, 1, 2, 3, 4 - mỗi ô rộng 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="10" y2="170" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="50" y1="10" x2="50" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="90" y1="10" x2="90" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="130" y1="10" x2="130" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="170" y1="10" x2="170" y2="170" stroke="#00a0e9" stroke-width="2"/>
+        
+        <!-- Các đường kẻ ngang chính (dòng 5, 4, 3, 2, 1 - mỗi ô cao 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="170" y2="10" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="10" y1="50" x2="170" y2="50" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="90" x2="170" y2="90" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="130" x2="170" y2="130" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="170" x2="170" y2="170" stroke="#00a0e9" stroke-width="2"/>
+
+        <!-- Đường kẻ dọc phụ nét đứt tại 2.5 ô ly (x=110) -->
+        <line x1="110" y1="10" x2="110" y2="170" stroke="#00a0e9" stroke-width="1.4" stroke-dasharray="3,3"/>
+
+        <!-- Đường kẻ ngang phụ nét đứt nối 2 điểm đặt và dừng bút trên dòng 2 (y=130) -->
+        <line x1="10" y1="130" x2="110" y2="130" stroke="#00a0e9" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+        <!-- Nét thắt giữa màu đỏ tươi rực rỡ chuẩn SGK -->
+        <path d="${pathD}" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+        <!-- 2 Chấm đen định vị chuẩn SGK: Điểm đặt bút (10, 130) và Điểm dừng bút (110, 130) -->
+        <circle cx="10" cy="130" r="5" fill="#0f172a"/>
+        <circle cx="110" cy="130" r="5" fill="#0f172a"/>
+
+        <!-- Mũi tên 1: Uốn lượn hướng lên dòng 3 -->
+        <path d="M 18 126 C 24 114, 34 104, 44 98" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+        <polygon points="46,96 38,98 42,103" fill="#0f172a"/>
+
+        <!-- Mũi tên 2: Vòng xoắn thắt giữa -->
+        <path d="M 56 142 C 48 144, 40 140, 38 134" fill="none" stroke="#0f172a" stroke-width="1.4"/>
+        <polygon points="36,128 42,133 36,136" fill="#0f172a"/>
+
+        <!-- Mũi tên 3: Uốn lượn xuống đáy móc ngược -->
+        <path d="M 68 132 C 71 134, 73 138, 73 144" fill="none" stroke="#0f172a" stroke-width="1.4"/>
+        <polygon points="73,148 70,141 76,141" fill="#0f172a"/>
+
+        <!-- Mũi tên 4: Móc ngược lên điểm dừng bút -->
+        <path d="M 86 168 C 94 166, 102 156, 105 146" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+        <polygon points="107,142 101,147 107,149" fill="#0f172a"/>
+
+        <!-- Thước đo chiều cao 2 ô ly bên phải -->
+        <line x1="178" y1="90" x2="178" y2="170" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="178,86 175,93 181,93" fill="#0f172a"/>
+        <polygon points="178,174 175,167 181,167" fill="#0f172a"/>
+        <text x="189" y="135" font-family="'Quicksand', sans-serif" font-size="14" font-weight="900" fill="#0f172a">2</text>
+
+        <!-- Thước đo độ rộng 2.5 ô ly bên dưới -->
+        <line x1="10" y1="180" x2="110" y2="180" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="6,180 13,177 13,183" fill="#0f172a"/>
+        <polygon points="114,180 107,177 107,183" fill="#0f172a"/>
+        <text x="60" y="196" font-family="'Quicksand', sans-serif" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">2.5</text>
       </svg>`;
     }
   }

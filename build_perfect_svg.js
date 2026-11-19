@@ -270,30 +270,64 @@ function getStrokeSVG(key) {
       </svg>`;
     }
 
-    // 11. Nét khuyết trên (vươn cao 5 ô ly, thân thẳng tắp, vòm trên tròn xinh)
+    // 11. Nét khuyết trên (chuẩn 100% hình mẫu SGK: cao 5 ô ly, rộng 1.5 ô ly, thân thẳng tắp 90 độ, vòm tròn đều)
     case "khuyet_tren": {
-      const { w, h, grid } = makeGrid(3, 6);
-      return `<svg viewBox="0 0 ${w} ${h}" class="w-full h-auto max-h-[190px] mx-auto rounded-2xl shadow-sm border border-blue-300">
-        ${grid}
-        <!--
-          Lưới 6 hàng: Dòng cơ sở (dòng kẻ 1) tại y=180.
-          Độ cao 5 ô ly = 5 * 36 = 180px -> Đỉnh nét chạm y=18!
-          Điểm đặt bút tại x=36, y=144 (đường kẻ 2).
-          Đưa xiên lên qua y=72, x=72.
-          Uốn vòm tròn mượt mà tại đỉnh (chạm y=18 tại x=54, uốn sang trái chạm x=36).
-          Kéo thẳng tắp theo trục đứng x=36 từ y=36 xuống dòng cơ sở y=180!
-        -->
-        <path d="M 36 144 L 66 54 C 74 30, 48 18, 36 28 L 36 180" ${redStroke}/>
-        ${dot(36, 144)}
-        ${dot(36, 180)}
-        ${dot(52, 21)}
-        <!-- Mũi tên xiên lên rồi thẳng xuống -->
-        <line x1="50" y1="110" x2="60" y2="76" stroke="#475569" stroke-width="1.5"/>
-        <polygon points="62,70 56,76 63,78" fill="#475569"/>
-        <!-- Thước đo độ cao 5 ô ly -->
-        <line x1="88" y1="18" x2="88" y2="180" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
-        ${dimText(98, 99, '5')}
-        ${dimText(54, 198, '1.5')}
+      const pathD = "M 70 170 L 130 50 C 130 24, 122 10, 110 10 C 98 10, 90 24, 90 50 L 90 210";
+      return `<svg viewBox="0 0 220 250" class="w-full h-auto max-h-[190px] mx-auto rounded-2xl shadow-sm border border-blue-200">
+        <!-- Nền trắng -->
+        <rect x="10" y="10" width="160" height="200" fill="#ffffff"/>
+        
+        <!-- Các đường kẻ dọc chính (cột 0, 1, 2, 3, 4 - mỗi ô rộng 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="10" y2="210" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="50" y1="10" x2="50" y2="210" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="90" y1="10" x2="90" y2="210" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="130" y1="10" x2="130" y2="210" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="170" y1="10" x2="170" y2="210" stroke="#00a0e9" stroke-width="2"/>
+        
+        <!-- Các đường kẻ ngang chính (dòng 6, 5, 4, 3, 2, 1 - mỗi ô cao 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="170" y2="10" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="10" y1="50" x2="170" y2="50" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="90" x2="170" y2="90" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="130" x2="170" y2="130" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="170" x2="170" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="210" x2="170" y2="210" stroke="#00a0e9" stroke-width="2"/>
+
+        <!-- Nét khuyết trên màu đỏ tươi rực rỡ chuẩn SGK (thân thẳng đứng tắp 90 độ, vòm tròn đều) -->
+        <path d="${pathD}" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+        <!-- 7 Chấm đen định vị chuẩn SGK -->
+        <circle cx="70" cy="170" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="130" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="90" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="50" r="5" fill="#0f172a"/>
+        <circle cx="130" cy="50" r="5" fill="#0f172a"/>
+        <circle cx="110" cy="10" r="5" fill="#0f172a"/>
+        <circle cx="90" cy="210" r="5" fill="#0f172a"/>
+
+        <!-- Mũi tên 1: Xiên lên hướng từ điểm đặt bút đến giao điểm -->
+        <line x1="62" y1="162" x2="77" y2="136" stroke="#0f172a" stroke-width="1.6"/>
+        <polygon points="80,131 72,137 78,141" fill="#0f172a"/>
+
+        <!-- Mũi tên 2: Vòm cong trên đỉnh uốn xuống thân nét -->
+        <path d="M 122 24 C 122 16, 102 16, 100 36" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+        <polygon points="100,42 96,34 104,34" fill="#0f172a"/>
+
+        <!-- Mũi tên 3: Thẳng đứng hướng xuống dọc theo thân nét -->
+        <line x1="98" y1="150" x2="98" y2="182" stroke="#0f172a" stroke-width="1.6"/>
+        <polygon points="98,188 94,180 102,180" fill="#0f172a"/>
+
+        <!-- Thước đo chiều cao 5 ô ly bên phải -->
+        <line x1="185" y1="10" x2="185" y2="210" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="185,6 182,13 188,13" fill="#0f172a"/>
+        <polygon points="185,214 182,207 188,207" fill="#0f172a"/>
+        <text x="198" y="105" font-family="'Quicksand', sans-serif" font-size="14" font-weight="900" fill="#0f172a">5</text>
+        <text x="198" y="122" font-family="'Quicksand', sans-serif" font-size="12" font-weight="900" fill="#0f172a">ô ly</text>
+
+        <!-- Thước đo độ rộng 1.5 ô ly bên dưới -->
+        <line x1="70" y1="222" x2="130" y2="222" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="66,222 73,219 73,225" fill="#0f172a"/>
+        <polygon points="134,222 127,219 127,225" fill="#0f172a"/>
+        <text x="100" y="238" font-family="'Quicksand', sans-serif" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">1.5 ô ly</text>
       </svg>`;
     }
 
@@ -361,26 +395,67 @@ function getStrokeSVG(key) {
       </svg>`;
     }
 
-    // 14. Nét thắt giữa (chữ k - thắt tròn xinh ở giữa, rộng 2.5 ô ly, cao 2.5 ô ly)
+    // 14. Nét thắt giữa (chữ k - chuẩn 100% hình mẫu SGK: cao 2 ô ly, rộng 2.5 ô ly, thắt tròn ở dòng kẻ 2, không cong méo)
     case "that_giua": {
-      const { w, h, grid } = makeGrid(4, 4);
-      return `<svg viewBox="0 0 ${w} ${h}" class="w-full h-auto max-h-[170px] mx-auto rounded-2xl shadow-sm border border-blue-300">
-        ${grid}
-        <!--
-          Bắt đầu tại x=24, y=72.
-          Uốn vòm cung lên chạm y=36 tại x=48.
-          Lượn xuống giữa tại x=58, y=72 tạo vòng thắt tròn nhỏ xinh.
-          Từ vòng thắt lượn xuống chạm dòng kẻ 1 (y=108) tại x=84, móc lên dừng tại x=108, y=72.
-        -->
-        <path d="M 24 72 C 24 40, 44 36, 52 46 C 60 56, 70 66, 60 74 C 52 82, 68 94, 82 108 C 96 108, 108 96, 108 72" ${redStroke}/>
-        ${dot(24, 72)}
-        ${dot(108, 72)}
-        ${dot(60, 68)}
-        <!-- Thước đo rộng 2.5 -->
-        <line x1="24" y1="120" x2="108" y2="120" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
-        ${dimText(66, 134, '2.5')}
-        <line x1="120" y1="36" x2="120" y2="108" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
-        ${dimText(128, 72, '2')}
+      const pathD = "M 10 130 C 18 114, 32 90, 52 90 C 66 90, 72 104, 68 118 C 65 125, 58 135, 48 135 C 39 135, 39 125, 48 125 C 58 125, 65 130, 68 138 C 71 146, 70 156, 74 164 C 77 170, 81 170, 86 170 C 96 170, 106 156, 110 130";
+      return `<svg viewBox="0 0 200 200" class="w-full h-auto max-h-[170px] mx-auto rounded-2xl shadow-sm border border-blue-200">
+        <!-- Nền trắng -->
+        <rect x="10" y="10" width="160" height="160" fill="#ffffff"/>
+        
+        <!-- Các đường kẻ dọc chính (cột 0, 1, 2, 3, 4 - mỗi ô rộng 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="10" y2="170" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="50" y1="10" x2="50" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="90" y1="10" x2="90" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="130" y1="10" x2="130" y2="170" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="170" y1="10" x2="170" y2="170" stroke="#00a0e9" stroke-width="2"/>
+        
+        <!-- Các đường kẻ ngang chính (dòng 5, 4, 3, 2, 1 - mỗi ô cao 40px = 1 ô ly) -->
+        <line x1="10" y1="10" x2="170" y2="10" stroke="#00a0e9" stroke-width="2"/>
+        <line x1="10" y1="50" x2="170" y2="50" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="90" x2="170" y2="90" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="130" x2="170" y2="130" stroke="#00a0e9" stroke-width="1.2"/>
+        <line x1="10" y1="170" x2="170" y2="170" stroke="#00a0e9" stroke-width="2"/>
+
+        <!-- Đường kẻ dọc phụ nét đứt tại 2.5 ô ly (x=110) -->
+        <line x1="110" y1="10" x2="110" y2="170" stroke="#00a0e9" stroke-width="1.4" stroke-dasharray="3,3"/>
+
+        <!-- Đường kẻ ngang phụ nét đứt nối 2 điểm đặt và dừng bút trên dòng 2 (y=130) -->
+        <line x1="10" y1="130" x2="110" y2="130" stroke="#00a0e9" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+        <!-- Nét thắt giữa màu đỏ tươi rực rỡ chuẩn SGK -->
+        <path d="${pathD}" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+        <!-- 2 Chấm đen định vị chuẩn SGK: Điểm đặt bút (10, 130) và Điểm dừng bút (110, 130) -->
+        <circle cx="10" cy="130" r="5" fill="#0f172a"/>
+        <circle cx="110" cy="130" r="5" fill="#0f172a"/>
+
+        <!-- Mũi tên 1: Uốn lượn hướng lên dòng 3 -->
+        <path d="M 18 126 C 24 114, 34 104, 44 98" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+        <polygon points="46,96 38,98 42,103" fill="#0f172a"/>
+
+        <!-- Mũi tên 2: Vòng xoắn thắt giữa -->
+        <path d="M 56 142 C 48 144, 40 140, 38 134" fill="none" stroke="#0f172a" stroke-width="1.4"/>
+        <polygon points="36,128 42,133 36,136" fill="#0f172a"/>
+
+        <!-- Mũi tên 3: Uốn lượn xuống đáy móc ngược -->
+        <path d="M 68 132 C 71 134, 73 138, 73 144" fill="none" stroke="#0f172a" stroke-width="1.4"/>
+        <polygon points="73,148 70,141 76,141" fill="#0f172a"/>
+
+        <!-- Mũi tên 4: Móc ngược lên điểm dừng bút -->
+        <path d="M 86 168 C 94 166, 102 156, 105 146" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+        <polygon points="107,142 101,147 107,149" fill="#0f172a"/>
+
+        <!-- Thước đo chiều cao 2 ô ly bên phải -->
+        <line x1="178" y1="90" x2="178" y2="170" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="178,86 175,93 181,93" fill="#0f172a"/>
+        <polygon points="178,174 175,167 181,167" fill="#0f172a"/>
+        <text x="189" y="135" font-family="'Quicksand', sans-serif" font-size="14" font-weight="900" fill="#0f172a">2</text>
+
+        <!-- Thước đo độ rộng 2.5 ô ly bên dưới -->
+        <line x1="10" y1="180" x2="110" y2="180" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="2.5,2.5"/>
+        <polygon points="6,180 13,177 13,183" fill="#0f172a"/>
+        <polygon points="114,180 107,177 107,183" fill="#0f172a"/>
+        <text x="60" y="196" font-family="'Quicksand', sans-serif" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">2.5</text>
       </svg>`;
     }
 

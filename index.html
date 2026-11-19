@@ -218,6 +218,104 @@
             </div>
           </div>
 
+          <!-- BỘ THẺ HÌNH MẪU GỢI Ý 3 DẤU THANH (DẤU NGÃ • DẤU HỎI • DẤU NẶNG CHUẨN SGK) -->
+          <div class="bg-white rounded-3xl p-6 border-4 border-amber-300 shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-amber-100 pb-3">
+              <div>
+                <h4 class="text-base sm:text-xl font-black text-amber-900 flex items-center gap-2">
+                  🌟 Bộ Thẻ Hình Mẫu Gợi Ý 3 Dấu Thanh Kỳ Diệu (Chuẩn SGK)
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-500 font-bold mt-0.5">
+                  Hình ảnh trực quan sinh động giúp bé phân biệt và nhớ ngay: <strong>Dấu ngã</strong>, <strong>Dấu hỏi</strong> và <strong>Dấu nặng</strong>!
+                </p>
+              </div>
+              <span class="text-xs bg-amber-100 text-amber-900 font-black px-3.5 py-1.5 rounded-full shadow-2xs">Chạm thẻ để nghe cô đọc 🔊</span>
+            </div>
+
+            <!-- Lưới 3 Thẻ Chuẩn Mẫu 100% -->
+            <div id="cuteToneCardsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- Injected by JS: Thẻ Dấu ngã (Con sóng), Thẻ Dấu hỏi (Móc câu xoay ngược), Thẻ Dấu nặng (Viên bi tròn) -->
+            </div>
+          </div>
+
+          <!-- Bảng Nhận Biết Dấu Huyền & Dấu Sắc (Chuẩn Hình Mẫu SGK) -->
+          <div class="bg-white rounded-3xl p-6 border-4 border-amber-300 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-base sm:text-lg font-black text-amber-900 flex items-center gap-2">
+                ✍️ Bảng Nhận Biết Dấu Huyền & Dấu Sắc (Chuẩn SGK)
+              </h4>
+              <span class="text-xs text-slate-400 font-bold">Chạm vào hàng để nghe đọc 🔊</span>
+            </div>
+            
+            <div class="max-w-md mx-auto border-3 border-slate-900 rounded-2xl overflow-hidden shadow-sm bg-white">
+              <!-- Hàng Dấu huyền -->
+              <div onclick="speak('Dấu huyền')" 
+                   class="grid grid-cols-2 border-b-3 border-slate-900 cursor-pointer hover:bg-amber-50 transition-colors group">
+                <div class="p-4 sm:p-5 flex items-center justify-between pr-4 bg-slate-50/70">
+                  <span class="font-black text-lg sm:text-xl text-slate-900">Dấu huyền</span>
+                  <span class="text-sm opacity-50 group-hover:opacity-100 text-amber-700 transition">🔊</span>
+                </div>
+                <div class="p-4 sm:p-5 flex items-center justify-center border-l-3 border-slate-900 bg-white">
+                  <svg width="86" height="62" viewBox="0 0 100 72" fill="none" class="group-hover:scale-110 transition-transform">
+                    <polygon points="11,28 42,9 89,55 72,63" fill="#0f172a" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Hàng Dấu sắc -->
+              <div onclick="speak('Dấu sắc')" 
+                   class="grid grid-cols-2 cursor-pointer hover:bg-amber-50 transition-colors group">
+                <div class="p-4 sm:p-5 flex items-center justify-between pr-4 bg-slate-50/70">
+                  <span class="font-black text-lg sm:text-xl text-slate-900">Dấu sắc</span>
+                  <span class="text-sm opacity-50 group-hover:opacity-100 text-amber-700 transition">🔊</span>
+                </div>
+                <div class="p-4 sm:p-5 flex items-center justify-center border-l-3 border-slate-900 bg-white">
+                  <svg width="86" height="62" viewBox="0 0 100 72" fill="none" class="group-hover:scale-110 transition-transform">
+                    <polygon points="11,55 58,9 89,28 28,63" fill="#0f172a" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 text-center text-xs text-slate-600 font-bold">
+              💡 <span class="text-amber-800 font-extrabold">Quy tắc nhận diện:</span> 
+              Dấu huyền vuốt xuôi từ trên xuống phải (giọng êm trầm: <i>bà, cà</i>). 
+              Dấu sắc vuốt xiên từ dưới lên phải (giọng cao vui tươi: <i>bé, cá</i>).
+            </div>
+          </div>
+
+        </div>
+
+        <!-- KHU VỰC ĐẶC BIỆT 3: ĐOÀN TÀU CHỮ CÁI (CHO BÀI 5: ÔN TẬP TUẦN 2) -->
+        <div id="trainReviewSection" class="hidden bg-gradient-to-b from-sky-50 via-amber-50/50 to-white rounded-3xl p-5 sm:p-7 border-4 border-amber-300 shadow-md space-y-5">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h4 class="text-lg sm:text-xl font-black text-amber-900 flex items-center gap-2">
+                🚂 Bé Đọc Chữ Cái - Đoàn Tàu Tuần 2
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">
+                Chạm <span class="text-rose-600 font-bold">🔊</span> để nghe cô đọc mẫu, chạm <span class="text-emerald-600 font-bold">🎤</span> để ghi âm bé đọc và rinh trọn <span class="text-amber-500 font-black">5 ⭐</span> nhé!
+              </p>
+            </div>
+            <div id="trainTotalStarsBadge" class="bg-amber-100 border-2 border-amber-400 px-3.5 py-1.5 rounded-2xl flex items-center gap-1.5 shadow-2xs">
+              <span class="text-amber-500 text-lg">⭐</span>
+              <span class="text-xs sm:text-sm font-black text-amber-900" id="trainStarsCountText">0/25 Sao</span>
+            </div>
+          </div>
+
+          <!-- Khu vực đường ray xe lửa và các toa tàu cuộn ngang -->
+          <div class="overflow-x-auto pb-4 pt-2 -mx-2 px-2">
+            <div class="flex items-end gap-3 min-w-[820px] pb-2" id="trainCarsContainer">
+              <!-- Rendered by JS: Đầu tàu + các toa chữ cái a, b, c, e, ê, dấu huyền, dấu sắc -->
+            </div>
+            <!-- Đường ray xe lửa -->
+            <div class="h-4 w-full min-w-[820px] rounded-full railway-track mt-1"></div>
+          </div>
+
+          <!-- Hộp thông báo trạng thái ghi âm thời gian thực -->
+          <div id="recordingFeedbackBox" class="hidden p-4 rounded-2xl border-2 text-center transition flex items-center justify-center gap-3">
+            <!-- Dynamic feedback -->
+          </div>
         </div>
 
         <!-- TẬP ĐÁNH VẦN THƯỜNG (CHO CÁC BÀI TỪ TUẦN 2 TRỞ ĐI) -->
@@ -235,7 +333,7 @@
         </div>
 
         <!-- TỪ VỰNG HÌNH ẢNH -->
-        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm">
+        <div id="vocabSection" class="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm">
           <div class="flex items-center justify-between mb-4">
             <h4 class="text-base sm:text-lg font-black text-amber-700 flex items-center gap-2">
               🖼️ Tranh Đẹp & Từ Hay
@@ -249,10 +347,10 @@
         </div>
 
         <!-- TẬP ĐỌC CÂU DỄ NHỚ -->
-        <div class="bg-emerald-50 rounded-3xl p-6 border-2 border-emerald-300 shadow-sm">
+        <div id="sentencesSection" class="bg-emerald-50 rounded-3xl p-6 border-2 border-emerald-300 shadow-sm">
           <div class="flex items-center justify-between mb-3">
-            <h4 class="text-base sm:text-lg font-black text-emerald-800 flex items-center gap-2">
-              📖 Bé Tập Đọc Câu
+            <h4 id="sentencesSectionTitle" class="text-base sm:text-lg font-black text-emerald-800 flex items-center gap-2">
+              📖 Bé đọc tiếng, từ
             </h4>
             <button onclick="readAllSentences()" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition flex items-center gap-1.5 shadow-xs">
               <span>🔊</span> Đọc hết
@@ -334,32 +432,1944 @@
           </div>
         </div>
 
-        <!-- BÀI TẬP TRẮC NGHIỆM TIÊU CHUẨN (CÁC BÀI CÒN LẠI) -->
-        <div class="bg-white rounded-3xl p-5 border-2 border-rose-200 shadow-sm flex items-center justify-between">
-          <div>
-            <h4 class="font-black text-slate-800 text-base sm:text-lg flex items-center gap-2">
-              🎯 Thử Thách Ôn Tập Kiến Thức
-            </h4>
-            <p class="text-xs text-slate-500 font-semibold">Bé bấm chọn vào đáp án đúng nhất nhé!</p>
+        <!-- BỘ 3 TRÒ CHƠI ĐỘC QUYỀN CHO TUẦN 2 BÀI 1: A a -->
+        <div id="lesson1GamesSection" class="hidden space-y-6">
+
+          <!-- Header & Stepper / Tabs chọn trò chơi -->
+          <div class="bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500 p-1 rounded-3xl shadow-md">
+            <div class="bg-white rounded-[22px] p-4 sm:p-5">
+              <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pb-3 border-b-2 border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl font-black shadow-xs">
+                    🎮
+                  </div>
+                  <div>
+                    <h3 class="text-lg sm:text-xl font-black text-slate-800 flex items-center gap-2">
+                      3 Trò Chơi Thần Kỳ Chữ A! ✨
+                    </h3>
+                    <p class="text-xs text-slate-500 font-bold">Bé hãy vượt qua 3 trò chơi thú vị để nhận trọn bộ 3 Sao Vàng nhé!</p>
+                  </div>
+                </div>
+
+                <!-- Huy hiệu 3 sao tiến độ -->
+                <div class="flex items-center gap-2 bg-amber-50 border-2 border-amber-300 px-4 py-2 rounded-2xl">
+                  <span class="text-xs font-black text-amber-900">Sao đạt được:</span>
+                  <div class="flex items-center gap-1 text-lg" id="letterAGameStars">
+                    <span id="starGame1" class="opacity-30 grayscale transition">⭐</span>
+                    <span id="starGame2" class="opacity-30 grayscale transition">⭐</span>
+                    <span id="starGame3" class="opacity-30 grayscale transition">⭐</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thanh chuyển đổi 3 trò chơi -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-3">
+                <button id="btnSubGame1" onclick="switchLetterAGame(1)" class="p-3 rounded-2xl border-2 font-black text-xs sm:text-sm transition flex items-center justify-center gap-2 bg-rose-500 text-white border-rose-600 shadow-sm btn-toy">
+                  <span>🧩 Trò 1: Em ghép chữ a</span>
+                </button>
+                <button id="btnSubGame2" onclick="switchLetterAGame(2)" class="p-3 rounded-2xl border-2 font-black text-xs sm:text-sm transition flex items-center justify-center gap-2 bg-slate-50 text-slate-700 border-slate-200 hover:bg-amber-100 btn-toy">
+                  <span>🧸 Trò 2: Gắp thú chữ a</span>
+                </button>
+                <button id="btnSubGame3" onclick="switchLetterAGame(3)" class="p-3 rounded-2xl border-2 font-black text-xs sm:text-sm transition flex items-center justify-center gap-2 bg-slate-50 text-slate-700 border-slate-200 hover:bg-emerald-100 btn-toy">
+                  <span>🍃 Trò 3: Tìm tiếng chứa a</span>
+                </button>
+              </div>
+            </div>
           </div>
-          <button onclick="resetCurrentQuiz()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl font-black transition">
-            🔄 Làm lại
-          </button>
+
+          <!-- TRÒ CHƠI 1: EM GHÉP CHỮ A -->
+          <div id="subGame1Container" class="bg-gradient-to-b from-sky-50 to-indigo-50 rounded-3xl border-4 border-sky-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 border-b-2 border-sky-200 pb-4">
+              <div>
+                <span class="bg-sky-200 text-sky-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
+                  Trò Chơi Số 1
+                </span>
+                <h4 class="text-xl font-black text-slate-800 mt-1 flex items-center gap-2">
+                  Em Ghép Chữ "a" Viết Thường ✍️
+                </h4>
+                <p class="text-xs text-slate-600 font-bold">Kéo thả hoặc chạm các nét vào đúng vị trí trên khung ô ly để tạo thành chữ a viết thường hoàn chỉnh nhé!</p>
+              </div>
+              <button onclick="resetGame1()" class="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs">
+                🔄 Ghép Lại
+              </button>
+            </div>
+
+            <!-- Bảng chơi Trò 1: Khay Trái + Ô Ly Giữa + Khay Phải -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+              
+              <!-- Nét rời 1: Nét cong kín -->
+              <div class="md:col-span-3 flex flex-col items-center">
+                <div class="text-xs font-black text-amber-800 mb-2">Nét 1: Nét Cong Kín</div>
+                <div id="cardStrokeCongKin" 
+                     draggable="true" 
+                     ondragstart="handleStrokeDragStart(event, 'cong_kin')"
+                     onclick="handleStrokeClick('cong_kin')" 
+                     class="w-full max-w-[170px] bg-white hover:bg-amber-50 border-3 border-amber-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-[11px] font-bold text-amber-600 mb-1 flex items-center justify-center gap-1">
+                    <span>🖐️ Bấm hoặc Kéo</span>
+                  </div>
+                  <div class="w-24 h-24 mx-auto flex items-center justify-center" id="visualStrokeCongKin">
+                    <!-- SVG nét cong kín -->
+                  </div>
+                  <div class="text-xs font-black text-slate-700 mt-2">Nét cong kín</div>
+                  <span id="badgeCongKin" class="inline-block mt-1 text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+              </div>
+
+              <!-- Bảng Ô Ly Lắp Ghép Trung Tâm -->
+              <div class="md:col-span-6 flex flex-col items-center">
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border-3 border-sky-300 shadow-md flex flex-col items-center w-full max-w-[340px] relative">
+                  <div class="text-xs font-black text-sky-800 mb-2 flex items-center gap-1.5">
+                    <span>📐 Bảng Ô Ly Chữ "a" Viết Thường</span>
+                    <button onclick="speak('Khung ô ly chữ a viết thường. Nét cong kín bên trái, nét móc ngược bên phải.')" class="text-slate-400 hover:text-sky-600">🔊</button>
+                  </div>
+
+                  <!-- SVG Bảng ghép ô ly 4x4 -->
+                  <div id="puzzleBoardContainer" class="relative w-[240px] h-[240px] sm:w-[260px] sm:h-[260px]">
+                    <!-- Rendered by JS -->
+                  </div>
+
+                  <div id="puzzleStatusMsg" class="mt-3 text-center text-xs font-bold text-slate-600 px-3 py-1.5 bg-slate-100 rounded-xl w-full">
+                    Bé hãy kéo hoặc chạm vào nét để bắt đầu nhé!
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nét rời 2: Nét móc ngược -->
+              <div class="md:col-span-3 flex flex-col items-center">
+                <div class="text-xs font-black text-blue-800 mb-2">Nét 2: Nét Móc Ngược</div>
+                <div id="cardStrokeMocNgoc" 
+                     draggable="true" 
+                     ondragstart="handleStrokeDragStart(event, 'moc_nguoc')"
+                     onclick="handleStrokeClick('moc_nguoc')" 
+                     class="w-full max-w-[170px] bg-white hover:bg-blue-50 border-3 border-blue-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-[11px] font-bold text-blue-600 mb-1 flex items-center justify-center gap-1">
+                    <span>🖐️ Bấm hoặc Kéo</span>
+                  </div>
+                  <div class="w-24 h-24 mx-auto flex items-center justify-center" id="visualStrokeMocNgoc">
+                    <!-- SVG nét móc ngược -->
+                  </div>
+                  <div class="text-xs font-black text-slate-700 mt-2">Nét móc ngược</div>
+                  <span id="badgeMocNgoc" class="inline-block mt-1 text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Banner Chúc mừng & Nút sang Trò 2 -->
+            <div id="game1SuccessBox" class="hidden bg-emerald-100 border-3 border-emerald-400 rounded-3xl p-5 text-center animate-pop">
+              <div class="text-4xl mb-1">🎉 🌟 ✍️</div>
+              <h5 class="text-lg sm:text-xl font-black text-emerald-900 mb-1">Hoan Hô Bé! Bé Đã Ghép Thành Công Chữ "a" Viết Thường!</h5>
+              <p class="text-xs sm:text-sm text-emerald-700 font-bold mb-4">Chữ a viết thường thật xinh đẹp với nét cong kín tròn trịa và nét móc thẳng tắp!</p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="resetGame1()" class="px-4 py-2.5 bg-white border-2 border-slate-300 text-slate-700 rounded-2xl font-black text-xs sm:text-sm">
+                  Ghép Lại 🔄
+                </button>
+                <button onclick="switchLetterAGame(2)" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-black text-xs sm:text-sm btn-toy shadow-sm">
+                  Sang Trò Chơi 2: Gắp Thú Chữ A 🎮 ➡️
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TRÒ CHƠI 2: GẮP THÚ CHỮ A -->
+          <div id="subGame2Container" class="hidden bg-gradient-to-b from-amber-50 to-orange-50 rounded-3xl border-4 border-amber-400 p-5 sm:p-7 shadow-md space-y-5">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b-2 border-amber-200 pb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 bg-amber-400 text-amber-950 rounded-2xl flex items-center justify-center text-3xl shadow-xs animate-float">
+                  🕹️
+                </div>
+                <div>
+                  <span class="bg-amber-200 text-amber-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
+                    Trò Chơi Số 2
+                  </span>
+                  <h4 class="text-xl font-black text-slate-800">Máy Gắp Thú Chữ A! 🧸</h4>
+                  <p class="text-xs text-slate-600 font-bold">Gắp hết những con thú có chữ <strong>A</strong>, <strong>a</strong> và <strong>a viết thường</strong> nhé!</p>
+                </div>
+              </div>
+
+              <!-- Bảng Thống kê & Đồng hồ -->
+              <div class="flex items-center gap-3">
+                <div class="bg-white border-2 border-amber-300 rounded-2xl px-4 py-2 text-center shadow-2xs">
+                  <div class="text-[10px] font-bold text-slate-400 uppercase">Thời gian</div>
+                  <div class="text-lg font-black text-rose-600" id="game2TimerText">00:00</div>
+                </div>
+                <div class="bg-white border-2 border-amber-300 rounded-2xl px-4 py-2 text-center shadow-2xs">
+                  <div class="text-[10px] font-bold text-slate-400 uppercase">Đã gắp được</div>
+                  <div class="text-lg font-black text-emerald-600" id="game2CaughtText">0 / 6</div>
+                </div>
+                <button onclick="startGame2()" id="btnStartGame2" class="px-5 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs sm:text-sm rounded-2xl btn-toy shadow-xs">
+                  Bắt Đầu Chơi 🎮
+                </button>
+              </div>
+            </div>
+
+            <!-- Feedback thông báo -->
+            <div id="game2Feedback" class="hidden p-3 rounded-2xl text-center font-black text-sm"></div>
+
+            <!-- Hồ Gắp Thú Bông Sinh Động (Máy Arcade) -->
+            <div class="relative bg-white/80 rounded-3xl border-3 border-dashed border-amber-300 p-5 sm:p-6 min-h-[300px] overflow-hidden" id="game2ArcadeMachine">
+              <!-- Cần gắp hoạt họa ở đỉnh -->
+              <div id="game2ClawArm" class="absolute top-1 left-1/2 -translate-x-1/2 transition-all duration-300 text-2xl z-20 pointer-events-none">
+                🦾
+              </div>
+
+              <!-- Lưới các con thú mang chữ cái -->
+              <div id="game2AnimalsGrid" class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-6">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <!-- Banner Chiến thắng Game 2 -->
+            <div id="game2SuccessBox" class="hidden bg-emerald-100 border-3 border-emerald-400 rounded-3xl p-5 text-center animate-pop">
+              <div class="text-4xl mb-1">🎉 🏆 🧸 ⭐</div>
+              <h5 class="text-lg sm:text-xl font-black text-emerald-900 mb-1">Xuất Sắc! Bé Đã Gắp Hết Tất Cả Thú Chữ A, a!</h5>
+              <p class="text-xs sm:text-sm text-emerald-700 font-bold mb-4" id="game2ResultSummary">
+                Bé thật nhanh mắt và khéo léo!
+              </p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="startGame2()" class="px-4 py-2.5 bg-white border-2 border-slate-300 text-slate-700 rounded-2xl font-black text-xs sm:text-sm">
+                  Chơi Lại Ván Mới 🔄
+                </button>
+                <button onclick="switchLetterAGame(3)" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-black text-xs sm:text-sm btn-toy shadow-sm">
+                  Sang Trò Chơi 3: Tìm Tiếng Chứa a 🍃 ➡️
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TRÒ CHƠI 3: TÌM TIẾNG CHỨA A -->
+          <div id="subGame3Container" class="hidden bg-gradient-to-b from-emerald-50 to-teal-50 rounded-3xl border-4 border-emerald-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 border-b-2 border-emerald-200 pb-4">
+              <div>
+                <span class="bg-emerald-200 text-emerald-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
+                  Trò Chơi Số 3
+                </span>
+                <h4 class="text-xl font-black text-slate-800 mt-1 flex items-center gap-2">
+                  Tìm Tiếng Chứa Âm "a" 🍃
+                </h4>
+                <p class="text-xs text-slate-600 font-bold">Trong 4 tiếng dưới đây, tiếng nào có chứa chữ a? Bé hãy lắng nghe và bấm chọn đúng nhé!</p>
+              </div>
+              <button onclick="resetGame3()" class="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs">
+                🔄 Làm Lại
+              </button>
+            </div>
+
+            <!-- Đố vui 4 tiếng: bè, cô, ăn, lá -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="game3WordsGrid">
+              <!-- Tiếng 1: bè -->
+              <div onclick="selectGame3Word('bè', this)" id="cardWord_be" class="bg-white hover:bg-emerald-50 border-3 border-slate-200 rounded-3xl p-5 text-center cursor-pointer transition bubbly-card shadow-xs flex flex-col items-center justify-between group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">⛵</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-800 mb-2">bè</div>
+                <button onclick="event.stopPropagation(); speak('bè');" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold px-3 py-1 rounded-xl flex items-center gap-1">
+                  🔊 Nghe
+                </button>
+              </div>
+
+              <!-- Tiếng 2: cô -->
+              <div onclick="selectGame3Word('cô', this)" id="cardWord_co" class="bg-white hover:bg-emerald-50 border-3 border-slate-200 rounded-3xl p-5 text-center cursor-pointer transition bubbly-card shadow-xs flex flex-col items-center justify-between group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">👩‍🏫</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-800 mb-2">cô</div>
+                <button onclick="event.stopPropagation(); speak('cô');" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold px-3 py-1 rounded-xl flex items-center gap-1">
+                  🔊 Nghe
+                </button>
+              </div>
+
+              <!-- Tiếng 3: ăn -->
+              <div onclick="selectGame3Word('ăn', this)" id="cardWord_an" class="bg-white hover:bg-emerald-50 border-3 border-slate-200 rounded-3xl p-5 text-center cursor-pointer transition bubbly-card shadow-xs flex flex-col items-center justify-between group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🍎</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-800 mb-2">ăn</div>
+                <button onclick="event.stopPropagation(); speak('ăn');" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold px-3 py-1 rounded-xl flex items-center gap-1">
+                  🔊 Nghe
+                </button>
+              </div>
+
+              <!-- Tiếng 4: lá (ĐÚNG!) -->
+              <div onclick="selectGame3Word('lá', this)" id="cardWord_la" class="bg-white hover:bg-emerald-50 border-3 border-slate-200 rounded-3xl p-5 text-center cursor-pointer transition bubbly-card shadow-xs flex flex-col items-center justify-between group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🍃</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-800 mb-2">lá</div>
+                <button onclick="event.stopPropagation(); speak('lá');" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold px-3 py-1 rounded-xl flex items-center gap-1">
+                  🔊 Nghe
+                </button>
+              </div>
+            </div>
+
+            <!-- Phản hồi Game 3 -->
+            <div id="game3Feedback" class="hidden p-4 rounded-2xl text-center font-bold text-sm"></div>
+
+            <!-- Tổng kết Đại Chiến Thắng 3 Trò Chơi -->
+            <div id="game3GrandSuccessBox" class="hidden bg-gradient-to-r from-amber-400 via-rose-400 to-emerald-400 p-1 rounded-3xl shadow-xl animate-pop">
+              <div class="bg-white rounded-[22px] p-6 text-center space-y-3">
+                <div class="text-5xl animate-bounce">🏆 ⭐ ⭐ ⭐ 🏆</div>
+                <h4 class="text-2xl font-black text-amber-900">CHÚC MỪNG BÉ ĐÃ CHIẾN THẮNG TRỌN VẸN 3 TRÒ CHƠI!</h4>
+                <p class="text-sm font-bold text-slate-600 max-w-md mx-auto">
+                  Bé đã xuất sắc hoàn thành: Ghép chữ a viết thường, Gắp hết các con thú chữ A, và Tìm đúng tiếng "lá" chứa chữ a!
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center gap-3">
+                  <button onclick="resetAllLetterAGames()" class="px-5 py-2.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-black text-sm rounded-2xl transition">
+                    Chơi Lại Cả 3 Trò 🔄
+                  </button>
+                  <button onclick="showHomeView()" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm rounded-2xl btn-toy shadow-sm">
+                    Về Trang Chủ Khám Phá Bài Mới 🚀
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Danh Sách Các Câu Hỏi -->
-        <div class="space-y-5" id="quizCardsContainer">
-          <!-- Injected by JS -->
+        <!-- BỘ 5 BÀI TẬP & TRÒ CHƠI ĐẶC QUYỀN BÀI 2: B b, DẤU HUYỀN -->
+        <div id="lesson2GamesSection" class="hidden space-y-6">
+
+          <!-- Header & Stepper / Tabs chọn bài tập -->
+          <div class="bg-gradient-to-r from-amber-500 via-rose-500 to-sky-500 p-1 rounded-3xl shadow-md">
+            <div class="bg-white rounded-[22px] p-4 sm:p-5">
+              <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pb-3 border-b-2 border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl font-black shadow-xs">
+                    🎮
+                  </div>
+                  <div>
+                    <h3 class="text-lg sm:text-xl font-black text-slate-800 flex items-center gap-2">
+                      <span>5 Thử Thách Kỳ Thú Chữ B! ✨</span>
+                      <button type="button" onclick="speakBGameQuestion('header')" class="w-8 h-8 rounded-full bg-amber-100 hover:bg-amber-200 text-amber-700 flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition shadow-2xs cursor-pointer" title="Bấm để nghe hướng dẫn">
+                        🔊
+                      </button>
+                    </h3>
+                    <p onclick="speakBGameQuestion('header')" class="text-xs text-slate-500 font-bold cursor-pointer hover:text-amber-800 transition">Bé hãy hoàn thành 5 trò chơi và bài tập để giành trọn bộ 5 Ngôi Sao Vàng nhé! <span class="text-amber-600 font-black">🔊 Bấm nghe</span></p>
+                  </div>
+                </div>
+
+                <!-- Huy hiệu 5 sao tiến độ -->
+                <div class="flex items-center gap-2 bg-amber-50 border-2 border-amber-300 px-4 py-2 rounded-2xl">
+                  <span class="text-xs font-black text-amber-900">Sao đạt được:</span>
+                  <div class="flex items-center gap-1 text-lg" id="letterBGameStars">
+                    <span id="starBGame1" class="opacity-30 grayscale transition">⭐</span>
+                    <span id="starBGame2" class="opacity-30 grayscale transition">⭐</span>
+                    <span id="starBGame3" class="opacity-30 grayscale transition">⭐</span>
+                    <span id="starBGame4" class="opacity-30 grayscale transition">⭐</span>
+                    <span id="starBGame5" class="opacity-30 grayscale transition">⭐</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thanh chuyển đổi 5 bài tập -->
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-3">
+                <button id="btnSubBGame1" onclick="switchLetterBGame(1)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-sky-500 text-white border-sky-600 shadow-sm btn-toy">
+                  <span>🧩 Trò 1: Bé ghép chữ b</span>
+                </button>
+                <button id="btnSubBGame2" onclick="switchLetterBGame(2)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-amber-100 btn-toy">
+                  <span>👁️ Trò 2: Ai tinh mắt!</span>
+                </button>
+                <button id="btnSubBGame3" onclick="switchLetterBGame(3)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-rose-100 btn-toy">
+                  <span>🍓 Trò 3: Tô màu dâu</span>
+                </button>
+                <button id="btnSubBGame4" onclick="switchLetterBGame(4)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-emerald-100 btn-toy">
+                  <span>🐢 Bài 4: Từ chứa B</span>
+                </button>
+                <button id="btnSubBGame5" onclick="switchLetterBGame(5)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-purple-100 btn-toy">
+                  <span>👵 Bài 5: Điền âm thiếu</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BÀI 1: TRÒ CHƠI BÉ GHÉP CHỮ B VIẾT THƯỜNG -->
+          <div id="subBGame1Container" class="bg-gradient-to-b from-sky-50 to-indigo-50 rounded-3xl border-4 border-sky-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-sky-200 pb-4">
+              <div class="flex-1 space-y-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="bg-sky-200 text-sky-900 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    Trò Chơi Số 1
+                  </span>
+                  <button type="button" onclick="speakBGameQuestion(1)" class="inline-flex items-center gap-1.5 px-3 py-1 bg-sky-500 hover:bg-sky-600 text-white rounded-xl text-xs font-black shadow-sm hover:scale-105 active:scale-95 transition cursor-pointer btn-toy" title="Bấm để nghe cô đọc đề bài">
+                    <span class="text-base animate-pulse">🔊</span>
+                    <span>Nghe Đề Bài</span>
+                  </button>
+                </div>
+                <h4 onclick="speakBGameQuestion(1)" class="text-xl sm:text-2xl font-black text-slate-800 flex items-center gap-2 cursor-pointer hover:text-sky-700 transition" title="Bấm để nghe đọc">
+                  Bé Ghép Chữ "b" Viết Thường ✍️🧩
+                </h4>
+                <p onclick="speakBGameQuestion(1)" class="text-xs sm:text-sm text-slate-600 font-bold cursor-pointer hover:text-sky-800 transition flex items-center gap-1.5 flex-wrap">
+                  <span>Kéo thả hoặc chạm các nét vào đúng vị trí trên khung ô ly để tạo thành chữ b viết thường hoàn chỉnh nhé!</span>
+                  <span class="text-sky-600 text-xs font-black bg-sky-100 px-2 py-0.5 rounded-lg inline-flex items-center gap-1">🔊 Bấm nghe lại</span>
+                </p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="speakBGameQuestion(1)" class="px-3.5 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-2xl text-xs sm:text-sm font-black transition flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 btn-toy" title="Nghe lại đề bài">
+                  <span class="text-lg">🔊</span>
+                  <span>Nghe Lại</span>
+                </button>
+                <button type="button" onclick="resetBGame1()" class="px-3.5 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs hover:scale-105 active:scale-95">
+                  🔄 Ghép Lại
+                </button>
+              </div>
+            </div>
+
+            <!-- Bảng chơi Trò 1: Nét Khuyết Trên (Trái) + Khung Ô Ly (Giữa) + Nét Thắt Trên (Phải) -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+              
+              <!-- Nét rời 1: Nét khuyết trên (Cao 5 ô ly) -->
+              <div class="md:col-span-3 flex flex-col items-center">
+                <div class="text-xs font-black text-amber-800 mb-2">Nét 1: Nét Khuyết Trên</div>
+                <div id="cardStrokeKhuyetTren" 
+                     draggable="true" 
+                     ondragstart="handleBStrokeDragStart(event, 'khuyet_tren')"
+                     onclick="handleBStrokeClick('khuyet_tren')" 
+                     class="w-full max-w-[170px] bg-white hover:bg-amber-50 border-3 border-amber-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-[11px] font-bold text-amber-600 mb-1 flex items-center justify-center gap-1">
+                    <span>🖐️ Bấm hoặc Kéo</span>
+                  </div>
+                  <div class="w-24 h-28 mx-auto flex items-center justify-center" id="visualStrokeKhuyetTren">
+                    <!-- SVG nét khuyết trên -->
+                  </div>
+                  <div class="text-xs font-black text-slate-700 mt-2">Nét khuyết trên (5 ô ly)</div>
+                  <span id="badgeKhuyetTren" class="inline-block mt-1 text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+              </div>
+
+              <!-- Bảng Ô Ly Lắp Ghép Trung Tâm (5 ô ly) -->
+              <div class="md:col-span-6 flex flex-col items-center">
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border-3 border-sky-300 shadow-md flex flex-col items-center w-full max-w-[340px] relative">
+                  <div class="text-xs font-black text-sky-800 mb-2 flex items-center gap-1.5">
+                    <span>📐 Khung Vở Ô Ly Chữ "b" (Cao 5 ô ly)</span>
+                    <button onclick="speak('Khung ô ly chữ b viết thường cao 5 ô ly. Nét khuyết trên cao 5 ô ly, nét thắt trên cao 2 ô ly.')" class="text-slate-400 hover:text-sky-600">🔊</button>
+                  </div>
+
+                  <!-- SVG Bảng ghép ô ly 4x5 -->
+                  <div id="puzzleBoardBContainer" 
+                       ondragover="handleBBoardDragOver(event)" 
+                       ondrop="handleBBoardDrop(event)"
+                       onclick="handleBBoardClick()"
+                       class="relative w-[230px] h-[270px] sm:w-[250px] sm:h-[295px] flex items-center justify-center cursor-pointer">
+                    <!-- Rendered by JS -->
+                  </div>
+
+                  <div id="puzzleBStatusMsg" class="mt-3 text-center text-xs font-bold text-slate-600 px-3 py-1.5 bg-slate-100 rounded-xl w-full">
+                    Bé hãy kéo hoặc chạm vào nét để bắt đầu nhé!
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nét rời 2: Nét thắt trên (Cao 2 ô ly) -->
+              <div class="md:col-span-3 flex flex-col items-center">
+                <div class="text-xs font-black text-blue-800 mb-2">Nét 2: Nét Thắt Trên</div>
+                <div id="cardStrokeThatTren" 
+                     draggable="true" 
+                     ondragstart="handleBStrokeDragStart(event, 'that_tren')"
+                     onclick="handleBStrokeClick('that_tren')" 
+                     class="w-full max-w-[170px] bg-white hover:bg-blue-50 border-3 border-blue-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-[11px] font-bold text-blue-600 mb-1 flex items-center justify-center gap-1">
+                    <span>🖐️ Bấm hoặc Kéo</span>
+                  </div>
+                  <div class="w-24 h-28 mx-auto flex items-center justify-center" id="visualStrokeThatTren">
+                    <!-- SVG nét thắt trên -->
+                  </div>
+                  <div class="text-xs font-black text-slate-700 mt-2">Nét thắt trên (2 ô ly)</div>
+                  <span id="badgeThatTren" class="inline-block mt-1 text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Banner Chúc mừng & Nút sang Trò 2 -->
+            <div id="bGame1SuccessBox" class="hidden bg-emerald-100 border-3 border-emerald-400 rounded-3xl p-5 text-center animate-pop">
+              <div class="text-4xl mb-1">🎉 🌟 ✍️ 🏆</div>
+              <h5 class="text-lg sm:text-xl font-black text-emerald-900 mb-1">Hoan Hô Bé! Bé Đã Ghép Thành Công Chữ "b" Viết Thường!</h5>
+              <p class="text-xs sm:text-sm text-emerald-700 font-bold mb-4">Chữ b viết thường thật xinh xắn với nét khuyết trên vươn cao 5 ô ly nối liền nét thắt trên tròn xinh ở dòng 3!</p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="resetBGame1()" class="px-4 py-2.5 bg-white border-2 border-slate-300 text-slate-700 rounded-2xl font-black text-xs sm:text-sm">
+                  Ghép Lại 🔄
+                </button>
+                <button onclick="switchLetterBGame(2)" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-black text-xs sm:text-sm btn-toy shadow-sm">
+                  Sang Trò Chơi 2: Ai Tinh Mắt! 👁️ ➡️
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BÀI 2: TRÒ CHƠI AI TINH MẮT! -->
+          <div id="subBGame2Container" class="hidden bg-gradient-to-b from-sky-50 to-emerald-50 rounded-3xl border-4 border-sky-300 p-5 sm:p-7 shadow-md space-y-5">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-sky-200 pb-3">
+              <div class="flex-1 space-y-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="bg-amber-200 text-amber-900 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    Trò Chơi Số 2
+                  </span>
+                  <button type="button" onclick="speakBGameQuestion(2)" class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-black shadow-sm hover:scale-105 active:scale-95 transition cursor-pointer btn-toy" title="Bấm để nghe cô đọc đề bài">
+                    <span class="text-base animate-pulse">🔊</span>
+                    <span>Nghe Đề Bài</span>
+                  </button>
+                </div>
+                <h4 onclick="speakBGameQuestion(2)" class="text-xl sm:text-2xl font-black text-slate-800 flex items-center gap-2 cursor-pointer hover:text-amber-700 transition" title="Bấm để nghe đọc">
+                  Ai Tinh Mắt! 👁️🔍
+                </h4>
+                <p onclick="speakBGameQuestion(2)" class="text-xs sm:text-sm text-slate-600 font-bold cursor-pointer hover:text-amber-800 transition flex items-center gap-1.5 flex-wrap">
+                  <span>Bé hãy tinh mắt tìm và bấm vào 3 chữ: <strong>B</strong> (in hoa), <strong>b</strong> (in thường) và <strong>b viết thường</strong> đang nấp trong bức tranh nhé!</span>
+                  <span class="text-amber-700 text-xs font-black bg-amber-100 px-2 py-0.5 rounded-lg inline-flex items-center gap-1">🔊 Bấm nghe lại</span>
+                </p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="speakBGameQuestion(2)" class="px-3.5 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-2xl text-xs sm:text-sm font-black transition flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 btn-toy" title="Nghe lại đề bài">
+                  <span class="text-lg">🔊</span>
+                  <span>Nghe Lại</span>
+                </button>
+                <button type="button" onclick="resetBGame2()" class="px-3.5 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs hover:scale-105 active:scale-95">
+                  🔄 Tìm Lại
+                </button>
+              </div>
+            </div>
+
+            <!-- Bảng Nhiệm vụ: Đếm 3 chữ cái cần tìm -->
+            <div class="flex flex-wrap items-center justify-between gap-2 bg-white rounded-2xl p-3 border-2 border-sky-200 shadow-2xs">
+              <div class="text-xs font-black text-slate-700">Mục tiêu cần tìm:</div>
+              <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                <div id="targetBadgeB_hoa" class="px-3 py-1 bg-slate-100 border border-slate-300 rounded-xl text-xs font-black text-slate-400 flex items-center gap-1">
+                  <span>Chữ B (in hoa)</span>
+                </div>
+                <div id="targetBadgeB_thuong" class="px-3 py-1 bg-slate-100 border border-slate-300 rounded-xl text-xs font-black text-slate-400 flex items-center gap-1">
+                  <span>Chữ b (in thường)</span>
+                </div>
+                <div id="targetBadgeB_viet" class="px-3 py-1 bg-slate-100 border border-slate-300 rounded-xl text-xs font-black text-slate-400 flex items-center gap-1">
+                  <span>b (viết thường)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thông báo phản hồi Trò 2 -->
+            <div id="bGame2Feedback" class="hidden p-3 rounded-2xl text-center font-bold text-xs sm:text-sm"></div>
+
+            <!-- Bức Tranh Phong Cảnh Thiên Nhiên Tương Tác -->
+            <div class="relative w-full max-w-[720px] mx-auto rounded-3xl overflow-hidden border-4 border-sky-300 shadow-lg bg-sky-200 select-none" id="scenicLandscapeBox">
+              <div id="scenicSvgContainer" class="w-full h-auto"></div>
+            </div>
+
+            <!-- Banner Chiến thắng Trò 2 -->
+            <div id="bGame2SuccessBox" class="hidden bg-emerald-100 border-3 border-emerald-400 rounded-3xl p-5 text-center animate-pop">
+              <div class="text-4xl mb-1">🎉 🌟 👁️ 🏆</div>
+              <h5 class="text-lg sm:text-xl font-black text-emerald-900 mb-1">Hoan Hô Bé! Bé Thật Là Tinh Mắt!</h5>
+              <p class="text-xs sm:text-sm text-emerald-700 font-bold mb-4">Bé đã xuất sắc tìm thấy đủ cả 3 chữ: B in hoa, b in thường và b viết thường!</p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="resetBGame2()" class="px-4 py-2.5 bg-white border-2 border-slate-300 text-slate-700 rounded-2xl font-black text-xs sm:text-sm">
+                  Tìm Lại 🔄
+                </button>
+                <button onclick="switchLetterBGame(3)" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-black text-xs sm:text-sm btn-toy shadow-sm">
+                  Sang Trò Chơi 3: Tô Màu Quả Dâu 🍓 ➡️
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BÀI 3: TRÒ CHƠI TÔ MÀU QUẢ DÂU -->
+          <div id="subBGame3Container" class="hidden bg-gradient-to-b from-rose-50 to-pink-50 rounded-3xl border-4 border-rose-300 p-5 sm:p-7 shadow-md space-y-5">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-rose-200 pb-3">
+              <div class="flex-1 space-y-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="bg-rose-200 text-rose-900 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    Trò Chơi Số 3 (Theo SGK)
+                  </span>
+                  <button type="button" onclick="speakBGameQuestion(3)" class="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-500 hover:bg-rose-600 text-white rounded-xl text-xs font-black shadow-sm hover:scale-105 active:scale-95 transition cursor-pointer btn-toy" title="Bấm để nghe cô đọc đề bài">
+                    <span class="text-base animate-pulse">🔊</span>
+                    <span>Nghe Đề Bài</span>
+                  </button>
+                </div>
+                <h4 onclick="speakBGameQuestion(3)" class="text-xl sm:text-2xl font-black text-slate-800 flex items-center gap-2 cursor-pointer hover:text-rose-700 transition" title="Bấm để nghe đọc">
+                  Tô Màu Quả Dâu Chứa Âm "b" Hoặc Dấu Huyền! 🍓🎨
+                </h4>
+                <p onclick="speakBGameQuestion(3)" class="text-xs sm:text-sm text-slate-600 font-bold cursor-pointer hover:text-rose-800 transition flex items-center gap-1.5 flex-wrap">
+                  <span>Bé hãy tìm và bấm để tô màu vào các quả dâu có tiếng chứa <strong>âm b</strong> hoặc <strong>dấu huyền ( \ )</strong> nhé!</span>
+                  <span class="text-rose-600 text-xs font-black bg-rose-100 px-2 py-0.5 rounded-lg inline-flex items-center gap-1">🔊 Bấm nghe lại</span>
+                </p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="speakBGameQuestion(3)" class="px-3.5 py-2 bg-rose-500 hover:bg-rose-600 text-white rounded-2xl text-xs sm:text-sm font-black transition flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 btn-toy" title="Nghe lại đề bài">
+                  <span class="text-lg">🔊</span>
+                  <span>Nghe Lại</span>
+                </button>
+                <button type="button" onclick="resetBGame3()" class="px-3.5 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs hover:scale-105 active:scale-95">
+                  🔄 Tô Lại
+                </button>
+              </div>
+            </div>
+
+            <div id="bGame3Feedback" class="hidden p-3 rounded-2xl text-center font-bold text-xs sm:text-sm"></div>
+
+            <!-- Dãy 5 quả dâu chuẩn SGK -->
+            <div class="bg-white rounded-3xl p-6 border-3 border-dashed border-rose-200 flex flex-wrap items-center justify-center gap-4 sm:gap-6 shadow-sm" id="strawberriesContainer">
+              <!-- Rendered by JS -->
+            </div>
+
+            <!-- Banner Chiến thắng Bài 3 -->
+            <div id="bGame3SuccessBox" class="hidden bg-emerald-100 border-3 border-emerald-400 rounded-3xl p-5 text-center animate-pop">
+              <div class="text-4xl mb-1">🎉 🍓 ⭐ 🎨</div>
+              <h5 class="text-lg sm:text-xl font-black text-emerald-900 mb-1">Tuyệt Vời! Bé Đã Tô Màu Đúng Hết Các Quả Dâu!</h5>
+              <p class="text-xs sm:text-sm text-emerald-700 font-bold mb-4">Các tiếng chứa âm b và dấu huyền là: <strong>ba</strong> (âm b), <strong>à</strong> (dấu huyền) và <strong>bò</strong> (âm b và dấu huyền)!</p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="resetBGame3()" class="px-4 py-2.5 bg-white border-2 border-slate-300 text-slate-700 rounded-2xl font-black text-xs sm:text-sm">
+                  Tô Lại 🔄
+                </button>
+                <button onclick="switchLetterBGame(4)" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-black text-xs sm:text-sm btn-toy shadow-sm">
+                  Sang Bài Tập 4: Tìm Từ Chứa B 🐢 ➡️
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BÀI 4: TÌM TỪ CHỨA B (THIẾT KẾ ĐẸP MẮT) -->
+          <div id="subBGame4Container" class="hidden bg-gradient-to-b from-amber-50 to-orange-50 rounded-3xl border-4 border-amber-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-amber-200 pb-3">
+              <div class="flex-1 space-y-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="bg-amber-200 text-amber-900 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    Bài Tập Số 4
+                  </span>
+                  <button type="button" onclick="speakBGameQuestion(4)" class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-black shadow-sm hover:scale-105 active:scale-95 transition cursor-pointer btn-toy" title="Bấm để nghe cô đọc đề bài">
+                    <span class="text-base animate-pulse">🔊</span>
+                    <span>Nghe Đề Bài</span>
+                  </button>
+                </div>
+                <h4 onclick="speakBGameQuestion(4)" class="text-xl sm:text-2xl font-black text-slate-800 flex items-center gap-2 cursor-pointer hover:text-amber-700 transition" title="Bấm để nghe đọc">
+                  Từ Nào Dưới Đây Có Chứa Chữ "b"? 🐢🔎
+                </h4>
+                <p onclick="speakBGameQuestion(4)" class="text-xs sm:text-sm text-slate-600 font-bold cursor-pointer hover:text-amber-800 transition flex items-center gap-1.5 flex-wrap">
+                  <span>Bé hãy chọn từ ngữ có chứa chữ b nhé!</span>
+                  <span class="text-amber-700 text-xs font-black bg-amber-100 px-2 py-0.5 rounded-lg inline-flex items-center gap-1">🔊 Bấm nghe lại</span>
+                </p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="speakBGameQuestion(4)" class="px-3.5 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-2xl text-xs sm:text-sm font-black transition flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 btn-toy" title="Nghe lại đề bài">
+                  <span class="text-lg">🔊</span>
+                  <span>Nghe Lại</span>
+                </button>
+                <button type="button" onclick="resetBGame4()" class="px-3.5 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs hover:scale-105 active:scale-95">
+                  🔄 Chọn Lại
+                </button>
+              </div>
+            </div>
+
+            <!-- 4 Thẻ Từ Vựng Lớn Có Hình Ảnh 3D & Nút Nghe -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="bGame4WordsGrid">
+              <!-- Rendered by JS -->
+            </div>
+
+            <div id="bGame4Feedback" class="hidden p-3 rounded-2xl text-center font-bold text-xs sm:text-sm"></div>
+
+            <!-- Banner Chiến thắng Bài 4 -->
+            <div id="bGame4SuccessBox" class="hidden bg-emerald-100 border-3 border-emerald-400 rounded-3xl p-5 text-center animate-pop">
+              <div class="text-4xl mb-1">🎉 🐢 ⭐ 🏆</div>
+              <h5 class="text-lg sm:text-xl font-black text-emerald-900 mb-1">Chính Xác! Bé Rất Giỏi!</h5>
+              <p class="text-xs sm:text-sm text-emerald-700 font-bold mb-4">Từ <strong>"ba ba"</strong> có chứa 2 chữ b rất đáng yêu!</p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="resetBGame4()" class="px-4 py-2.5 bg-white border-2 border-slate-300 text-slate-700 rounded-2xl font-black text-xs sm:text-sm">
+                  Chọn Lại 🔄
+                </button>
+                <button onclick="switchLetterBGame(5)" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-black text-xs sm:text-sm btn-toy shadow-sm">
+                  Sang Bài Tập 5: Điền Âm Còn Thiếu 👵 ➡️
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BÀI 5: ĐIỀN ÂM CÒN THIẾU VÀO TIẾNG -->
+          <div id="subBGame5Container" class="hidden bg-gradient-to-b from-purple-50 to-indigo-50 rounded-3xl border-4 border-purple-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b-2 border-purple-200 pb-3">
+              <div class="flex-1 space-y-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="bg-purple-200 text-purple-900 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    Bài Tập Số 5
+                  </span>
+                  <button type="button" onclick="speakBGameQuestion(5)" class="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-black shadow-sm hover:scale-105 active:scale-95 transition cursor-pointer btn-toy" title="Bấm để nghe cô đọc đề bài">
+                    <span class="text-base animate-pulse">🔊</span>
+                    <span>Nghe Đề Bài</span>
+                  </button>
+                </div>
+                <h4 onclick="speakBGameQuestion(5)" class="text-xl sm:text-2xl font-black text-slate-800 flex items-center gap-2 cursor-pointer hover:text-purple-700 transition" title="Bấm để nghe đọc">
+                  Điền Âm Còn Thiếu Vào Tiếng! 👵✍️
+                </h4>
+                <p onclick="speakBGameQuestion(5)" class="text-xs sm:text-sm text-slate-600 font-bold cursor-pointer hover:text-purple-800 transition flex items-center gap-1.5 flex-wrap">
+                  <span>Bé hãy chọn âm còn thiếu ghép với "à" để chỉ người bà hiền từ nhé!</span>
+                  <span class="text-purple-700 text-xs font-black bg-purple-100 px-2 py-0.5 rounded-lg inline-flex items-center gap-1">🔊 Bấm nghe lại</span>
+                </p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="speakBGameQuestion(5)" class="px-3.5 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl text-xs sm:text-sm font-black transition flex items-center gap-1.5 shadow-sm hover:scale-105 active:scale-95 btn-toy" title="Nghe lại đề bài">
+                  <span class="text-lg">🔊</span>
+                  <span>Nghe Lại</span>
+                </button>
+                <button type="button" onclick="resetBGame5()" class="px-3.5 py-2 bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-200 rounded-2xl text-xs font-black transition shadow-2xs hover:scale-105 active:scale-95">
+                  🔄 Làm Lại
+                </button>
+              </div>
+            </div>
+
+            <!-- Khung Tranh Minh Họa Người Bà & Ô Chữ Ghép -->
+            <div class="bg-white rounded-3xl p-6 border-3 border-purple-200 shadow-xs flex flex-col items-center justify-center text-center space-y-4">
+              <div class="w-24 h-24 bg-purple-100 rounded-3xl flex items-center justify-center text-5xl shadow-2xs">
+                👵
+              </div>
+              <div class="flex items-center justify-center gap-2 text-4xl sm:text-5xl font-black text-slate-800">
+                <span id="slotMissingLetter" class="w-16 h-16 sm:w-20 sm:h-20 border-3 border-dashed border-purple-400 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 animate-pulse">
+                  ?
+                </span>
+                <span class="text-slate-800">à</span>
+              </div>
+              <p class="text-xs font-bold text-slate-500">Người bà yêu quý của bé</p>
+            </div>
+
+            <!-- 4 Nút Lựa Chọn Chữ Cái: B, C, D, G -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-2" id="bGame5OptionsGrid">
+              <!-- Rendered by JS -->
+            </div>
+
+            <div id="bGame5Feedback" class="hidden p-4 rounded-2xl text-center font-bold text-xs sm:text-sm"></div>
+
+            <!-- Tổng kết Đại Chiến Thắng 5 Bài Tập -->
+            <div id="bGameGrandSuccessBox" class="hidden bg-gradient-to-r from-amber-400 via-rose-400 to-emerald-400 p-1 rounded-3xl shadow-xl animate-pop">
+              <div class="bg-white rounded-[22px] p-6 text-center space-y-3">
+                <div class="text-5xl animate-bounce">🏆 ⭐ ⭐ ⭐ ⭐ ⭐ 🏆</div>
+                <h4 class="text-2xl font-black text-amber-900">CHÚC MỪNG BÉ ĐÃ XUẤT SẮC HOÀN THÀNH CẢ 5 THỬ THÁCH BÀI 2: B b \!</h4>
+                <p class="text-sm font-bold text-slate-600 max-w-lg mx-auto">
+                  Bé đã làm rất tuyệt vời: Ghép chữ b viết thường chuẩn nét, Tinh mắt tìm chữ B trong tranh, Tô màu quả dâu đúng chuẩn, Tìm từ "ba ba" chứa chữ b, và Ghép đúng tiếng "Bà"!
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center gap-3">
+                  <button onclick="resetAllLetterBGames()" class="px-5 py-2.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-black text-sm rounded-2xl transition">
+                    Chơi Lại Cả 5 Bài 🔄
+                  </button>
+                  <button onclick="showHomeView()" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm rounded-2xl btn-toy shadow-md">
+                    Trở Về Trang Chủ 🏠
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
+        <!-- /BỘ 5 BÀI TẬP & TRÒ CHƠI ĐẶC QUYỀN BÀI 2 -->
 
-        <!-- Nút Nộp Bài & Nhận Sao -->
-        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 text-center shadow-sm">
-          <button onclick="checkQuizResults()" class="px-8 py-4 bg-gradient-to-r from-amber-400 to-rose-500 hover:from-amber-500 hover:to-rose-600 text-white rounded-3xl font-black text-base sm:text-lg shadow-xl shadow-rose-200 transition inline-flex items-center gap-2.5 btn-toy">
-            <span>⭐ Nộp Bài & Nhận Sao Vàng!</span>
-          </button>
+        <!-- ============================================================================ -->
+        <!-- BỘ 4 TRÒ CHƠI ĐẶC QUYỀN BÀI 3: C c, DẤU SẮC ( / ) -->
+        <!-- ============================================================================ -->
+        <div id="lesson3GamesSection" class="hidden space-y-6">
 
-          <!-- Hộp Chúc Mừng -->
-          <div id="quizResultBox" class="hidden mt-6 p-6 rounded-3xl border-4 text-center transition"></div>
+          <!-- Header 4 Trò Chơi Kỳ Thú Chữ C -->
+          <div class="bg-gradient-to-r from-amber-50 via-rose-50 to-orange-50 rounded-3xl p-5 sm:p-6 border-3 border-amber-300 shadow-sm">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-amber-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-xs">
+                  🐟
+                </div>
+                <div>
+                  <h3 class="text-lg sm:text-xl font-black text-slate-800 flex items-center gap-2">
+                    <span>4 Thử Thách Kỳ Thú Chữ C & Dấu Sắc! ✨</span>
+                    <button type="button" onclick="speakCGameQuestion('header')" class="w-8 h-8 rounded-full bg-amber-100 hover:bg-amber-200 text-amber-700 flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition shadow-2xs cursor-pointer" title="Bấm để nghe hướng dẫn">
+                      🔊
+                    </button>
+                  </h3>
+                  <p onclick="speakCGameQuestion('header')" class="text-xs text-slate-500 font-bold cursor-pointer hover:text-amber-800 transition">Bé hãy hoàn thành 4 trò chơi để giành trọn bộ 4 Ngôi Sao Vàng nhé! <span class="text-amber-600 font-black">🔊 Bấm nghe</span></p>
+                </div>
+              </div>
+
+              <!-- Huy hiệu 4 sao tiến độ -->
+              <div class="flex items-center gap-2 bg-amber-50 border-2 border-amber-300 px-4 py-2 rounded-2xl">
+                <span class="text-xs font-black text-amber-900">Sao đạt được:</span>
+                <div class="flex items-center gap-1 text-lg" id="letterCGameStars">
+                  <span id="starCGame1" class="opacity-30 grayscale transition">⭐</span>
+                  <span id="starCGame2" class="opacity-30 grayscale transition">⭐</span>
+                  <span id="starCGame3" class="opacity-30 grayscale transition">⭐</span>
+                  <span id="starCGame4" class="opacity-30 grayscale transition">⭐</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thanh chuyển đổi 4 trò chơi -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-3">
+              <button id="btnSubCGame1" onclick="switchLetterCGame(1)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-amber-500 text-white border-amber-600 shadow-sm btn-toy">
+                <span>🧩 Trò 1: Ghép chữ cá</span>
+              </button>
+              <button id="btnSubCGame2" onclick="switchLetterCGame(2)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-sky-100 btn-toy">
+                <span>🎣 Trò 2: Câu cá chữ C</span>
+              </button>
+              <button id="btnSubCGame3" onclick="switchLetterCGame(3)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-emerald-100 btn-toy">
+                <span>🔍 Trò 3: Chứa c, dấu sắc</span>
+              </button>
+              <button id="btnSubCGame4" onclick="switchLetterCGame(4)" class="p-2.5 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-purple-100 btn-toy">
+                <span>🔗 Trò 4: Ghép đôi</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TRÒ CHƠI 1: EM GHÉP CHỮ CÁ -->
+          <!-- ========================================== -->
+          <div id="subCGame1Container" class="bg-gradient-to-b from-amber-50 to-orange-50 rounded-3xl border-4 border-amber-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 border-b-2 border-amber-200 pb-4">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-amber-900 flex items-center gap-2">
+                  <span>🧩 Trò 1: Em ghép chữ "cá" viết thường</span>
+                  <button type="button" onclick="speakCGameQuestion(1)" class="w-7 h-7 rounded-full bg-amber-200 hover:bg-amber-300 text-amber-800 flex items-center justify-center text-xs hover:scale-110 active:scale-95 transition cursor-pointer" title="Nghe hướng dẫn trò 1">
+                    🔊
+                  </button>
+                </h4>
+                <p class="text-xs text-amber-700 font-bold">Kéo thả hoặc chạm vào chữ <strong>c</strong>, chữ <strong>a viết thường</strong> và <strong>dấu sắc ( / )</strong> vào đúng vị trí trên khung ô ly nhé!</p>
+              </div>
+              <button onclick="resetCGame1()" class="text-xs bg-white hover:bg-amber-100 text-amber-900 border-2 border-amber-300 px-3.5 py-1.5 rounded-xl font-bold transition flex items-center gap-1 shadow-2xs">
+                🔄 Ghép lại
+              </button>
+            </div>
+
+            <!-- Khay 3 miếng ghép (nằm ở 3 vị trí khác nhau) -->
+            <div class="space-y-2">
+              <div class="text-xs font-black text-amber-900 uppercase tracking-wider text-center flex items-center justify-center gap-2">
+                <span>📦 Khay 3 bộ phận cần ghép:</span>
+                <span class="text-[11px] text-slate-500 font-semibold normal-case">(Chạm chọn rồi chạm vào ô ly, hoặc kéo thả)</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center max-w-2xl mx-auto pt-1">
+
+                <!-- Thẻ 1: Chữ c viết thường -->
+                <div id="cardPartC" draggable="true" ondragstart="handleCGame1DragStart(event, 'c')" onclick="selectCGame1Part('c')" class="w-full max-w-[190px] bg-white hover:bg-amber-50 border-3 border-amber-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-xs font-black text-amber-800 mb-1 flex items-center justify-center gap-1">
+                    <span>1. Chữ c</span>
+                    <button type="button" onclick="event.stopPropagation(); speak('Chữ c viết thường, nét cong hở phải');" class="text-[11px] text-amber-600 hover:scale-110">🔊</button>
+                  </div>
+                  <div id="visualPartC" class="flex items-center justify-center h-20 group-hover:scale-105 transition">
+                    <!-- SVG chữ c viết thường -->
+                  </div>
+                  <span id="badgePartC" class="inline-block mt-1 text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+
+                <!-- Thẻ 2: Dấu sắc (nằm ở giữa để xáo trộn vị trí) -->
+                <div id="cardPartSac" draggable="true" ondragstart="handleCGame1DragStart(event, 'sac')" onclick="selectCGame1Part('sac')" class="w-full max-w-[190px] bg-white hover:bg-amber-50 border-3 border-amber-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-xs font-black text-rose-800 mb-1 flex items-center justify-center gap-1">
+                    <span>3. Dấu sắc ( / )</span>
+                    <button type="button" onclick="event.stopPropagation(); speak('Dấu sắc');" class="text-[11px] text-rose-600 hover:scale-110">🔊</button>
+                  </div>
+                  <div id="visualPartSac" class="flex items-center justify-center h-20 group-hover:scale-105 transition">
+                    <!-- SVG dấu sắc -->
+                  </div>
+                  <span id="badgePartSac" class="inline-block mt-1 text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+
+                <!-- Thẻ 3: Chữ a viết thường chuẩn tiểu học Việt Nam -->
+                <div id="cardPartA" draggable="true" ondragstart="handleCGame1DragStart(event, 'a')" onclick="selectCGame1Part('a')" class="w-full max-w-[190px] bg-white hover:bg-amber-50 border-3 border-amber-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card shadow-sm select-none group">
+                  <div class="text-xs font-black text-amber-800 mb-1 flex items-center justify-center gap-1">
+                    <span>2. Chữ a viết thường</span>
+                    <button type="button" onclick="event.stopPropagation(); speak('Chữ a viết thường, nét cong kín và nét móc ngược');" class="text-[11px] text-amber-600 hover:scale-110">🔊</button>
+                  </div>
+                  <div id="visualPartA" class="flex items-center justify-center h-20 group-hover:scale-105 transition">
+                    <!-- SVG chữ a viết thường -->
+                  </div>
+                  <span id="badgePartA" class="inline-block mt-1 text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Bảng ghép chữ cá trên ô ly học sinh -->
+            <div class="space-y-2">
+              <div class="text-xs font-black text-amber-900 uppercase tracking-wider text-center">
+                🎯 Khung Ô Ly Ghép Chữ "cá":
+              </div>
+              <div class="max-w-[380px] h-[210px] mx-auto p-2 bg-amber-100/60 rounded-3xl border-3 border-amber-300 shadow-inner flex items-center justify-center">
+                <div id="puzzleBoardCaContainer" class="w-full h-full cursor-pointer" onclick="handleCGame1BoardClick(event)">
+                  <!-- SVG Puzzle Board Chữ Cá -->
+                </div>
+              </div>
+              <div id="puzzleCaStatusMsg" class="mt-3 text-center text-xs font-bold text-slate-600 px-3 py-1.5 bg-slate-100 rounded-xl max-w-md mx-auto">
+                Bé hãy bấm chọn nét ở trên rồi chạm vào ô ly tương ứng để ghép chữ cá nhé!
+              </div>
+            </div>
+
+            <!-- Hộp chúc mừng Trò 1 -->
+            <div id="cGame1SuccessBox" class="hidden bg-emerald-50 border-3 border-emerald-400 rounded-2xl p-4 text-center space-y-2 animate-pop">
+              <div class="text-4xl animate-bounce">🎉 ⭐ 🐟</div>
+              <h5 class="text-base sm:text-lg font-black text-emerald-900">XUẤT SẮC! BÉ ĐÃ GHÉP THÀNH CÔNG CHỮ "CÁ" VIẾT THƯỜNG!</h5>
+              <p class="text-xs text-emerald-700 font-bold">
+                Chữ "cá" gồm chữ <strong>c</strong> ghép với chữ <strong>a viết thường</strong> và <strong>dấu sắc ( / )</strong> trên đầu chữ a! <br>
+                Đánh vần: <strong>c - a - ca - sắc - cá! 🐟</strong>
+              </p>
+              <div class="pt-1">
+                <button onclick="switchLetterCGame(2)" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs rounded-xl btn-toy shadow-sm">
+                  Chơi Tiếp Trò 2: Câu Cá Chữ C 🎣 ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TRÒ CHƠI 2: CÂU CÁ (ARCADE FISHING GAME) -->
+          <!-- ========================================== -->
+          <div id="subCGame2Container" class="hidden bg-gradient-to-b from-sky-50 to-blue-50 rounded-3xl border-4 border-sky-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 border-b-2 border-sky-200 pb-4">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-sky-900 flex items-center gap-2">
+                  <span>🎣 Trò 2: Câu cá</span>
+                  <button type="button" onclick="speakCGameQuestion(2)" class="w-7 h-7 rounded-full bg-sky-200 hover:bg-sky-300 text-sky-800 flex items-center justify-center text-xs hover:scale-110 active:scale-95 transition cursor-pointer" title="Nghe hướng dẫn trò 2">
+                    🔊
+                  </button>
+                </h4>
+                <p class="text-xs text-sky-700 font-bold">Các chú cá đang bơi lội tung tăng! Bé hãy nhanh tay gắp/câu hết <strong>3 chú cá đúng</strong> (chữ <strong>C</strong>, <strong>c viết thường</strong> và <strong>tiếng cá</strong>) nhé!</p>
+              </div>
+              <button onclick="resetCGame2()" class="text-xs bg-white hover:bg-sky-100 text-sky-900 border-2 border-sky-300 px-3.5 py-1.5 rounded-xl font-bold transition flex items-center gap-1 shadow-2xs">
+                🔄 Câu lại
+              </button>
+            </div>
+
+            <!-- Bảng điều khiển câu cá -->
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-white/80 p-3.5 rounded-2xl border-2 border-sky-200">
+              <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 bg-sky-100 text-sky-900 px-3 py-1.5 rounded-xl font-black text-xs">
+                  <span>⏱️ Thời gian:</span>
+                  <span id="cGame2TimerText" class="font-mono text-sm text-rose-600">00:00</span>
+                </div>
+                <div class="flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1.5 rounded-xl font-black text-xs">
+                  <span>🐟 Đã câu được:</span>
+                  <span id="cGame2CaughtText" class="text-sm text-amber-700">0 / 3</span>
+                </div>
+              </div>
+              <button id="btnStartCGame2" onclick="startCGame2()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs rounded-xl btn-toy shadow-xs">
+                Bắt Đầu Câu Cá 🎣
+              </button>
+            </div>
+
+            <!-- Bể cá đại dương sống động -->
+            <div class="relative w-full h-[360px] sm:h-[400px] rounded-3xl aquarium-container border-4 border-sky-400 shadow-xl overflow-hidden select-none">
+              <!-- Sóng nước & ánh sáng mặt nước -->
+              <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/30 to-transparent pointer-events-none"></div>
+
+              <!-- Bong bóng nước bốc lên -->
+              <div class="absolute bottom-2 left-10 w-4 h-4 rounded-full bg-white/40 border border-white/60 bubble-float pointer-events-none"></div>
+              <div class="absolute bottom-6 left-1/3 w-3 h-3 rounded-full bg-white/40 border border-white/60 bubble-float pointer-events-none" style="animation-delay: 1.5s;"></div>
+              <div class="absolute bottom-4 right-1/4 w-5 h-5 rounded-full bg-white/40 border border-white/60 bubble-float pointer-events-none" style="animation-delay: 0.8s;"></div>
+              <div class="absolute bottom-8 right-12 w-3 h-3 rounded-full bg-white/40 border border-white/60 bubble-float pointer-events-none" style="animation-delay: 2.2s;"></div>
+
+              <!-- Rạn san hô & rong rêu đáy biển -->
+              <div class="absolute inset-x-0 bottom-0 h-16 flex items-end justify-between px-4 pointer-events-none opacity-85">
+                <span class="text-4xl">🪸</span>
+                <span class="text-3xl">🌿</span>
+                <span class="text-4xl">🐚</span>
+                <span class="text-3xl">🌿</span>
+                <span class="text-5xl">🪸</span>
+                <span class="text-3xl">🌿</span>
+                <span class="text-4xl">🦀</span>
+              </div>
+
+              <!-- Khu vực bơi của các chú cá -->
+              <div id="cGame2Aquarium" class="relative w-full h-full p-4">
+                <!-- Các con cá được render bằng JS -->
+              </div>
+            </div>
+
+            <!-- Hộp phản hồi & gợi ý -->
+            <div id="cGame2Feedback" class="hidden"></div>
+
+            <!-- Hộp chúc mừng hoàn thành Trò 2 -->
+            <div id="cGame2SuccessBox" class="hidden bg-emerald-50 border-3 border-emerald-400 rounded-2xl p-4 text-center space-y-2 animate-pop">
+              <div class="text-4xl animate-bounce">🎣 🏆 ⭐ ⭐</div>
+              <h5 class="text-base sm:text-lg font-black text-emerald-900">HOAN HÔ BÉ! ĐÃ CÂU ĐƯỢC CẢ 3 CON CÁ ĐÚNG!</h5>
+              <p id="cGame2SuccessDesc" class="text-xs text-emerald-700 font-bold">
+                Bé đã câu xuất sắc cả 3 chú cá đúng (chữ C, c viết thường và tiếng cá). Nhận Ngôi Sao Vàng thứ 2! 🌟
+              </p>
+              <div class="pt-1">
+                <button onclick="switchLetterCGame(3)" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs rounded-xl btn-toy shadow-sm">
+                  Chơi Tiếp Trò 3: Tìm Tiếng Chứa C, Dấu Sắc 🔍 ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TRÒ CHƠI 3: TÌM TIẾNG CHỨA C, DẤU SẮC -->
+          <!-- ========================================== -->
+          <div id="subCGame3Container" class="hidden bg-gradient-to-b from-emerald-50 to-teal-50 rounded-3xl border-4 border-emerald-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 border-b-2 border-emerald-200 pb-4">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-emerald-900 flex items-center gap-2">
+                  <span>🔍 Trò 3: Tìm tiếng chứa c, dấu sắc ( / )</span>
+                  <button type="button" onclick="speakCGameQuestion(3)" class="w-7 h-7 rounded-full bg-emerald-200 hover:bg-emerald-300 text-emerald-800 flex items-center justify-center text-xs hover:scale-110 active:scale-95 transition cursor-pointer" title="Nghe hướng dẫn trò 3">
+                    🔊
+                  </button>
+                </h4>
+                <p class="text-xs text-emerald-700 font-bold">Cho 4 tiếng khác nhau. Tiếng nào có chứa cả <strong>chữ c</strong> và <strong>dấu sắc ( / )</strong>? Bé hãy bấm nghe và chọn đúng nhé!</p>
+              </div>
+              <button onclick="resetCGame3()" class="text-xs bg-white hover:bg-emerald-100 text-emerald-900 border-2 border-emerald-300 px-3.5 py-1.5 rounded-xl font-bold transition flex items-center gap-1 shadow-2xs">
+                🔄 Chọn lại
+              </button>
+            </div>
+
+            <!-- Lưới 4 tiếng lựa chọn -->
+            <div id="cGame3WordsGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-2">
+              <!-- Rendered by JS: bè, cô, ba (hoặc lá), cá -->
+            </div>
+
+            <!-- Phản hồi sau khi bấm -->
+            <div id="cGame3Feedback" class="hidden"></div>
+
+            <!-- Hộp chúc mừng Trò 3 -->
+            <div id="cGame3SuccessBox" class="hidden bg-emerald-50 border-3 border-emerald-400 rounded-2xl p-4 text-center space-y-2 animate-pop">
+              <div class="text-4xl animate-bounce">🎉 ⭐ ⭐ ⭐ 🐟</div>
+              <h5 class="text-base sm:text-lg font-black text-emerald-900">CHÍNH XÁC TUYỆT ĐỐI! TIẾNG "CÁ" CHỨA C VÀ DẤU SẮC!</h5>
+              <p class="text-xs text-emerald-700 font-bold">
+                Đánh vần: <strong>c - a - ca - sắc - cá!</strong> Tiếng "cá" có phụ âm <strong>c</strong> và thanh <strong>sắc ( / )</strong>! Bé nhận được Ngôi Sao Vàng thứ 3! 🌟
+              </p>
+              <div class="pt-1">
+                <button onclick="switchLetterCGame(4)" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs rounded-xl btn-toy shadow-sm">
+                  Chơi Tiếp Trò 4: Ghép Đôi Chữ & Hình 🔗 ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- TRÒ CHƠI 4: GHÉP ĐÔI (CHỮ VỚI HÌNH) -->
+          <!-- ========================================== -->
+          <div id="subCGame4Container" class="hidden bg-gradient-to-b from-purple-50 to-pink-50 rounded-3xl border-4 border-purple-300 p-5 sm:p-7 shadow-md space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 border-b-2 border-purple-200 pb-4">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-purple-900 flex items-center gap-2">
+                  <span>🔗 Trò 4: Ghép đôi (Chữ với Hình tương ứng)</span>
+                  <button type="button" onclick="speakCGameQuestion(4)" class="w-7 h-7 rounded-full bg-purple-200 hover:bg-purple-300 text-purple-800 flex items-center justify-center text-xs hover:scale-110 active:scale-95 transition cursor-pointer" title="Nghe hướng dẫn trò 4">
+                    🔊
+                  </button>
+                </h4>
+                <p class="text-xs text-purple-700 font-bold">Bé hãy chạm vào một chữ ở <strong>cột bên trái</strong>, rồi chạm vào hình thích hợp ở <strong>cột bên phải</strong> để tạo thành một đôi nhé!</p>
+              </div>
+              <button onclick="resetCGame4()" class="text-xs bg-white hover:bg-purple-100 text-purple-900 border-2 border-purple-300 px-3.5 py-1.5 rounded-xl font-bold transition flex items-center gap-1 shadow-2xs">
+                🔄 Ghép lại
+              </button>
+            </div>
+
+            <!-- Bảng ghép đôi 2 cột -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto pt-2">
+              
+              <!-- Cột trái: Chữ -->
+              <div class="space-y-3">
+                <div class="text-xs font-black text-purple-900 uppercase tracking-wider text-center bg-purple-100/70 py-1.5 rounded-xl">
+                  🅰️ Cột Trái: Chữ Cái
+                </div>
+                <div id="cGame4LeftCol" class="space-y-3">
+                  <!-- Rendered by JS: ca, cà, cá -->
+                </div>
+              </div>
+
+              <!-- Cột phải: Hình ảnh -->
+              <div class="space-y-3">
+                <div class="text-xs font-black text-pink-900 uppercase tracking-wider text-center bg-pink-100/70 py-1.5 rounded-xl">
+                  🖼️ Cột Phải: Hình Ảnh
+                </div>
+                <div id="cGame4RightCol" class="space-y-3">
+                  <!-- Rendered by JS: cà chua, cái ca, con cá -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Danh sách cặp đôi đã nối -->
+            <div id="cGame4PairsList" class="hidden bg-white/80 p-3 rounded-2xl border-2 border-purple-200 max-w-lg mx-auto text-center text-xs font-bold text-purple-800"></div>
+
+            <!-- Phản hồi sau khi ghép -->
+            <div id="cGame4Feedback" class="hidden"></div>
+
+            <!-- Hộp chúc mừng hoàn thành Trò 4 & Hoàn thành toàn bài 3 -->
+            <div id="cGame4SuccessBox" class="hidden bg-gradient-to-r from-amber-100 via-emerald-100 to-sky-100 border-4 border-amber-400 rounded-3xl p-6 text-center space-y-3 animate-pop shadow-lg">
+              <div class="text-5xl animate-bounce">🏆 ⭐ ⭐ ⭐ ⭐ 🏆</div>
+              <h4 class="text-xl sm:text-2xl font-black text-amber-900">CHÚC MỪNG BÉ ĐÃ HOÀN THÀNH XUẤT SẮC CẢ 4 TRÒ CHƠI BÀI 3: C c, DẤU SẮC!</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-700 max-w-lg mx-auto">
+                Bé đã đạt trọn vẹn <strong>4 Ngôi Sao Vàng</strong>: Ghép chữ cá viết thường chuẩn tiểu học, Câu sạch cá chữ C trong bể nước, Tìm đúng tiếng "cá" chứa c và dấu sắc, và Ghép đôi hoàn hảo chữ với hình!
+              </p>
+              <div class="pt-2 flex flex-wrap justify-center gap-3">
+                <button onclick="resetAllLetterCGames()" class="px-5 py-2.5 bg-amber-200 hover:bg-amber-300 text-amber-950 font-black text-xs sm:text-sm rounded-2xl transition">
+                  Chơi Lại Cả 4 Trò 🔄
+                </button>
+                <button onclick="showHomeView()" class="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm rounded-2xl btn-toy shadow-md">
+                  Trở Về Trang Chủ 🏠
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /BỘ 4 TRÒ CHƠI ĐẶC QUYỀN BÀI 3 -->
+
+        <!-- ============================================================================ -->
+        <!-- BỘ 3 TRÒ CHƠI ĐẶC QUYỀN BÀI 4: E e, Ê ê -->
+        <!-- ============================================================================ -->
+        <div id="lesson4GamesSection" class="hidden space-y-6">
+
+          <!-- Header 3 Trò Chơi Kỳ Diệu Chữ E & Ê -->
+          <div class="bg-gradient-to-r from-rose-50 via-amber-50 to-orange-50 rounded-3xl p-5 sm:p-6 border-3 border-rose-300 shadow-sm">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-rose-500 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-xs">
+                  ✨
+                </div>
+                <div>
+                  <h3 class="text-lg sm:text-xl font-black text-slate-800 flex items-center gap-2">
+                    <span>3 Trò Chơi Kỳ Diệu: Chữ E & Chữ Ê! 🎩✨</span>
+                    <button type="button" onclick="speakEGameQuestion('header')" class="w-8 h-8 rounded-full bg-rose-100 hover:bg-rose-200 text-rose-700 flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition shadow-2xs cursor-pointer" title="Bấm để nghe hướng dẫn">
+                      🔊
+                    </button>
+                  </h3>
+                  <p onclick="speakEGameQuestion('header')" class="text-xs text-slate-500 font-bold cursor-pointer hover:text-rose-800 transition">Bé hãy hoàn thành 3 trò chơi để giành trọn bộ 3 Ngôi Sao Vàng nhé! <span class="text-rose-600 font-black">🔊 Bấm nghe</span></p>
+                </div>
+              </div>
+
+              <!-- Huy hiệu 3 sao tiến độ -->
+              <div class="flex items-center gap-2 bg-white/90 border-2 border-rose-300 px-4 py-2 rounded-2xl shadow-xs">
+                <span class="text-xs font-black text-rose-900">Sao đạt được:</span>
+                <div class="flex items-center gap-1.5 text-lg" id="letterEGameStars">
+                  <span id="starEGame1" class="opacity-30 grayscale transition" title="Trò 1: Em ghép chữ e & ê">⭐</span>
+                  <span id="starEGame2" class="opacity-30 grayscale transition" title="Trò 2: Chiếc mũ thần kì">⭐</span>
+                  <span id="starEGame3" class="opacity-30 grayscale transition" title="Trò 3: Đào chữ cái">⭐</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thanh chuyển đổi 3 trò chơi -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-3">
+              <button id="btnSubEGame1" onclick="switchLetterEGame(1)" class="p-3 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow-xs bg-rose-500 text-white border-rose-600">
+                <span>🧩 Trò 1: Em Ghép Chữ E & Ê</span>
+              </button>
+              <button id="btnSubEGame2" onclick="switchLetterEGame(2)" class="p-3 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow-xs bg-white text-slate-700 border-slate-200 hover:bg-rose-50">
+                <span>🎩 Trò 2: Chiếc Mũ Thần Kì</span>
+              </button>
+              <button id="btnSubEGame3" onclick="switchLetterEGame(3)" class="p-3 rounded-2xl border-2 font-black text-xs transition flex items-center justify-center gap-2 cursor-pointer shadow-xs bg-white text-slate-700 border-slate-200 hover:bg-rose-50">
+                <span>⛏️ Trò 3: Đào Chữ Cái</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TRÒ CHƠI 1: EM GHÉP CHỮ E VÀ CHỮ Ê -->
+          <!-- ============================================================== -->
+          <div id="subEGame1Container" class="space-y-4">
+            <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-rose-200 shadow-sm space-y-5">
+              
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-rose-50/70 p-4 rounded-2xl border border-rose-200">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl">🧩</span>
+                  <div>
+                    <h4 class="text-base sm:text-lg font-black text-slate-800 flex items-center gap-2">
+                      <span>Trò chơi 1: Em Ghép Chữ e và Chữ ê</span>
+                      <button type="button" onclick="speakEGameQuestion('game1')" class="w-7 h-7 rounded-full bg-rose-200 hover:bg-rose-300 text-rose-800 flex items-center justify-center text-xs transition cursor-pointer" title="Nghe câu hỏi">🔊</button>
+                    </h4>
+                    <p class="text-xs text-slate-600 font-medium">Kéo thả các nét vào đúng vị trí trên bảng ô ly để tạo thành chữ e và ê hoàn chỉnh (chuẩn chữ viết thường tiểu học)!</p>
+                  </div>
+                </div>
+
+                <!-- Chuyển đổi chế độ: Ghép Chữ e / Ghép Chữ ê -->
+                <div class="flex items-center gap-1.5 bg-white p-1 rounded-2xl border border-rose-300 shadow-2xs shrink-0">
+                  <button id="btnModeEGame1_e" onclick="switchEGame1Mode('e')" class="px-3 py-1.5 rounded-xl font-black text-xs transition bg-rose-500 text-white shadow-2xs cursor-pointer">
+                    ✍️ Ghép chữ e (2 nét)
+                  </button>
+                  <button id="btnModeEGame1_ee" onclick="switchEGame1Mode('ee')" class="px-3 py-1.5 rounded-xl font-black text-xs transition text-slate-600 hover:bg-rose-50 cursor-pointer">
+                    🎩 Ghép chữ ê (3 nét)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Nội dung ghép chữ: Kho nét và Bảng ô ly -->
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                
+                <!-- Cột trái: Kho nét (Cards) -->
+                <div class="md:col-span-5 flex flex-col gap-3">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-black text-slate-600 uppercase tracking-wider">📦 Kho các nét chữ cái:</span>
+                    <span class="text-[11px] text-rose-600 font-bold">Kéo hoặc bấm chọn nét</span>
+                  </div>
+
+                  <div class="grid grid-cols-2 md:grid-cols-1 gap-3" id="eGame1CardsContainer">
+                    
+                    <!-- Thẻ 1: Nét xiên phải -->
+                    <div id="cardStrokeXienPhai" draggable="true"
+                         ondragstart="handleEGame1DragStart(event, 'xien_phai')"
+                         onclick="selectEGame1Stroke('xien_phai')"
+                         class="bg-white hover:bg-rose-50 border-3 border-rose-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card select-none shadow-xs">
+                      <div class="text-[11px] font-black text-rose-900 mb-1">1. Nét xiên phải lượn lên</div>
+                      <div id="visualStrokeXienPhai" class="flex items-center justify-center h-20 my-1 pointer-events-none"></div>
+                      <div class="text-[10px] text-slate-500 font-bold">Từ đường kẻ 1 lên đường kẻ 3</div>
+                      <span id="badgeXienPhai" class="inline-block mt-1 text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                    </div>
+
+                    <!-- Thẻ 2: Nét cong hở phải -->
+                    <div id="cardStrokeCongHoPhai" draggable="true"
+                         ondragstart="handleEGame1DragStart(event, 'cong_ho_phai')"
+                         onclick="selectEGame1Stroke('cong_ho_phai')"
+                         class="bg-white hover:bg-rose-50 border-3 border-rose-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card select-none shadow-xs">
+                      <div class="text-[11px] font-black text-rose-900 mb-1">2. Nét cong hở phải</div>
+                      <div id="visualStrokeCongHoPhai" class="flex items-center justify-center h-20 my-1 pointer-events-none"></div>
+                      <div class="text-[10px] text-slate-500 font-bold">Lượn lưng cắt nét xiên, chạm đáy</div>
+                      <span id="badgeCongHoPhai" class="inline-block mt-1 text-[10px] bg-rose-100 text-rose-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                    </div>
+
+                    <!-- Thẻ 3: Dấu mũ mái nhà (cho chữ ê) -->
+                    <div id="cardStrokeDauMu" draggable="true"
+                         ondragstart="handleEGame1DragStart(event, 'dau_mu')"
+                         onclick="selectEGame1Stroke('dau_mu')"
+                         class="bg-white hover:bg-amber-50 border-3 border-amber-300 rounded-3xl p-3 text-center cursor-pointer transition bubbly-card select-none shadow-xs hidden">
+                      <div class="text-[11px] font-black text-amber-900 mb-1">3. Dấu mũ mái nhà</div>
+                      <div id="visualStrokeDauMu" class="flex items-center justify-center h-20 my-1 pointer-events-none"></div>
+                      <div class="text-[10px] text-slate-500 font-bold">Đỉnh nhọn ở trên đầu chữ e</div>
+                      <span id="badgeDauMu" class="inline-block mt-1 text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">Sẵn sàng</span>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Cột phải: Bảng Ô Ly Ghép Chữ (Puzzle Board) -->
+                <div class="md:col-span-7 flex flex-col items-center">
+                  <div class="w-full max-w-[340px] flex flex-col items-center gap-3">
+                    <div class="flex items-center justify-between w-full text-xs font-black text-slate-600">
+                      <span>BẢNG Ô LY GHÉP CHỮ:</span>
+                      <span class="text-rose-600 font-bold" id="puzzleEStatusHint">Kéo nét vào bảng nhé!</span>
+                    </div>
+
+                    <!-- Khung chứa SVG bảng ghép chữ -->
+                    <div class="w-full aspect-square max-w-[320px] relative" id="puzzleBoardEContainer">
+                      <!-- Rendered by renderPuzzleBoardESG() -->
+                    </div>
+
+                    <p id="puzzleEStatusMsg" class="text-xs font-bold text-slate-600 text-center min-h-[20px]">
+                      👉 Bé hãy kéo <span class="text-rose-600 font-black">Nét xiên phải</span> vào bảng trước nhé!
+                    </p>
+
+                    <!-- Nút thao tác Game 1 -->
+                    <div class="flex flex-col items-center gap-2.5 mt-2 w-full">
+                      <!-- Nút nổi bật chuyển sang Trò 2 -->
+                      <button type="button" id="btnGoToEGame2" onclick="switchLetterEGame(2)" class="w-full max-w-[280px] py-3 px-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-sm rounded-2xl shadow-lg hover:shadow-xl transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer animate-pulse hidden">
+                        <span>🎮 Qua Trò Chơi 2: Chiếc Mũ Thần Kì 🎩 ➡️</span>
+                      </button>
+
+                      <div class="flex items-center gap-3">
+                        <button type="button" id="btnNextEGame1Mode" onclick="toggleEGame1Mode()" class="px-4 py-2 bg-rose-500 hover:bg-rose-600 text-white font-black text-xs rounded-xl transition cursor-pointer flex items-center gap-1.5 shadow-2xs hidden">
+                          <span>✨ Ghép chữ tiếp theo ➡️</span>
+                        </button>
+                        <button type="button" onclick="resetEGame1()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-xs rounded-xl transition cursor-pointer flex items-center gap-1.5 shadow-2xs">
+                          <span>🔄 Ghép lại</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TRÒ CHƠI 2: CHIẾC MŨ THẦN KÌ -->
+          <!-- ============================================================== -->
+          <div id="subEGame2Container" class="hidden space-y-4">
+            <div class="bg-gradient-to-br from-indigo-50/60 via-purple-50/50 to-pink-50/60 rounded-3xl p-5 sm:p-7 border-2 border-purple-200 shadow-sm space-y-6">
+              
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-white/80 backdrop-blur-xs p-4 rounded-2xl border border-purple-200">
+                <div class="flex items-center gap-3">
+                  <span class="text-3xl animate-bounce">🎩</span>
+                  <div>
+                    <h4 class="text-base sm:text-lg font-black text-purple-900 flex items-center gap-2">
+                      <span>Trò chơi 2: Chiếc Mũ Thần Kì</span>
+                      <button type="button" onclick="speakEGameQuestion('game2')" class="w-7 h-7 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-800 flex items-center justify-center text-xs transition cursor-pointer" title="Nghe hướng dẫn">🔊</button>
+                    </h4>
+                    <p class="text-xs text-purple-700 font-medium">Bé hãy kéo chiếc mũ thần kì đội lên cho chữ e để chữ e biến hình thành chữ ê nhé!</p>
+                  </div>
+                </div>
+
+                <button type="button" onclick="resetEGame2()" class="px-3.5 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-800 font-black text-xs rounded-xl transition cursor-pointer flex items-center gap-1 shrink-0">
+                  <span>🔄 Đội lại mũ</span>
+                </button>
+              </div>
+
+              <!-- Sân khấu phép thuật biến hình -->
+              <div class="relative bg-white rounded-3xl p-6 sm:p-8 border-3 border-purple-300 shadow-inner flex flex-col md:flex-row items-center justify-around gap-8 min-h-[380px] overflow-hidden">
+                
+                <!-- Chữ E trên bảng ô ly ở giữa -->
+                <div class="flex flex-col items-center">
+                  <span class="text-xs font-black text-purple-800 mb-2 uppercase tracking-wide">Sân Khấu Phép Thuật:</span>
+                  
+                  <div class="relative w-64 h-64 sm:w-72 sm:h-72 bg-white rounded-3xl border-3 border-purple-200 p-2 shadow-md flex items-center justify-center" id="magicStageBox">
+                    
+                    <!-- Vùng nhận diện thả mũ trên đầu chữ e -->
+                    <div id="magicHatDropZone"
+                         ondragover="handleMagicHatBoardDragOver(event)"
+                         ondrop="handleMagicHatDrop(event)"
+                         onclick="wearMagicHat()"
+                         class="absolute top-4 left-1/2 -translate-x-1/2 w-40 h-20 rounded-2xl border-2 border-dashed border-purple-400 bg-purple-50/70 hover:bg-purple-100/90 flex flex-col items-center justify-center cursor-pointer transition z-20 hat-target-pulse">
+                      <span class="text-[11px] font-black text-purple-700">👒 Đội mũ vào đây!</span>
+                      <span class="text-[9px] text-purple-500 font-bold">Kéo hoặc bấm vào đây</span>
+                    </div>
+
+                    <!-- Bảng vẽ SVG Chữ E / Ê biến hình -->
+                    <div id="magicLetterSVGContainer" class="w-full h-full flex items-center justify-center pointer-events-none">
+                      <!-- Rendered by updateEGame2UI() -->
+                    </div>
+
+                    <!-- Hiệu ứng tia sáng phép thuật khi biến hình -->
+                    <div id="magicSparkleOverlay" class="absolute inset-0 pointer-events-none hidden items-center justify-center z-30">
+                      <div class="text-6xl animate-magic-burst">✨🌟✨</div>
+                    </div>
+
+                  </div>
+
+                  <div id="magicTransformMsg" class="mt-3 text-xs sm:text-sm font-black text-purple-900 text-center">
+                    👉 Hãy kéo chiếc mũ bên cạnh đội lên đầu chữ e nào!
+                  </div>
+
+                  <!-- Nút thao tác Game 2 -->
+                  <div class="flex flex-col items-center gap-2.5 mt-3 w-full">
+                    <button type="button" id="btnGoToEGame3" onclick="switchLetterEGame(3)" class="w-full max-w-[320px] py-3 px-4 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-stone-900 font-black text-sm rounded-2xl shadow-lg hover:shadow-xl transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 cursor-pointer animate-bounce hidden">
+                      <span>🎮 Qua Trò Chơi 3: Thợ Mỏ Đào Chữ Cái ⛏️ ➡️</span>
+                    </button>
+                    <div class="flex items-center gap-2.5">
+                      <button type="button" id="btnResetEGame2" onclick="resetEGame2()" class="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-black text-xs rounded-xl border border-slate-200 transition cursor-pointer flex items-center gap-1.5 shadow-2xs hidden">
+                        <span>🔄 Biến hình lại</span>
+                      </button>
+                      <button type="button" onclick="switchLetterEGame(1)" class="px-3 py-2 text-purple-700 hover:text-purple-900 font-bold text-xs rounded-xl transition cursor-pointer">
+                        <span>⬅️ Trở lại Trò 1</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chiếc Mũ Thần Kì lơ lửng bên cạnh -->
+                <div class="flex flex-col items-center gap-3">
+                  <span class="text-xs font-black text-amber-700 uppercase tracking-wide">Chiếc Mũ Thần Kì:</span>
+                  
+                  <div id="draggableMagicHat" draggable="true"
+                       ondragstart="handleMagicHatDragStart(event)"
+                       onclick="selectMagicHat()"
+                       class="w-36 h-36 bg-gradient-to-br from-amber-100 to-orange-100 border-3 border-amber-400 rounded-3xl p-3 flex flex-col items-center justify-center gap-1.5 cursor-grab active:cursor-grabbing hover:scale-105 transition shadow-md bubbly-card select-none animate-hat-float">
+                    
+                    <!-- SVG Chiếc Mũ Mái Nhà Vàng Kim -->
+                    <svg width="72" height="48" viewBox="0 0 72 48" class="drop-shadow-sm pointer-events-none">
+                      <path d="M 12 38 L 36 12 L 60 38" fill="none" stroke="#ea580c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M 12 38 L 36 12 L 60 38" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <span class="text-xs font-black text-amber-900">Chiếc Mũ Mái Nhà</span>
+                    <span id="magicHatBadge" class="text-[9px] font-bold bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full">Kéo tôi đi! ✨</span>
+                  </div>
+
+                  <p class="text-[11px] text-slate-500 font-bold text-center max-w-[160px]">
+                    Bé có thể kéo thả hoặc bấm vào mũ rồi bấm lên đầu chữ e!
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TRÒ CHƠI 3: ĐÀO CHỮ CÁI (GOLD MINER) -->
+          <!-- ============================================================== -->
+          <div id="subEGame3Container" class="hidden space-y-4">
+            <div class="bg-gradient-to-br from-amber-950 via-stone-900 to-amber-950 rounded-3xl p-5 sm:p-6 border-3 border-amber-500/80 shadow-xl space-y-4 text-white">
+              
+              <!-- Header game đào vàng -->
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-stone-900/80 p-3.5 rounded-2xl border border-amber-500/40">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-amber-500 text-stone-900 rounded-2xl flex items-center justify-center text-2xl font-black shadow-xs">
+                    ⛏️
+                  </div>
+                  <div>
+                    <h4 class="text-base sm:text-lg font-black text-amber-300 flex items-center gap-2">
+                      <span>Trò chơi 3: Thợ Mỏ Đào Chữ Cái! ⛏️💎</span>
+                      <button type="button" onclick="speakEGameQuestion('game3')" class="w-7 h-7 rounded-full bg-amber-400/20 hover:bg-amber-400/40 text-amber-300 flex items-center justify-center text-xs transition cursor-pointer" title="Nghe nhiệm vụ">🔊</button>
+                    </h4>
+                    <p class="text-xs text-amber-100/70 font-medium">Ngắm cần cẩu và bấm THẢ MÓC để gắp đúng các thỏi vàng có chữ E, e và Chữ Ê, ê nhé!</p>
+                  </div>
+                </div>
+
+                <!-- Bảng thống kê điểm & vàng -->
+                <div class="flex items-center gap-3 flex-wrap">
+                  <div class="bg-stone-800/90 border border-amber-400/40 px-3 py-1.5 rounded-xl text-center">
+                    <div class="text-[10px] text-amber-300/80 font-bold uppercase">Thỏi Vàng E, Ê:</div>
+                    <div class="text-sm font-black text-amber-300">
+                      <span id="eGame3Collected">0</span> / <span id="eGame3TotalTargets">4</span> 🏆
+                    </div>
+                  </div>
+                  <div class="bg-stone-800/90 border border-amber-400/40 px-3 py-1.5 rounded-xl text-center">
+                    <div class="text-[10px] text-amber-300/80 font-bold uppercase">Điểm số:</div>
+                    <div class="text-sm font-black text-amber-400">
+                      <span id="eGame3Score">0</span> 💰
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Khu vực Canvas Game Đào Vàng -->
+              <div class="relative w-full rounded-2xl overflow-hidden border-2 border-amber-500/50 gold-mine-canvas-box flex flex-col items-center">
+                
+                <canvas id="goldMinerCanvas" width="660" height="420" class="w-full max-w-[660px] h-auto block select-none cursor-pointer"></canvas>
+
+                <!-- Banner thông báo kết quả đào / chúc mừng -->
+                <div id="minerWinOverlay" class="absolute inset-0 bg-stone-900/90 backdrop-blur-xs flex flex-col items-center justify-center gap-3 p-6 text-center hidden z-30">
+                  <div class="text-5xl animate-bounce">🏆🎉✨</div>
+                  <h3 class="text-xl sm:text-2xl font-black text-amber-300">XUẤT SẮC! BÁC THỢ MỎ TÍ HON!</h3>
+                  <p class="text-xs sm:text-sm text-amber-100 font-bold max-w-md">
+                    Bé đã đào sạch tất cả các thỏi vàng có chữ E và chữ Ê! Giành trọn vẹn 3 Ngôi Sao Vàng của bài học!
+                  </p>
+                  <div class="flex flex-wrap items-center justify-center gap-3 mt-3">
+                    <button type="button" onclick="resetEGame3()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-900 font-black text-xs sm:text-sm rounded-xl transition cursor-pointer shadow-lg">
+                      🔄 Đào Vàng Ván Mới
+                    </button>
+                    <button type="button" onclick="switchLetterEGame(1)" class="px-5 py-2.5 bg-rose-600 hover:bg-rose-500 text-white font-black text-xs sm:text-sm rounded-xl transition cursor-pointer shadow-lg">
+                      🧩 Chơi Lại Từ Trò 1
+                    </button>
+                    <button type="button" onclick="switchLetterEGame(2)" class="px-5 py-2.5 bg-purple-700 hover:bg-purple-600 text-white font-black text-xs sm:text-sm rounded-xl transition cursor-pointer shadow-lg">
+                      🎩 Về Trò 2
+                    </button>
+                    <button type="button" onclick="showHomeView()" class="px-5 py-2.5 bg-stone-700 hover:bg-stone-600 text-white font-black text-xs sm:text-sm rounded-xl transition cursor-pointer">
+                      🏠 Về Trang Chủ
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Thanh điều khiển thả móc bên dưới -->
+              <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+                <div class="text-xs text-amber-200/80 font-bold flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span id="minerStatusHint">Cần cẩu đang lắc lư... Canh góc chuẩn rồi thả móc!</span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <button type="button" id="btnDropMinerHook" onclick="dropEGame3Hook()" class="px-6 py-3 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-400 text-stone-900 font-black text-sm rounded-2xl transition cursor-pointer shadow-lg active:scale-95 flex items-center gap-2 btn-toy">
+                    <span>🎣 THẢ MÓC NGAY!</span>
+                    <span class="text-xs opacity-75 font-bold">(Phím Space)</span>
+                  </button>
+                  <button type="button" onclick="resetEGame3()" class="px-3.5 py-3 bg-stone-800 hover:bg-stone-700 text-amber-300 font-bold text-xs rounded-2xl transition cursor-pointer border border-amber-500/30">
+                    🔄 Ván mới
+                  </button>
+                </div>
+              </div>
+
+              <!-- Thanh liên kết chuyển đổi giữa các trò chơi -->
+              <div class="flex items-center justify-between pt-3 border-t border-amber-500/30 text-xs">
+                <button type="button" onclick="switchLetterEGame(1)" class="text-amber-300/80 hover:text-amber-200 font-bold flex items-center gap-1 cursor-pointer">
+                  <span>⬅️ Trò 1: Ghép Chữ E & Ê</span>
+                </button>
+                <button type="button" onclick="switchLetterEGame(2)" class="text-amber-300/80 hover:text-amber-200 font-bold flex items-center gap-1 cursor-pointer">
+                  <span>Trò 2: Chiếc Mũ Thần Kì 🎩 ➡️</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- /BỘ 3 TRÒ CHƠI ĐẶC QUYỀN BÀI 4 -->
+
+        <!-- BỘ 2 TRÒ CHƠI ĐẶC QUYỀN BÀI 5: ÔN TẬP TUẦN 2 -->
+        <div id="lesson5GamesSection" class="hidden space-y-6">
+
+          <!-- Thanh chọn và tổng kết sao 3 trò chơi -->
+          <div class="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 p-4 sm:p-5 rounded-3xl text-white shadow-md flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <div class="inline-block bg-white/20 backdrop-blur-xs px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-1">
+                🎮 Ôn Tập Đỉnh Cao • Tuần 2
+              </div>
+              <h3 class="text-xl sm:text-2xl font-black drop-shadow-xs">
+                Bộ 3 Trò Chơi Ôn Tập Tuần 2
+              </h3>
+              <p class="text-xs sm:text-sm text-amber-50 font-medium">
+                Vượt qua 3 trò chơi kỳ thú để trở thành Nhà Thám Hiểm xuất sắc nhất!
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2 bg-white/20 backdrop-blur-xs px-4 py-2 rounded-2xl border border-white/30">
+              <span class="text-xs sm:text-sm font-black">Ngôi Sao:</span>
+              <div class="flex items-center gap-1.5 text-2xl">
+                <span id="starReviewGame1" class="opacity-30 grayscale transition" title="Trò 1: Mắt Thần Tinh Anh">⭐</span>
+                <span id="starReviewGame2" class="opacity-30 grayscale transition" title="Trò 2: Nhà Máy Ghép Tiếng">⭐</span>
+                <span id="starReviewGame3" class="opacity-30 grayscale transition" title="Trò 3: Đường Đua Nét Chữ">⭐</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nút bấm Tab chuyển đổi 3 trò chơi -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+            <button type="button" id="tabBtnReviewGame1" onclick="switchReviewGame(1)" 
+                    class="py-3 px-4 rounded-2xl font-black text-xs sm:text-sm transition-all shadow-sm border-2 flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-rose-500 text-white border-transparent shadow-amber-200">
+              <span>👁️ Trò 1: Mắt Thần Tinh Anh</span>
+            </button>
+            <button type="button" id="tabBtnReviewGame2" onclick="switchReviewGame(2)" 
+                    class="py-3 px-4 rounded-2xl font-black text-xs sm:text-sm transition-all shadow-sm border-2 flex items-center justify-center gap-2 bg-white text-slate-700 border-amber-200 hover:bg-amber-50">
+              <span>🏭 Trò 2: Nhà Máy Ghép Tiếng</span>
+            </button>
+            <button type="button" id="tabBtnReviewGame3" onclick="switchReviewGame(3)" 
+                    class="py-3 px-4 rounded-2xl font-black text-xs sm:text-sm transition-all shadow-sm border-2 flex items-center justify-center gap-2 bg-white text-slate-700 border-amber-200 hover:bg-amber-50">
+              <span>🏎️ Trò 3: Đường Đua Nét Chữ</span>
+            </button>
+          </div>
+
+          <!-- ============================================== -->
+          <!-- TRÒ CHƠI 1: MẮT THẦN TINH ANH -->
+          <!-- ============================================== -->
+          <div id="reviewGame1Box" class="bg-gradient-to-b from-sky-100 via-sky-50 to-emerald-50 rounded-3xl p-5 sm:p-7 border-4 border-amber-300 shadow-lg space-y-5 relative overflow-hidden">
+            
+            <!-- Header Trò 1 -->
+            <div class="bg-white/80 backdrop-blur-xs rounded-2xl p-4 border-2 border-amber-200 flex flex-wrap items-center justify-between gap-3 shadow-xs">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-amber-900 flex items-center gap-2">
+                  👁️ Mắt Thần Tinh Anh ✨
+                </h4>
+                <p class="text-xs text-slate-600 font-semibold mt-0.5">
+                  Lắng nghe âm thanh và tinh mắt bấm chọn đúng quả bóng chứa chữ cái nhé!
+                </p>
+              </div>
+
+              <!-- Huy hiệu lượt chơi -->
+              <div class="flex items-center gap-2">
+                <span id="eyeRoundBadge" class="bg-amber-500 text-white px-3 py-1 rounded-xl font-black text-xs shadow-xs">
+                  Lượt 1
+                </span>
+                <button type="button" onclick="playCurrentEyeTargetSound()" 
+                        class="bg-rose-500 hover:bg-rose-600 text-white px-3 py-1.5 rounded-xl font-black text-xs flex items-center gap-1.5 shadow-xs transition btn-toy">
+                  <span>🔊</span> Nghe lại
+                </button>
+              </div>
+            </div>
+
+            <!-- Bảng hiển thị chữ cần tìm trong lượt -->
+            <div class="bg-white rounded-3xl p-5 border-3 border-amber-300 shadow-sm text-center relative">
+              <div class="text-xs font-black text-slate-400 uppercase tracking-wider mb-1">YÊU CẦU LƯỢT NÀY</div>
+              
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xs sm:text-sm font-bold text-slate-600">Bé hãy tìm:</span>
+                <span id="eyeTargetTextDisplay" class="text-4xl sm:text-5xl font-black text-rose-600 tracking-wide animate-pulse">
+                  a
+                </span>
+                <button type="button" onclick="playCurrentEyeTargetSound()" class="w-10 h-10 rounded-2xl bg-rose-100 hover:bg-rose-200 text-rose-600 flex items-center justify-center text-lg transition">
+                  🔊
+                </button>
+              </div>
+
+              <!-- Thanh tiến độ 4 chữ của lượt -->
+              <div class="flex items-center justify-center gap-2 sm:gap-3 mt-4" id="eyeProgressSlotsContainer">
+                <!-- Injected by JS: 4 ô tròn tiến độ -->
+              </div>
+            </div>
+
+            <!-- Vùng trời xuất hiện các quả bóng bay mang chữ cái -->
+            <div class="relative bg-gradient-to-b from-sky-200/60 via-sky-100/40 to-emerald-100/50 rounded-3xl p-5 sm:p-6 border-2 border-sky-300 min-h-[340px] flex items-center justify-center overflow-hidden">
+              <!-- Đám mây trang trí -->
+              <div class="absolute top-3 left-4 text-3xl opacity-60 pointer-events-none select-none">☁️</div>
+              <div class="absolute top-8 right-6 text-2xl opacity-50 pointer-events-none select-none">☁️</div>
+              <div class="absolute bottom-2 left-10 text-2xl opacity-60 pointer-events-none select-none">🍃</div>
+              <div class="absolute bottom-3 right-10 text-2xl opacity-60 pointer-events-none select-none">🌿</div>
+
+              <!-- Lưới các quả bóng bay tương tác -->
+              <div id="eyeBalloonsGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full max-w-2xl relative z-10">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <!-- Hộp chúc mừng hoàn thành lượt chơi -->
+            <div id="eyeRoundSuccessBox" class="hidden bg-white/95 rounded-3xl p-6 border-4 border-emerald-400 text-center space-y-4 animate-pop shadow-xl">
+              <div class="text-5xl animate-bounce">🎉 👁️ ⭐</div>
+              <h4 class="text-xl sm:text-2xl font-black text-emerald-800" id="eyeSuccessTitle">
+                Hoan Hô Bé! Mắt Thần Tinh Anh!
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold max-w-md mx-auto" id="eyeSuccessDesc">
+                Bé đã xuất sắc tìm đúng cả 4 chữ cái trong lượt chơi này!
+              </p>
+              
+              <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                <button type="button" onclick="startNextEyeRound()" 
+                        class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-2xl font-black text-sm sm:text-base shadow-lg shadow-orange-200 transition flex items-center gap-2 btn-toy">
+                  <span>🔄 Chơi Lượt Tiếp Theo (Tìm 4 Chữ Mới!)</span>
+                </button>
+                <button type="button" onclick="switchReviewGame(2)" 
+                        class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-2xl font-black text-sm sm:text-base shadow-lg shadow-teal-200 transition flex items-center gap-2 btn-toy">
+                  <span>Trò 2: Nhà Máy Ghép Tiếng ➡️</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============================================== -->
+          <!-- TRÒ CHƠI 2: NHÀ MÁY GHÉP TIẾNG -->
+          <!-- ============================================== -->
+          <div id="reviewGame2Box" class="hidden bg-gradient-to-b from-amber-50 via-orange-50/40 to-slate-100 rounded-3xl p-5 sm:p-7 border-4 border-amber-300 shadow-lg space-y-5">
+            
+            <!-- Header Trò 2 -->
+            <div class="bg-white/80 backdrop-blur-xs rounded-2xl p-4 border-2 border-amber-200 flex flex-wrap items-center justify-between gap-3 shadow-xs">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-amber-900 flex items-center gap-2">
+                  🏭 Nhà Máy Ghép Tiếng Kỳ Diệu ⚙️
+                </h4>
+                <p class="text-xs text-slate-600 font-semibold mt-0.5">
+                  Chọn các mảnh chữ rời rồi bấm <span class="text-rose-600 font-bold">🚀 BẮT ĐẦU</span> để vận hành nhà máy tạo tiếng có nghĩa!
+                </p>
+              </div>
+
+              <!-- Trạng thái sản xuất -->
+              <div class="flex items-center gap-2">
+                <span id="factoryStatusBadge" class="bg-emerald-500 text-white px-3 py-1 rounded-xl font-black text-xs shadow-xs flex items-center gap-1">
+                  <span>⚙️</span> Sẵn sàng vận hành
+                </span>
+              </div>
+            </div>
+
+            <!-- Gợi ý thử thách (Challenge banner) -->
+            <div id="factoryMissionBanner" class="bg-amber-100/80 border-2 border-amber-300 rounded-2xl p-3 sm:p-4 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl sm:text-3xl">🎯</span>
+                <div>
+                  <div class="text-[11px] font-black text-amber-800 uppercase tracking-wider">Thử Thách Chế Tạo:</div>
+                  <div class="text-xs sm:text-sm font-black text-amber-950" id="factoryMissionText">
+                    Bé hãy ghép các mảnh chữ để tạo thành tiếng <span class="text-rose-600 font-black text-base underline">cá</span> 🐟 nhé!
+                  </div>
+                </div>
+              </div>
+              <button type="button" onclick="randomFactoryMission()" class="text-xs font-black text-amber-700 bg-white hover:bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-300 transition shrink-0">
+                🎲 Đổi thử thách
+              </button>
+            </div>
+
+            <!-- KHUNG NHÀ MÁY CHÍNH VỚI BUỒNG GHÉP & BĂNG CHUYỀN -->
+            <div class="bg-gradient-to-b from-slate-800 via-slate-900 to-zinc-900 rounded-3xl p-6 sm:p-8 border-4 border-amber-500 shadow-xl relative overflow-hidden text-white">
+              
+              <!-- Khói bốc lên từ ống khói nhà máy -->
+              <div class="flex justify-between items-center px-4 mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-10 bg-amber-600 rounded-t-lg relative flex flex-col items-center">
+                    <span class="absolute -top-6 text-xl steam-puff">💨</span>
+                  </div>
+                  <div class="text-xs font-black text-amber-400 flex items-center gap-1">
+                    <span id="factoryGear1" class="text-base gear-spinning inline-block">⚙️</span>
+                    <span>XƯỞNG CHẾ TẠO CHỮ</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <span id="factoryGear2" class="text-base gear-spinning inline-block">⚙️</span>
+                  <div class="w-6 h-10 bg-amber-600 rounded-t-lg relative flex flex-col items-center">
+                    <span class="absolute -top-6 text-xl steam-puff">💨</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buồng ghép tiếng trung tâm (Assembly Chamber) -->
+              <div id="assemblyChamberBox" class="bg-slate-800/90 rounded-2xl p-5 border-3 border-amber-400/80 shadow-inner max-w-md mx-auto text-center space-y-4 transition">
+                <div class="text-xs font-black text-amber-300 flex items-center justify-between">
+                  <span>BUỒNG GHÉP TIẾNG 🧩</span>
+                  <span class="text-[10px] text-slate-300 font-semibold">(Bấm vào chữ trong ô để gỡ bỏ)</span>
+                </div>
+
+                <!-- 3 Ô chứa các mảnh chữ ghép -->
+                <div class="flex items-center justify-center gap-3" id="factorySlotsContainer">
+                  <!-- Injected by JS: Ô 1, Ô 2, Ô 3 -->
+                </div>
+
+                <!-- Nút điều khiển vận hành -->
+                <div class="flex items-center justify-center gap-3 pt-2">
+                  <button type="button" onclick="clearFactorySlots()" 
+                          class="px-4 py-2.5 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-2xl font-bold text-xs transition border border-slate-500">
+                    🗑️ Xóa hết
+                  </button>
+
+                  <button type="button" id="btnStartFactory" onclick="startFactoryEngine()" 
+                          class="px-7 py-3 bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 hover:from-amber-500 hover:to-rose-600 text-white rounded-2xl font-black text-sm sm:text-base shadow-lg shadow-orange-500/50 transition flex items-center gap-2 btn-toy">
+                    <span>🚀 BẮT ĐẦU VẬN HÀNH</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Băng chuyền đưa sản phẩm ra -->
+              <div class="mt-6 pt-4 border-t-2 border-slate-700/80">
+                <div class="text-xs font-black text-amber-300/80 mb-2 flex items-center justify-between">
+                  <span>KỆ THÀNH PHẨM CỦA BÉ 📦</span>
+                  <span id="factoryCountText" class="text-xs font-black text-emerald-400">Đã tạo: 0 tiếng</span>
+                </div>
+                <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-thin min-h-[56px]" id="factoryProductsShelf">
+                  <span class="text-xs text-slate-400 italic">Chưa có sản phẩm nào. Hãy ghép tiếng đầu tiên nhé!</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- KHAY CÁC MẢNH CHỮ RỜI ĐỂ HỌC SINH BẤM CHỌN -->
+            <div class="bg-white rounded-3xl p-5 border-3 border-amber-300 shadow-sm space-y-3">
+              <div class="flex items-center justify-between">
+                <h5 class="text-xs sm:text-sm font-black text-slate-800 flex items-center gap-1.5">
+                  <span>🔤</span> Mảnh Chữ Rời (Bé bấm chọn để đưa vào buồng ghép):
+                </h5>
+                <span class="text-xs text-slate-400 font-bold">Chạm vào mảnh chữ 👇</span>
+              </div>
+
+              <div class="flex flex-wrap gap-2.5 sm:gap-3.5 justify-center" id="factoryLetterTilesContainer">
+                <!-- Injected by JS: a, b, c, e, ê, dấu huyền, dấu sắc -->
+              </div>
+            </div>
+
+            <!-- Hộp phản hồi thành công hoặc cảnh báo kẹt máy -->
+            <div id="factoryFeedbackBox" class="hidden p-5 rounded-3xl border-3 text-center transition animate-pop shadow-md space-y-3">
+              <!-- Injected by JS -->
+            </div>
+
+          </div>
+
+          <!-- ============================================== -->
+          <!-- TRÒ CHƠI 3: ĐƯỜNG ĐUA NÉT CHỮ -->
+          <!-- ============================================== -->
+          <div id="reviewGame3Box" class="hidden bg-gradient-to-b from-sky-100 via-indigo-50/50 to-emerald-50 rounded-3xl p-5 sm:p-7 border-4 border-indigo-300 shadow-xl space-y-6 relative overflow-hidden">
+            
+            <!-- Header Trò 3 -->
+            <div class="bg-white/90 backdrop-blur-xs rounded-3xl p-4 sm:p-5 border-2 border-indigo-200 flex flex-wrap items-center justify-between gap-4 shadow-sm">
+              <div class="max-w-xl">
+                <div class="inline-flex items-center gap-1.5 bg-indigo-100 text-indigo-800 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider mb-1.5 shadow-2xs">
+                  <span>🏎️</span> <span>Tập Tô Chữ Viết Thường • Ôn Tập Tuần 2</span>
+                </div>
+                <h4 class="text-lg sm:text-2xl font-black text-indigo-950 flex items-center gap-2">
+                  <span>🏁 Đường Đua Nét Chữ</span> <span class="text-xl">✍️</span>
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-semibold mt-1">
+                  Bé hãy bắt đầu từ điểm màu xanh 🟢, lướt ngón tay hoặc chuột theo đường nét chấm và mũi tên chỉ hướng để hoàn thành thử thách nhé!
+                </p>
+              </div>
+
+              <!-- Thanh tiến trình đường đua & Số sao gom được -->
+              <div class="bg-gradient-to-br from-indigo-50 to-white p-3.5 rounded-2xl border-2 border-indigo-200 shadow-inner flex flex-col gap-2 min-w-[240px]">
+                <div class="flex items-center justify-between text-xs font-black">
+                  <span class="text-indigo-900 flex items-center gap-1">
+                    <span>🚦</span> Tiến Trình Cuộc Đua:
+                  </span>
+                  <span id="raceTrackProgressText" class="text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full font-black text-[11px]">
+                    0/11 Chặng
+                  </span>
+                </div>
+
+                <!-- Đường đua thu nhỏ với xe đua chạy -->
+                <div class="relative w-full h-5 bg-slate-200 rounded-full border border-slate-300 overflow-hidden flex items-center px-1">
+                  <div class="absolute inset-0 flex items-center justify-around opacity-30 pointer-events-none">
+                    <span class="w-2 h-0.5 bg-slate-600"></span>
+                    <span class="w-2 h-0.5 bg-slate-600"></span>
+                    <span class="w-2 h-0.5 bg-slate-600"></span>
+                    <span class="w-2 h-0.5 bg-slate-600"></span>
+                    <span class="w-2 h-0.5 bg-slate-600"></span>
+                  </div>
+                  <!-- Thanh tiến độ màu gradient -->
+                  <div id="raceTrackProgressBar" class="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-emerald-400 via-teal-400 to-indigo-500 rounded-full transition-all duration-500" style="width: 0%;"></div>
+                  <!-- Xe đua tí hon -->
+                  <div id="raceCarIndicator" class="relative z-10 text-base transition-all duration-500 transform -translate-y-0.5" style="left: 0%;">
+                    🏎️
+                  </div>
+                  <!-- Cờ đích -->
+                  <div class="absolute right-1 text-xs">🏁</div>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 pt-0.5">
+                  <span id="raceTotalStarsText" class="text-amber-600 font-black flex items-center gap-1">
+                    <span>⭐</span> 0 Sao đã gom
+                  </span>
+                  <span id="raceChallengeStatusBadge" class="text-emerald-700 font-extrabold text-[11px]">Đang sẵn sàng</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- THANH CHỌN LƯỢT ĐUA (5 CHỮ CỐT LÕI + CÁC TIẾNG ĐÃ HỌC) -->
+            <div class="bg-white rounded-3xl p-4 sm:p-5 border-3 border-indigo-200 shadow-sm space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-base sm:text-lg">🔤</span>
+                  <h5 class="text-xs sm:text-sm font-black text-slate-800 uppercase tracking-wide">
+                    Chọn Chữ / Tiếng Luyện Tô:
+                  </h5>
+                </div>
+                <span class="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-xl">
+                  5 Chữ cái cốt lõi (a, b, c, e, ê) & Tiếng đã học
+                </span>
+              </div>
+
+              <!-- Danh sách các nút chọn chữ -->
+              <div class="flex flex-wrap gap-2 sm:gap-2.5 justify-center sm:justify-start" id="raceLetterSelectorContainer">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <!-- BẢNG TẬP TÔ CHÍNH (VỞ Ô LY + CANVAS VẼ TAY) -->
+            <div class="bg-white rounded-3xl p-4 sm:p-6 border-4 border-indigo-300 shadow-lg space-y-4">
+              
+              <!-- Thông tin chữ hiện tại & Nút nghe mẫu, xem mẫu -->
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-3 border-b-2 border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div id="raceCurrentCharBadge" class="w-12 h-12 bg-gradient-to-tr from-indigo-500 to-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black shadow-md shadow-indigo-300/50">
+                    a
+                  </div>
+                  <div>
+                    <h5 id="raceLetterTitle" class="text-base sm:text-lg font-black text-slate-800">
+                      Chữ a (Viết thường)
+                    </h5>
+                    <p id="raceLetterGuideDesc" class="text-xs text-slate-500 font-semibold">
+                      Cao 2 ô ly • Gồm 2 nét: Nét cong kín & Nét móc ngược
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="speakLetterRaceGuide()" 
+                          class="px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-xl text-xs font-black transition flex items-center gap-1.5 btn-toy" 
+                          title="Lắng nghe hướng dẫn viết">
+                    <span>🔊</span> <span>Nghe hướng dẫn</span>
+                  </button>
+                  <button type="button" id="btnRaceDemo" onclick="playRaceLetterDemo()" 
+                          class="px-3.5 py-2 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-xl text-xs font-black shadow-sm transition flex items-center gap-1.5 btn-toy" 
+                          title="Bút mẫu di chuyển theo nét">
+                    <span>🎬</span> <span>Xem mẫu viết</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- KHUNG BẢNG Ô LY VÀ CANVAS TẬP TÔ -->
+              <div class="relative w-full max-w-[560px] mx-auto aspect-[560/360] rounded-3xl overflow-hidden border-3 border-indigo-300 shadow-md bg-white select-none touch-none">
+                
+                <!-- SVG Hướng dẫn: Lưới ô ly, đường nét chấm, mũi tên và điểm đặt bút -->
+                <svg id="raceGuideSvg" viewBox="0 0 560 360" class="absolute inset-0 w-full h-full pointer-events-none select-none">
+                  <!-- Injected by renderRaceSvgGuide() -->
+                </svg>
+
+                <!-- Canvas tương tác vẽ tay mượt mà -->
+                <canvas id="raceCanvas" width="560" height="360" 
+                        class="absolute inset-0 w-full h-full cursor-crosshair touch-none select-none z-10">
+                </canvas>
+
+                <!-- Bút chì hoạt hình chạy mẫu khi bấm "Xem mẫu viết" -->
+                <div id="raceDemoPencil" 
+                     class="hidden absolute pointer-events-none z-20 text-3xl select-none -translate-x-1/2 -translate-y-1/2 filter drop-shadow-md">
+                  ✏️
+                </div>
+
+                <!-- Lời nhắc nhanh ở góc dưới bảng -->
+                <div class="absolute bottom-2 right-3 z-15 bg-white/85 backdrop-blur-xs text-[10px] text-slate-500 font-bold px-2 py-0.5 rounded-lg border border-slate-200 pointer-events-none">
+                  Bắt đầu tại 🟢 số 1
+                </div>
+              </div>
+
+              <!-- THANH CÔNG CỤ CHỌN MÀU BÚT VÀ CỠ NÉT -->
+              <div class="flex flex-wrap items-center justify-between gap-3 pt-2 px-1 text-xs">
+                <!-- Chọn màu bút -->
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-600 text-[11px]">Màu mực:</span>
+                  <div class="flex items-center gap-1.5">
+                    <button type="button" onclick="setRaceInkColor('#2563eb')" class="w-6 h-6 rounded-full bg-blue-600 border-2 border-white shadow-xs hover:scale-115 transition" title="Xanh dương"></button>
+                    <button type="button" onclick="setRaceInkColor('#dc2626')" class="w-6 h-6 rounded-full bg-rose-600 border-2 border-white shadow-xs hover:scale-115 transition" title="Đỏ rực rỡ"></button>
+                    <button type="button" onclick="setRaceInkColor('#059669')" class="w-6 h-6 rounded-full bg-emerald-600 border-2 border-white shadow-xs hover:scale-115 transition" title="Xanh lá"></button>
+                    <button type="button" onclick="setRaceInkColor('#7c3aed')" class="w-6 h-6 rounded-full bg-purple-600 border-2 border-white shadow-xs hover:scale-115 transition" title="Tím biếc"></button>
+                    <button type="button" onclick="setRaceInkColor('rainbow')" class="w-6 h-6 rounded-full bg-gradient-to-tr from-rose-400 via-amber-300 to-sky-400 border-2 border-white shadow-xs hover:scale-115 transition" title="Mực cầu vồng"></button>
+                  </div>
+                </div>
+
+                <!-- Cỡ nét bút -->
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-600 text-[11px]">Cỡ nét:</span>
+                  <button type="button" id="btnRacePenNormal" onclick="setRaceInkWidth(10)" 
+                          class="px-2.5 py-1 rounded-lg font-bold text-[11px] bg-indigo-600 text-white shadow-2xs">
+                    Vừa (10px)
+                  </button>
+                  <button type="button" id="btnRacePenThick" onclick="setRaceInkWidth(14)" 
+                          class="px-2.5 py-1 rounded-lg font-bold text-[11px] bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    Đậm (14px)
+                  </button>
+                </div>
+              </div>
+
+              <!-- HÀNG 4 NÚT HÀNH ĐỘNG: XÓA, LÀM LẠI, KIỂM TRA, LƯỢT TIẾP THEO -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-between gap-3 pt-3 border-t-2 border-slate-100">
+                <div class="flex items-center gap-2">
+                  <!-- Nút XÓA (theo yêu cầu) -->
+                  <button type="button" onclick="clearRaceCanvas()" 
+                          class="px-4 py-2.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border-2 border-rose-200 rounded-2xl font-black text-xs sm:text-sm shadow-xs transition flex items-center gap-1.5 btn-toy">
+                    <span>🗑️</span> <span>Xóa nét</span>
+                  </button>
+
+                  <!-- Nút LÀM LẠI (theo yêu cầu) -->
+                  <button type="button" onclick="resetRaceCurrentLetter()" 
+                          class="px-4 py-2.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border-2 border-amber-200 rounded-2xl font-black text-xs sm:text-sm shadow-xs transition flex items-center gap-1.5 btn-toy">
+                    <span>🔄</span> <span>Làm lại</span>
+                  </button>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <!-- Nút KIỂM TRA (theo yêu cầu) -->
+                  <button type="button" onclick="checkRaceDrawing()" 
+                          class="px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-2xl font-black text-xs sm:text-sm shadow-md shadow-emerald-400/40 transition flex items-center gap-2 btn-toy">
+                    <span>✅</span> <span>KIỂM TRA NÉT CHỮ</span>
+                  </button>
+
+                  <!-- Nút Lượt tiếp theo -->
+                  <button type="button" onclick="nextRaceLetter()" 
+                          class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-xs sm:text-sm shadow-xs transition flex items-center gap-1 btn-toy">
+                    <span>Lượt tiếp</span> <span>➡️</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- HỘP ĐÁNH GIÁ KẾT QUẢ VÀ TÍNH ĐIỂM SAO (ẨN KHI CHƯA BẤM KIỂM TRA) -->
+            <div id="raceFeedbackBox" class="hidden p-5 rounded-3xl border-3 text-center transition animate-pop shadow-md space-y-3">
+              <!-- Injected by JS: Số sao, lời khen, nút tô lại / chuyển lượt -->
+            </div>
+
+            <!-- MODAL / THẺ CHÚC MỪNG HOÀN THÀNH THỬ THÁCH ĐƯỜNG ĐUA -->
+            <div id="raceGrandSuccessCard" class="hidden p-6 rounded-3xl border-4 border-amber-400 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-center shadow-xl space-y-4 animate-pop">
+              <div class="text-5xl animate-bounce">🏆 🏎️ ⭐</div>
+              <div class="text-xl sm:text-2xl font-black text-amber-950">
+                CHÚC MỪNG BÉ ĐÃ HOÀN THÀNH XUẤT SẮC ĐƯỜNG ĐUA NÉT CHỮ!
+              </div>
+              <p class="text-xs sm:text-sm text-amber-900 font-semibold max-w-lg mx-auto">
+                Bé đã thuần thục cách viết các chữ cái <b>a, b, c, e, ê</b> và các tiếng hay tuần 2. Bé thật xứng đáng nhận Cúp Vàng Đường Đua!
+              </p>
+              <div class="flex justify-center gap-3 pt-2">
+                <button type="button" onclick="celebrateGrandCupAgain()" 
+                        class="px-6 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black rounded-2xl text-xs sm:text-sm shadow-md btn-toy">
+                  🎉 Bắn Pháo Hoa Ăn Mừng
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /BỘ 3 TRÒ CHƠI ĐẶC QUYỀN BÀI 5 -->
+
+        <!-- BÀI TẬP TRẮC NGHIỆM TIÊU CHUẨN (CÁC BÀI CÒN LẠI) -->
+        <div id="standardPracticeSection" class="space-y-6">
+          <div class="bg-white rounded-3xl p-5 border-2 border-rose-200 shadow-sm flex items-center justify-between">
+            <div>
+              <h4 class="font-black text-slate-800 text-base sm:text-lg flex items-center gap-2">
+                🎯 Thử Thách Ôn Tập Kiến Thức
+              </h4>
+              <p class="text-xs text-slate-500 font-semibold">Bé bấm chọn vào đáp án đúng nhất nhé!</p>
+            </div>
+            <button onclick="resetCurrentQuiz()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl font-black transition">
+              🔄 Làm lại
+            </button>
+          </div>
+
+          <!-- Danh Sách Các Câu Hỏi -->
+          <div class="space-y-5" id="quizCardsContainer">
+            <!-- Injected by JS -->
+          </div>
+
+          <!-- Nút Nộp Bài & Nhận Sao -->
+          <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 text-center shadow-sm">
+            <button onclick="checkQuizResults()" class="px-8 py-4 bg-gradient-to-r from-amber-400 to-rose-500 hover:from-amber-500 hover:to-rose-600 text-white rounded-3xl font-black text-base sm:text-lg shadow-xl shadow-rose-200 transition inline-flex items-center gap-2.5 btn-toy">
+              <span>⭐ Nộp Bài & Nhận Sao Vàng!</span>
+            </button>
+
+            <!-- Hộp Chúc Mừng -->
+            <div id="quizResultBox" class="hidden mt-6 p-6 rounded-3xl border-4 text-center transition"></div>
+          </div>
         </div>
 
       </div>
